@@ -1,0 +1,6 @@
+description: Simple encoder-decoder char-level  
+tags:
+  - char-n-grams
+  - pytorch-nn
+param-files:
+  - "*yaml"

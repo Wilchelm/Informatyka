@@ -1,0 +1,1 @@
+--metric WER --metric Accuracy --tokenizer character-by-character --precision 4
