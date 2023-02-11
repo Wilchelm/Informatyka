@@ -1,0 +1,28 @@
+module cos(input [4:0] a,b, input[1:0] operator , output reg [9:0] result);
+always @(*)
+begin
+	case (operator)
+		2'b00 : result=a+b;
+		2'b01 : result=a-b;
+		2'b10 : result=a*b;
+	endcase
+end
+endmodule
+
+module test (LEDR,SW, KEY);
+input [9:0] SW;
+input [3:0] KEY;
+output [9:0] LEDR;
+
+reg[1:0] operator;
+cos inst1(SW[4:0],SW[9:5],operator,LEDR);
+always @(*)
+begin
+	case (KEY[2:0])
+		3'b110 : operator= 2'b00;
+		3'b101 : operator= 2'b01;
+		3'b011 : operator= 2'b10;
+	endcase
+
+end
+endmodule 

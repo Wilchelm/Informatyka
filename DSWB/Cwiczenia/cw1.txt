@@ -1,0 +1,36 @@
+---------ZADANIE 1-------------------
+
+//module test (KEY, LEDR);
+//input[1:0] KEY;
+//output[2:0] LEDR;
+
+//assign LEDR[0] = KEY[0]; //zad 1 
+//assign LEDR[1] = KEY[0] & KEY[1]; //zad 2
+//assign LEDR[2] = !KEY[0] ^ !KEY[1];// zad 3
+	
+/*	zadanie 4
+input [3:0] KEY;
+output [6:4] LEDR;
+
+assign LEDR[6:4]=!KEY[0] + !KEY[1] +!KEY[2] +!KEY[3];
+*/
+
+module test (LEDR, SW);
+input [9:8] SW;
+output [9:8] LEDR;
+
+assign LEDR[8] = SW[8];
+assign LEDR[9] = SW[9]; 
+
+endmodule
+
+----------ZADANIE 2-------------
+
+module test(HEX0, HEX1,HEX3,HEX2);
+output [6:0] HEX0, HEX1,HEX3,HEX2;
+
+assign HEX3=7'b0100100;
+assign HEX2=7'b1111001;
+assign HEX1=7'b0000010;
+assign HEX0=7'b1111001;
+endmodule
