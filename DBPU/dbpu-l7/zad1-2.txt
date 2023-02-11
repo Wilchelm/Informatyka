@@ -1,0 +1,79 @@
+Wyodrębnianie klucza głównego TrueCrypt i identyfikacja woluminu
+Jednym z ujawnionych pułapek szyfrowania dysku TrueCrypt jest to, że klucze główne muszą pozostać w pamięci RAM, aby zapewnić w pełni przezroczyste szyfrowanie. Innymi słowy, gdyby zezwolono na spuszczanie kluczy głównych na dysk, projekt ucierpiałby pod względem bezpieczeństwa (pisanie kluczy zwykłego tekstu w celu bardziej trwałego przechowywania) i wydajności. Jest to ryzyko, z którym podejrzani muszą się zmagać, i na którym organy ścigania i śledczy mogą skorzystać.
+
+Domyślny schemat szyfrowania to AES w trybie XTS. W trybie XTS pierwotne i wtórne 256-bitowe klucze są łączone razem, tworząc jeden 512-bitowy (64 bajty) klucz główny. Zaletą, którą zyskujesz od samego początku, jest to, że wzory w kluczach AES można odróżnić od innych pozornie losowych bloków danych. W ten sposób narzędzia, takie jak aeskeyfind i bulk_extractor, lokalizują klucze w zrzutach pamięci, przechwytywaniu pakietów itp. W większości przypadków wyodrębnianie kluczy z pamięci RAM jest tak proste:
+
+$ ./aeskeyfind Win8SP0x86.raw
+f12bffe602366806d453b3b290f89429
+e6f5e6511496b3db550cc4a00a4bdb1b
+4d81111573a789169fce790f4f13a7bd
+a2cde593dd1023d89851049b8474b9a0
+269493cfc103ee4ac7cb4dea937abb9b
+4d81111573a789169fce790f4f13a7bd
+4d81111573a789169fce790f4f13a7bd
+269493cfc103ee4ac7cb4dea937abb9b
+4d81111573a789169fce790f4f13a7bd
+0f2eb916e673c76b359a932ef2b81a4b
+7a9df9a5589f1d85fb2dfc62471764ef47d00f35890f1884d87c3a10d9eb5bf4
+e786793c9da3574f63965803a909b8ef40b140b43be062850d5bb95d75273e41
+Keyfind progress: 100%
+
+Zidentyfikowano kilka kluczy, ale tylko dwa ostatnie mają 256 bitów (pozostałe to klucze 128-bitowe). Dlatego możesz postawić zakład, łącząc dwa 256-bitowe klucze, będziesz mieć 512-bitowy główny klucz AES. To wszystko jest dość proste i zostało udokumentowane w kilku miejscach - jednym z moich ulubionych jest blog Michaela Weissbachera.
+
+Problem w tym, co się stanie, jeśli podejrzani zmienią domyślny schemat szyfrowania AES? TrueCrypt obsługuje również Twofish, Serpent i ich kombinacje (AES-Twofish, AES-Twofish-Serpent). Ponadto obsługuje tryby inne niż XTS, takie jak LWR, CBC, zewnętrzny CBC i wewnętrzny CBC (chociaż wiele CBC jest przestarzałych lub nie jest zalecane).
+
+Co robisz, jeśli podejrzany używa niestandardowych schematów lub trybów szyfrowania? Nie można znaleźć kluczy Twofish lub Serpent za pomocą narzędzi przeznaczonych do skanowania w poszukiwaniu kluczy AES - to po prostu nie działa. Jak zauważył jeden ktoś na Twitterze (@brnocrist), narzędzie Carsten Maartmann-Moe o nazwie Interrogate może być tutaj przydatne (podobnie jak kilka komercyjnych wdrożeń od Elcomsoft lub Passware).
+
+Kolejnym wyzwaniem, przed którym stają śledczy, w przypadku kontenerów opartych na plikach, jest ustalenie, który plik na dysku twardym podejrzanego służy jako kontener. Jeśli nie wiesz, to posiadanie kluczy głównych jest tak przydatne, jak znalezienie klucza do domu, ale nie masz pojęcia, gdzie jest dom.
+
+Aby rozwiązać te problemy, napisałem kilka nowych wtyczek Volatility. Wtyczka truecryptsummary daje szczegółowy opis wszystkich artefaktów związanych z TrueCrypt w danym zrzucie pamięci. Oto jak to wygląda w systemie testowym z 64-bitowym systemem Windows 2012.
+
+https://github.com/volatilityfoundation/volatility/wiki/Volatility-Usage
+
+$ python vol.py -f WIN-QBTA4959AO9.raw --profile=Win2012SP0x64 truecryptsummary
+Volatility Foundation Volatility Framework 2.3.1 (T)
+
+Process              TrueCrypt.exe at 0xfffffa801af43980 pid 2096
+Kernel Module        truecrypt.sys at 0xfffff88009200000 - 0xfffff88009241000
+Symbolic Link        Volume{52b24c47-eb79-11e2-93eb-000c29e29398} -> \Device\TrueCryptVolumeZ mounted 2013-10-11 03:51:08 UTC+0000
+Symbolic Link        Volume{52b24c50-eb79-11e2-93eb-000c29e29398} -> \Device\TrueCryptVolumeR mounted 2013-10-11 03:55:13 UTC+0000
+File Object          \Device\TrueCryptVolumeR\$Directory at 0x7c2f7070
+File Object          \Device\TrueCryptVolumeR\$LogFile at 0x7c39d750
+File Object          \Device\TrueCryptVolumeR\$MftMirr at 0x7c67cd40
+File Object          \Device\TrueCryptVolumeR\$Mft at 0x7cf05230
+File Object          \Device\TrueCryptVolumeR\$Directory at 0x7cf50330
+File Object          \Device\TrueCryptVolumeR\$BitMap at 0x7cfa7a00
+File Object          \Device\TrueCryptVolumeR\Chats\Logs\bertha.xml at 0x7cdf4a00
+Driver               \Driver\truecrypt at 0x7c9c0530 range 0xfffff88009200000 - 0xfffff88009241000
+Device               TrueCryptVolumeR at 0xfffffa801b4be080 type FILE_DEVICE_DISK
+Container            Path: \Device\Harddisk1\Partition1
+Device               TrueCrypt at 0xfffffa801ae3f500 type FILE_DEVICE_UNKNOWN
+
+Między innymi widać, że wolumin TrueCrypt został zamontowany w podejrzanym systemie 11 października 2013 r. Ponadto ścieżka do kontenera to \ Device \ Harddisk1 \ Partition1, ponieważ w tym przypadku kontener był całą partycją ( Pamięć USB). Gdybyśmy mieli do czynienia z kontenerem opartym na plikach, jak wspomniano wcześniej, dane wyjściowe pokazywałyby pełną ścieżkę na dysku do pliku.
+
+Być może nawet bardziej ekscytujące jest to, że pomimo partycji jest w pełni zaszyfrowana, po zamontowaniu wszystkie pliki dostępne na woluminie są buforowane przez Menedżera pamięci podręcznej systemu Windows normalnie - co oznacza, że ​​wtyczka zrzutu może pomóc w ich odzyskaniu zwykłym tekstem. Tak, obejmuje to pliki $ Mft, $ MftMirr, $ Directory i inne pliki metadanych NTFS, które są odszyfrowywane natychmiast po zamontowaniu woluminu. W rzeczywistości, nawet jeśli wartości, które prowadzą nas do kluczy głównych, zostaną zamienione na dysk, lub jeśli TrueCrypt (lub inne pakiety szyfrowania dysku, takie jak PGP lub BitLocker) zaczną używać algorytmów bez przewidywalnych / wykrywalnych kluczy, nadal możesz odzyskać całość lub część dowolnego pliki otwierane podczas montowania woluminu na podstawie faktu, że sam system operacyjny Windows buforuje zawartość pliku (pamiętaj, że szyfrowanie jest przezroczyste dla systemu operacyjnego, więc buforuje pliki z zaszyfrowanych woluminów w taki sam sposób, jak zawsze).
+
+Po uruchomieniu wtyczki, takiej jak truecryptsummary, nie powinieneś mieć wątpliwości, czy TrueCrypt został zainstalowany i używany oraz jakie pliki lub partycje są Twoimi celami. Następnie możesz uruchomić wtyczkę truecryptmaster, która nie wykonuje żadnej magii.
+
+https://github.com/volatilityfoundation/volatility/wiki/Volatility-Usage
+
+$ python vol.py -f WIN-QBTA4.raw --profile=Win2012SP0x64 truecryptmaster -D . 
+Volatility Foundation Volatility Framework 2.3.1 (T)
+
+Container: \Device\Harddisk1\Partition1
+Hidden Volume: No
+Read Only: No
+Disk Length: 7743733760 (bytes)
+Host Length: 7743995904 (bytes)
+Encryption Algorithm: SERPENT
+Mode: XTS
+Master Key
+0xfffffa8018eb71a8 bbe1dc7a8e87e9f1f7eef37e6bb30a25   ...z.......~k..%
+0xfffffa8018eb71b8 90b8948fefee425e5105054e3258b1a7   ......B^Q..N2X..
+0xfffffa8018eb71c8 a76c5e96d67892335008a8c60d09fb69   .l^..x.3P......i
+0xfffffa8018eb71d8 efb0b5fc759d44ec8c057fbc94ec3cc9   ....u.D.......<.
+Dumped 64 bytes to ./0xfffffa8018eb71a8_master.key
+
+Masz teraz 512-bajtowy klucz główny Serpent, którego możesz użyć do odszyfrowania dysku USB o pojemności około 8 GB. Informuje o trybie szyfrowania, z którego korzystał podejrzany, o pełnej ścieżce do pliku lub kontenera oraz o niektórych dodatkowych właściwościach, takich jak to, czy wolumin jest tylko do odczytu, czy ukryty. Jak możesz podejrzewać, wtyczka działa niezależnie od algorytmu szyfrowania, trybu, długości klucza i różnych innych czynników, które mogą skomplikować procedurę wyszukiwania kluczy. Wynika to z faktu, że nie opiera się na wzorcach klucza lub harmonogramu kluczy - znajduje je dokładnie w taki sam sposób, w jaki sam sterownik TrueCrypt znajduje klucze w pamięci RAM, zanim będzie musiał zaszyfrować lub odszyfrować blok danych.
+
+Zazwyczaj atakowi zimnego rozruchu (Cold Boot Attack) można zapobiec, ograniczając fizyczny dostęp atakującego do komputera lub utrudniając przeprowadzenie ataku. Jedna metoda polega na lutowaniu lub przyklejaniu modułów pamięci do płyty głównej, więc nie można ich łatwo wyjąć z gniazd i włożyć do innej maszyny pod kontrolą atakującego. Nie uniemożliwia to jednak atakującemu uruchomienia komputera ofiary i wykonania zrzutu pamięci przy użyciu wymiennego napędu flash USB. Ograniczenie, takie jak UEFI Secure Boot lub podobne metody weryfikacji rozruchu, może skutecznie zapobiegać uruchomieniu przez atakującego niestandardowego środowiska oprogramowania w celu zrzucenia zawartości wlutowanej pamięci głównej.

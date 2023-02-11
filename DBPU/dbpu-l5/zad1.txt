@@ -1,0 +1,33 @@
+grep -v "=[ ]*-1[ ]*ENOENT" * | grep "uid" > zad1.txt
+
+passwd.txt:getuid()                                = 1000
+passwd.txt:openat(AT_FDCWD, "/proc/self/loginuid", O_RDONLY) = 3
+passwd.txt:getuid()                                = 1000
+passwd.txt:getuid()                                = 1000
+passwd.txt:getuid()                                = 1000
+passwd.txt:geteuid()                               = 1000
+passwd.txt:--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8444, si_uid=1000, si_status=7, si_utime=1, si_stime=0} ---
+passwd.txt:--- SIGHUP {si_signo=SIGHUP, si_code=SI_USER, si_pid=8394, si_uid=1000} ---
+passwd.txt:getuid()                                = 1000
+ping.txt:getuid()                                = 1000
+ping.txt:setuid(1000)                            = 0
+ping.txt:getuid()                                = 1000
+ping.txt:geteuid()                               = 1000
+vim.txt:getuid()                                = 1000
+vim.txt:getuid()                                = 1000
+vim.txt:getuid()                                = 1000
+vim.txt:--- SIGHUP {si_signo=SIGHUP, si_code=SI_USER, si_pid=8364, si_uid=1000} ---
+vim.txt:getuid()                                = 1000
+vim.txt:getuid()                                = 1000
+
+-------------------------------------------------------------------------------------------
+
+grep -v "=[ ]*-1[ ]*ENOENT" * | grep "access" >> zad1.txt
+
+gcc.txt:access("/usr/bin/gcc", X_OK)            = 0
+gcc.txt:access("/usr/bin/gcc", X_OK)            = 0
+gcc.txt:access("/usr/lib/gcc/x86_64-linux-gnu/7/", X_OK) = 0
+gcc.txt:access("/usr/lib/gcc/x86_64-linux-gnu/7/", X_OK) = 0
+gcc.txt:access("/usr/lib/gcc/x86_64-linux-gnu/7/", X_OK) = 0
+gcc.txt:access("/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper", X_OK) = 0
+vim.txt:access("/lib/terminfo/x/xterm-256color", R_OK) = 0

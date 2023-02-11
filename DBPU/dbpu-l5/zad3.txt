@@ -1,0 +1,33 @@
+Instalacja: 
+
+yum install policycoreutils-python setroubleshoot -y
+
+systemctl status zabbix-server
+
+Nie można uruchomić bo blokuje SELinux
+
+grep "SELinux is preventing" /var/log/audit/audit.log
+
+Otrzymujemy wiadomości typu:
+SELinux is preventing httpd from create access on the file temp_5be3f85348052_5be3f85347985.docx. For complete SELinux messages run: sealert -l 335e7781-6a68-4ca6-827f-073f93829f2d
+
+Aby to zrozumieć generujemy przetłumaczony log:
+
+sealert -a /var/log/audit/audit.log
+
+Otrzymujemy:
+Found 2 alerts in /var/log/audit/audit.log
+
+W danym logu otrzymujemy wzasadzie poradnik co zrobić by aplikacja została dodana do reguł:
+...
+If you belive that zabbix_server_mysql should be allowed setrlimit access on processes labeled zabbix_t by default
+.
+Then you should report this as a bug
+You can generate local policy module to allow this access.
+Do
+allow this access for now by executing:
+# ausearch -c "zabbix_server" --raw | audit2allow -M my-zabbixserver
+# semodule -i my-zabbixserver.pp
+...
+
+Odpalamy i jest

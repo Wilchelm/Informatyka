@@ -1,0 +1,9 @@
+Ataki czasowe znane są od 15 lat, ale do tej pory uważano, że ich przeprowadzenie przez internet jest praktycznie niemożliwe z racji nieprzewidywalnych opóźnień, jakie dotykają pakiety IP przesyłane przez Internet — a ataki czasowe wymagają bardzo precyzyjnych pomiarów.
+
+Jak wygląda łamanie hasła poprzez atak czasowy? 
+Atakujący loguje się do serwisu różnymi hasłami i mierzy czasy odpowiedzi serwera. Jeśli serwer weryfikuje hasło znak po znaku, to na podstawie różnić w czasach otrzymania komunikatu błędu “hasło nieprawidłowe” można wnioskować, czy któryś ze znaków w haśle był prawidłowy. Brzmi niewiarygodnie? A właśnie tak w 2007 roku złamano hasło do Xbox 360 (https://beta.ivc.no/wiki/index.php/Xbox_360_Timing_Attack). 
+
+
+Badacze wspominają, że łatwiej przeprowadza się ataki na webaplikacje, które zostały napisane w językach interpretowanych (np. Perl, Python), gdyż te “wolniej” przetwarzają dane niż języki kompilowane (np. C), a to zdecydowanie ułatwia przeprowadzenie ataku czasowego.
+
+Podobnie łatwiej atakuje się webaplikacje hostowane w chmurze — bo atakujący może szybko (i tanio) wykupić swój serwer “w okolicy”, co znacznie ogranicza zakłócenia związane z przesyłaniem pakietów przez Internet.

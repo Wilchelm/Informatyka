@@ -1,0 +1,24 @@
+Wszystkie programy oferują bardzo dobrą ochronę i mogę je wybrać na podstawie następujących prostych kryteriów:
+
+1. Nowy użytkownik / łatwość użycia: Grsecurity
+2. Łatwa do zrozumienia polityka i narzędzia: AppArmor
+3. Najsilniejszy mechanizm kontroli dostępu: SELinux
+
+Funkcjonalność 			| SELinux 				| AppArmor 		| Grsecurity
+-----------------------------------------------------------------------------------------------------------------------------------------
+Zautomatyzowane 		| Nie (audit2allow 			| Tak (Yast wizard) 	| Tak (auto traning / gradm)
+				| i system-config-selinux) 
+-----------------------------------------------------------------------------------------------------------------------------------------
+Wydajne konfigurowanie zasad 	| Tak (bardzo skomplikowane) 		| Tak 			| Tak
+-----------------------------------------------------------------------------------------------------------------------------------------
+Domyślna i zalecana integracja 	| CentOS / RedHat / Debian 		| Suse / OpenSuse 	| Dowolna dystrybucja Linuksa
+-----------------------------------------------------------------------------------------------------------------------------------------
+Szkolenie i wsparcie dostawców 	| Tak (Redhat) 				| Tak (Novell) 		| Nie (forum społeczności i listy)
+-----------------------------------------------------------------------------------------------------------------------------------------
+Polecany dla 			| Zaawansowanego użytkownika 		| Nowy / 		| Nowi użytkownicy
+				|					| zaawansowanego	| 
+				|					| użytkownika		|
+-----------------------------------------------------------------------------------------------------------------------------------------
+Funkcja				| System oparty na nazwie ścieżki 	| Dołącza etykiety do 	| ACLs 
+				| nie wymaga etykietowania ani		| wszystkich plików,	|
+				| ponownego znakowania systemu plików	| procesów i obiektów	|

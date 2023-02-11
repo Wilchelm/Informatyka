@@ -1,0 +1,40 @@
+#include <tunables/global>
+/bin/ping flags=(complain) {
+  #include <abstractions/base>
+  #include <abstractions/consoles>
+  #include <abstractions/nameservice>
+
+  capability net_raw,
+  capability setuid,
+  network inet raw,
+  
+  /bin/ping mixr,
+  /etc/modules.conf r,
+}
+
+
+
+1. #include <tunables/global>: dołącz instrukcje z innych plików. Umożliwia to umieszczenie instrukcji dotyczących wielu aplikacji we wspólnym pliku.
+
+2. /bin/ping flags=(complain): ścieżka do profilowanego programu, również ustawiając tryb narzekać.
+
+3. capability net_raw,: umożliwia aplikacji dostęp do funkcji CAP_NET_RAW Posix.1e.
+
+4. capability setuid,: umożliwia aplikacji dostęp do funkcji SETUID(2) 
+
+5. network inet raw,:  zezwól na dostęp do SOCK_RAW tylko dla adresów inet4 
+
+6. /bin/ping mixr,: umożliwia aplikacji odczyt i wykonanie dostępu do pliku.
+
+7. /etc/modules.conf r, umożliwia aplikacji odczyt do pliku.
+
+Różne sposoby dostępów do plików:
+
+„r” (odczyt)
+„w” (zapis)
+„m” (mapa pamięci jako plik wykonywalny)
+„k” (blokowanie plików)
+„l” (tworzenie twardych linków)
+„ix” (wykonaj i odziedzicz ten profil)
+„Px” (uruchom pod innym profilem, po wyczyszczeniu środowiska)
+„Ux” (wykonaj nieokreślony, po oczyszczeniu środowiska)

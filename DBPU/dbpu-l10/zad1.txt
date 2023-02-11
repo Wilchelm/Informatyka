@@ -1,0 +1,14 @@
+Odpowiednikiem /dev/random jest /dev/urandom („nieograniczone”/nieblokujące losowe źródło), które wykorzystuje wewnętrzną pulę do wytworzenia większej liczby pseudolosowych bitów. Oznacza to, że wywołanie nie zostanie zablokowane, ale dane wyjściowe mogą zawierać mniejszą entropię niż odpowiedni odczyt z /dev/random. Chociaż /dev/urandom jest nadal przeznaczony jako generator liczb pseudolosowych odpowiedni do większości celów kryptograficznych, autorzy odpowiedniej strony podręcznika zauważają, że teoretycznie może istnieć jak dotąd nieopublikowany atak na algorytm używany przez /dev/urandom , a użytkownicy zaniepokojeni takim atakiem powinni zamiast tego użyć /dev/random. Jest jednak mało prawdopodobne, aby taki atak miał miejsce, ponieważ gdy pula entropii jest nieprzewidywalna, nie przecieka ona bezpieczeństwa przez zmniejszoną liczbę bitów.
+
+Możliwe jest również pisanie do /dev/random. Pozwala to każdemu użytkownikowi mieszać losowe dane w puli. Nieprzypadkowe dane są nieszkodliwe, ponieważ tylko uprzywilejowany użytkownik może wystawić ioctl potrzebny do zwiększenia oszacowania entropii. Bieżąca ilość entropii i wielkość puli entropii jądra Linuxa, obie mierzone w bitach, są dostępne w/proc/sys/kernel/random/i mogą być wyświetlane za pomocą komendy cat /proc/sys/kernel/random/entropy_avail i odpowiednio cat /proc/sys/kernel/random/poolize.
+
+$ cat /proc/sys/kernel/random/entropy_avail
+3648
+$cat /proc/sys/kernel/random/poolize
+4096
+
+Jądro Linux zapewnia obsługę kilku sprzętowych generatorów liczb losowych, jeśli powinny być zainstalowane. Surowy wynik takiego urządzenia można uzyskać z /dev/hwrng.
+
+W jądrze Linuksa 3.16 i nowszym samo jądro miesza dane ze sprzętowych generatorów liczb losowych do /dev/random w przesuwnej skali w oparciu o definiowalną jakość szacowania entropii HWRNG. Oznacza to, że do wykonania tego zadania nie jest potrzebny demon przestrzeni użytkownika, taki jak rngd z rng-tools. W jądrze Linux 3.17+ VirtIO RNG został zmodyfikowany tak, aby miał domyślną jakość zdefiniowaną powyżej 0, i jako taki jest obecnie jedynym domyślnym HWRNG zmieszanym z /dev/random.
+
+Pula entropii może zostać ulepszona przez programy takie jak timer_entropyd, haveged, randomsound itp. Za pomocą narzędzi rng sprzętowe generatory liczb losowych, takie jak klucz Entropy, itp. Mogą zapisywać do /dev/random. Programy testów twardych dieharder, diehard i ent mogą testować te generatory liczb losowych.

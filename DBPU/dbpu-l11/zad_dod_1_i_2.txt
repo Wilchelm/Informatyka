@@ -1,0 +1,61 @@
+Metody zabezpieczania komputerów:
+
+1. Zainstalować oprogramowanie antywirusowe
+
+Instalacja oprogramowania jest absolutnie niezbędna w każdym komputerze podłączonym do Internetu. Oprogramowanie to w podstawowym zakresie zabezpiecza nas przez różnego rodzaju szkodliwymi aplikacjami. Dostępne są zarówno płatne jak i bezpłatne programy antywirusowe. Do bezpłatnych zaliczyć można m.in.:
+-> Windows Security Essentials (dla Windows Vista/7)
+-> AVG Antivirus Free
+-> Avast! Free Antivirus
+Każde z nich w podstawowym zakresie spełni swoją funkcję. Należy zadbać też o to, by program antywirusowy sam aktualizował tak zwaną bazę sygnatur wirusów, która pozwala mu wykrywać najnowsze zagrożenia.
+
+2. "Wyłączać Internet"
+
+Warto zastanowić się, czy komputer rzeczywiście musi być bezustannie podłączony do Internetu. Współczesne oprogramowanie często takiego dostępu wymaga, w przeciwnym wypadku warto odłączać komputer od sieci, gdy nie jest ona potrzebna. Odłączenie od sieci internetowej skraca czas, w którym komputer jest narażony na ryzyko, a w przypadku zainfekowanego komputera – czas, w którym ma on możliwość wysyłania naszych danych. Metoda ta ,,dramatycznie’’ nie wpłynie na poziom bezpieczeństwa systemu, ale na pewno mu nie zaszkodzi.
+
+Uwaga: odłączenie od Internetu może utrudnić pobieranie aktualizacji automatycznych, które są niezbędne dla bezpieczeństwa systemu.
+Włączyć aktualizacje automatyczne
+
+Aktualizacje są szczególnie ważne w systemie operacyjnym (Windows, Linux), w oprogramowaniu antywirusowym, przeglądarce internetowej oraz w programach Java, Adobe Reader i Flash Player. Luki (błędy) w tych programach odpowiadają za większość infekcji szkodliwym oprogramowaniem.
+
+Większość wymienionego oprogramowania ma możliwość samodzielnego, automatycznego aktualizowania. Opcję tą warto włączyć, gdyż zaoszczędzi nam konieczności pamiętania o aktualizacjach. Mimo tego warto od czasu do czasu sprawdzić, czy aktualizacje te się wykonują.
+
+3. Unikać "brudnych" stron
+
+Korzystanie ze stron z nielegalnym oprogramowaniem, muzyką, filmami lub ,,niecenzuralnymi’’ treściami niesie ze sobą bardzo duże ryzyko. Szczególnie często na takich stronach znajduje się złośliwy kod, który może zaszkodzić naszemu komputerowi i zarazić go szkodliwym oprogramowaniem. W przypadku takich stron nawet w przypadku wykazania ich szkodliwości nie ma realnej możliwości wpłynięcia na właściciela strony. W wielu przypadkach nie możemy nawet zgłosić się do organów ścigania, bo korzystanie z treści tych stron może być nielegalne lub kompromitujące dla użytkownika.
+
+Większość antywirusów mają możliwość blokowania niechcianych stron.
+
+4. Rozsądnie używać haseł
+
+W Internecie można znaleźć wiele materiałów o dobrych hasłach. Generalnie, hasło powinno być możliwie długie (na pewno więcej niż 8 znaków), nie powinno być pojedynczym słowem i powinno zawierać duże litery, małe litery, cyfry i znaki specjalne (takie jak ,’;:{}[]!@#$%%^&*() itd.) i powinno być dla nas łatwe do zapamiętania. Zaleca się także, by okresowo (możliwie często) zmieniać hasło, szczególnie w przypadku, gdy wykorzystujemy je w wielu miejscach. Dzięki temu nawet, jeżeli w jednym z miejsc ulegnie ono ujawnieniu, intruz może nie zdążyć wykorzystać go w miejscach pozostałych. Haseł nie należy (oczywiście) udostępniać innym osobom, zapisywać ich jawnym tekstem na komputerze ani w jego pobliżu.
+Dobrym programem jest KeePass, który posiada także generator haseł.
+
+5. Używać bezpieczniej przeglądarki
+
+Absolutna większość zagrożeń dostaje się do naszego komputera podczas przeglądania Internetu. Dlatego też ważne jest posiadanie przeglądarki, która nie naraża niepotrzebnie naszego komputera na atak. Obecnie za w miarę bezpieczne uchodzą Google Chrome, Internet Explorer (pod warunkiem, że jest to aktualna wersja!) i Mozilla Firefox. Istnieją też inne przeglądarki takie jak Safari czy Opera, jednak w Polsce nie zyskały one zbyt dużej popularności. Bardzo ważne jest, by przeglądarka była zawsze aktualna, gdyż to właśnie ona będzie najczęściej atakowana przez oprogramowanie złośliwe. Niektóre przeglądarki w związku z tym aktualizują się same (np. Google Chrome).
+
+6. Wykonywać kopie bezpieczeństwa
+
+Każdy sprzęt w końcu się zepsuje. Przyczyną może być awaria zasilania, burza, zużycie sprzętu ale także pożar lub zalanie. W zależności od przyczyny awarii oraz od technologii przechowywania danych odzyskanie danych może nie być możliwe. Dlatego też bardzo ważne jest, by posiadać kopie bezpieczeństwa ważnych danych. Można je wykonywać ręcznie na nośniki wymienne (pendrive, dvd itp.) lub skorzystać z usług sieciowych (o ile ufamy usługodawcy w kwestii bezpieczeństwa i poufności naszych danych). Można też zainstalować oprogramowanie, które będzie wykonywać kopie bezpieczeństwa w sposób automatyczny.
+
+7. Ograniczyć zbędne oprogramowanie
+
+W przypadku pobierania oprogramowania z Internetu zwracać uwagę na to, skąd bierzemy oprogramowanie i ograniczyć pobieranie go z "dziwnych" źródeł.
+
+8. Włączyć firewall
+
+Firewall (zapora) jest systemem komputerowym lub aplikacją, która zabezpiecza komputer przez atakami z zewnątrz. Mówiąc obrazowo, twórcy protokołu TCP/IP (będącego podstawą współczesnych sieci) założyli, że komputer ma 65536 okien. Każde z nich umożliwia komunikację ze światem zewnętrznym/między aplikacjami. Firewall jest odpowiedzialny za to, by otwarte były tylko te okna, które chcemy. Brak firewalla powoduje, że otwarte są wszystkie okna, co w ogromnym stopniu naraża komputer na zagrożenia.
+
+Współczesne systemy operacyjne posiadają wbudowany  podstawowy firewall. Aby dowiedzieć się, czy jest włączony i jak go włączyć najprościej wyszukać w gogle ,,jak włączyć zaporę w windows XP’’, ,,jak włączyć zaporę w windows 7’’ lub ,,jak włączyć zaporę w windows Vista’’ w zależności od powiadanej wersji systemu.
+
+9.Szyfrować dane na wymiennych nośnikach
+
+    Szyfrowane pendrive – są obecnie dostępne w sprzedaży. Nośnik taki zawiera w sobie oprogramowanie, które dba o zabezpieczenie kryptograficzne danych. Oprogramowanie umożliwia ustawienie hasła/pinu do pendvie, bez którego nie można odtworzyć danych. Dostępne są również wersje z czytnikiem linii papilarnych, których zeskanowanie umożliwia odczyt danych.
+    Szyfrowanie danych przenoszonych – można podobnie jak w przypadku poczty e-mail stworzyć zaszyfrowane archiwum zabezpieczone hasłem. Metoda ta nie jest najwygodniejsza w korzystaniu, ale gwarantuje całkiem przyzwoity poziom bezpieczeństwa i jest bardzo prosta w obsłudze.
+    Szyfrowanie całego pendrive przy pomocy dodatkowego oprogramowania jak np. Truecrypt pozwala zabezpieczyć każdy nośnik w skuteczny sposób. Obsługa jest raczej prosta, dostępne są w internecie też liczne instrukcje jak czegoś takiego dokonać.
+
+10. Zmienić system operacyjny na nowszy/mniej popularny
+
+Atakowanie komputerów jest zajęciem dochodowym, podlega więc w dużym stopniu prawom ekonomii. Powoduje to, że systemy bardziej popularne są częściej analizowane pod kątem ich bezpieczeństwa (bo jest więcej możliwych celów ataku). Wybranie systemu mniej poplenarnego (jak np. Linux, BSD, OpenSolaris) pozwala więc znaleźć się w grupie mniejszego ryzyka (na te systemy wirusy niemal nie powstają, bo wymaga to zbyt dużo pracy względem liczby potencjalnych ofiar). W przypadku większości użytkowników domowych (z wyłączeniem zaciętych graczy komputerowych) systemy te zapewniają wystarczającą funkcjonalność i znacząco podnoszą poziom bezpieczeństwa.
+
+Podsumowując by laik posiadał w miarę bezpieczny komputer należy posiadać system antywirusowy. Ważne by sam się aktualizował i miał udogodnienia jak monitorowanie stron czy plików jakie wrzucamy na nasz komputer/pobieramy w czasie rzeczywistym. Ważne by oprogramowanie posiadało automatyczne aktualizacje. Można równierz zainstalować Truecrypta w celu zaszyfrowania plików oraz KeePass do generowania i bezpiecznego przechowywania haseł. Dobrym też sposobem jest włączenie automatycznych kopii zapasowych.

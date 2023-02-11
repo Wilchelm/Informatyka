@@ -1,0 +1,53 @@
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Kod Heartbleed
+
+Błąd kodowania, który spowodował Heartbleed, można prześledzić do jednego wiersza kodu:
+
+memcpy(bp, pl, payload);
+
+memcpy () to polecenie kopiujące dane. bp to miejsce, do którego go kopiuje, pl to miejsce, z którego jest kopiowany, a payload to długość kopiowanych danych. Problem polega na tym, że nigdy nie ma próby sprawdzenia, czy ilość danych w pl jest równa podanej wartości payload.
+
+Najbardziej ironiczną rzeczą jest to, że OpenSSL jest oprogramowaniem typu open source. Każdy mógł spojrzeć na kod i prawdopodobnie setki tak, ale nikt nie zauważył dość elementarnego błędu kodowania.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Exploity Heartbleed
+
+Nie jest jasne, czy w świecie rzeczywistym wykorzystano lukę Heartbeat, zanim została szeroko opublikowana. Możliwe, że niektóre próby ataków wykryte przez firmy zajmujące się ochroną już w 2013 r. Sprawdzały lukę w zabezpieczeniach - a niektórzy uważają, że atakujący byli rządowymi agencjami bezpieczeństwa.
+
+Po kwietniu 2014 roku. Kiedy luka została upubliczniona, firmy starały się zaktualizować swoje systemy, ale hakerzy byli w stanie ją wykorzystać w kilku przypadkach. Atak na Community Health Systems, który ukradł dane pacjentów, został oskarżony o Heartbleed, podobnie jak kradzież setek numerów identyfikatorów społecznościowych z kanadyjskiej Agencji Skarbowej.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Poprawka Heartbleed
+
+Aby naprawić lukę Heartbleed, należy zaktualizować ją do najnowszej wersji OpenSSL. Możesz znaleźć linki do całego najnowszego kodu na stronie OpenSSL.
+
+Jeśli jesteś ciekawy kodu, który implementuje poprawkę, możesz na to spojrzeć - w końcu OpenSSL jest open source:
+
+* Read type and payload length first */
+
+if (1 + 2 + 16 > s->s3->relent)
+
+return 0;
+
+/* silently discard */
+
+hbtype = *p++;
+
+n2s(p, payload);
+
+if (1 + 2 + payload + 16 > s->s3->rrec.length)
+
+return 0;
+
+/* silently discard per RFC 6520 sec. 4 */
+
+pl = p;
+
+Pierwsza część tego kodu zapewnia, że ​​żądanie heartbeat nie ma wartości 0 KB, co może powodować problemy. Druga część upewnia się, że prośba jest tak długo, jak to mówi.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+

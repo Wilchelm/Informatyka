@@ -1,0 +1,56 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+
+        cout << "Size of char : " << sizeof(char) << endl;
+        cout << "Size of int : " << sizeof(int) << endl;
+        cout << "Size of short int : " << sizeof(short int) << endl;
+        cout << "Size of long int : " << sizeof(long int) << endl;
+        cout << "Size of float : " << sizeof(float) << endl;
+        cout << "Size of double : " << sizeof(double) << endl;
+        cout << "Size of wchar_t : " << sizeof(wchar_t) << endl;
+	int abc[30];
+	int def[10];
+	int def2[30];
+        long long def3[10];
+
+	for(int i=0;i<30;i++) abc[i]=i;
+	abc[0]++;
+//	for(int i=0;i<10;i++) cout << def[i] << endl;
+        cout << "Sizeof int def[10]: " << sizeof(def) << "\n";
+        cout << "Sizeof int def2[30]: " << sizeof(def2) << "\n";
+        cout << "Sizeof long long def3[10]: " << sizeof(def3) << "\n";
+
+        return 0;
+}
+
+/*
+Size of char : 1
+Size of int : 4
+Size of short int : 2
+Size of long int : 8
+Size of float : 4
+Size of double : 8
+Size of wchar_t : 4
+Sizeof int def[10]: 40
+Sizeof int def2[30]: 120
+Sizeof long long def3[10]: 80
+
+-------------------------------------------------------------------
+
+
+$ g++ -O0 c1-1.cpp 
+$ g++ -O3 c1-1.cpp 
+c1-1.cpp: In function ‘int main()’:
+c1-1.cpp:9:30: warning: iteration 10 invokes undefined behavior [-Waggressive-loop-optimizations]
+  for(int i=0;i<30;i++) abc[i]=i;
+                        ~~~~~~^~
+c1-1.cpp:9:15: note: within this loop
+  for(int i=0;i<30;i++) abc[i]=i;
+              ~^~~
+
+*/
+
+

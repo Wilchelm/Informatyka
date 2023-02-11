@@ -1,0 +1,38 @@
+Manufacturer	Country	Model	Introyear	Interface	OS	Price	Throughput	Operatingprinciple	Certifications / tests	Openhardware?	Softwarelicense
+Altus Metrum	USA	ChaosKey 1.0	2016	USB	Linux	$40€45	10 Mbit/s	Reverse biased semiconductorjunction	FIPS-140-2	Open	GPLv2
+Araneus InformationSystems Oy	Finland	Alea II	2014	USB	Windows/Linux/BSD/MacOS X	€109	100 Kbit/s	Reverse biasedsemiconductorjunction	NISTSTS /DIEHARD	Closed	Proprietary
+BitBabbler	Australia	BitBabbler Black	2015	USB	Linux/BSD/Mac/Windows	AUD$49	650 Kbit/s	Mix of shot noise,Johnson–Nyquistnoise,flicker noise, and some electromagnetic interference	ENT test suite /NISTSP800-22 / DIE HARDER / TestU01	Closed	GPLv2
+BitBabbler	Australia	BitBabbler White	2015	USB	Linux/BSD/Mac/Windows	AUD$199	2.5 Mbit/s	Mix of shot noise,Johnson–Nyquistnoise,flicker noise, and some electromagnetic interference	ENT test suite /NISTSP800-22 / DIE HARDER / TestU01	Closed	GPLv2
+Comscire	USA	PQ4000KS	2016	USB	Linux/Windows/Mac	$795	4 Mbit/s	Shot noise	NISTSP800-90B, C,NIST,SP800-22 /DIEHARD	Closed	Proprietary
+Comscire	USA	PQ32MU	2013	USB	Linux/Windows/Mac	$1,495	32 Mbit/s	Shot noise	NISTSP800-90B, C,NIST,SP800-22 /DIEHARD	Closed	Proprietary
+Flying Stone Technology	Japan	FST-01 (includes NeuG 1.0)	2013	USB	Windows/Linux/FreeBSD/Mac	$35-$50	602 Kbit/s	Analog-to-digitalconverter noise	NISTSP800-22	Open	GPLv3
+Generic	N/A	rtl-sdr dongles	2013	USB	Linux/Mac	$24	2.8 Mbit/s	Atmosphericnoise. Requiresrtl-entropy	NIST SP800-22	Closed	GPLv3
+Generic	N/A	STM32 Nucleo Dongles (Running NeuG 1.0)	2015	USB	Windows/Linux/FreeBSD/Mac	$12	560 Kbit/s	Analog-to-digitalconverter noise	NISTSP800-22	Closed	GPLv3
+Generic	N/A	Any webcam	2017	USB	Windows/Linux/FreeBSD/Mac	$7	960 Kbit/s	Image noise	NISTSP800-22	Closed	Public domain
+ID Quantique SA	Switzerland	Quantis-USB	2006	USB	Windows/Linux	€990	4 Mbit/s	Beam splitter	NIST SP800-22 / DIE HARD by METAS / CTL	Closed	Proprietary
+ID Quantique SA	Switzerland	Quantis-PCIe-4M	2010	PCIe	Windows/Linux	€1,299	4 Mbit/s	Beam splitter	NIST SP800-22 / DIE HARD by METAS / CTL	Closed	Proprietary
+ID Quantique SA	Switzerland	Quantis-PCIe-16M	2010	PCIe	Windows/Linux	€2,990	16 Mbit/s	Beam splitter	NIST SP800-22 / DIE HARD by METAS / CTL	Closed	Proprietary
+ID Quantique SA	Switzerland	Quantis Appliance 4M	2016	Network	Windows/Linux	N/A	4 Mbit/s	Beam splitter	NIST SP800-22 / DIE HARD by METAS / CTL	Closed	Proprietary
+ID Quantique SA	Switzerland	Quantis Appliance 16M	2016	Network	Windows/Linux	N/A	16 Mbit/s	Beam splitter	NIST SP800-22 / DIE HARD by METAS / CTL	Closed	Proprietary
+ID Quantique SA	Switzerland	Quantis AIS31	2015	PCIe / USB	Windows/Linux	N/A	75 Kbit/s	Beam splitter	BSI AIS 31 / NIST SP800-22 /DIEHARD by METAS /CTL	Closed	Proprietary
+Intel	USA	Ivy Bridge-EP	2013	CPU	N/A	$323	3 Gbit/s	Johnson–Nyquistnoise	N/A	Closed	Mixed
+Kidekin	South Korea	TRNG	2015	USB	Linux/Windows/Mac	79	2 Mbit/s	Registerlesslinear-feedbackshiftregisters	NISTSP800-22	Closed	Proprietary
+LETech	Japan	GRANG (various devices)	2008–2012	USB3/SATA	Linux/Windows	N/A	400 Mbit/s	Johnson–Nyquistnoise	NISTSP800-22	Closed	Proprietary
+LETech	Japan	GRANG Server	2013	Network	Linux	N/A	1.2 Gbit/s	Johnson–Nyquistnoise	NISTSP800-22	Closed	Proprietary
+Moonbase Otago	N/A	OneRNG	2015	USB	Linux/Windows/Mac	$40	350 Kbit/s	Avalanche diodewith optional atmospheric noise	NISTSP800-22	Open	GPLv3/LGPLv3
+Protego ST(https://www.protegost.com)	Sweden	SG100 Classic (https://www.protegost.com/product-page/sg100-classic)	1996	USB	Linux/Unix/Windows/Mac	€255	115 Kbit/s	Reverse biaseddiode	Diehard/FIPS-140-2	Closed	Source code Proprietary
+Protego ST(https://www.protegost.com)	Sweden	SG100 EVO-USB (https://www.protegost.com/product-page/sg100-evo)	2013	USB	Linux/Unix/Windows/Mac	€270	115 Kbit/s	Reverse biaseddiode	Diehard/FIPS-140-2	Closed	Source code Proprietary
+Protego ST(https://www.protegost.com)	Sweden	SG100 EVO-USB CERT (https://www.protegost.com/product-page/sg100-evo-cert)	2013	USB	Linux/Unix/Windows/Mac	€530	115 Kbit/s	Reverse biaseddiode	Diehard/FIPS-140-2	Closed	Source code Proprietary
+Quant-Lab	Croatia	QRBG121	2005	USB	Linux/Unix/Windows/Mac	€2,700	12 Mbit/s	Photoelectriceffect	NISTSP800-22	Closed	Proprietary
+QuintessenceLabs	Australia	qStream, qCrypt-xStream	2012	Network	Linux/Windows	N/A	1 Gbit/s	Beam splitter	NISTSP800-90 A,B, C	Closed	Proprietary
+Simtec Electronics	UK	Entropy Key	2009	USB	Linux/BSD/Windows	£36	26.6 Kbit/s	Avalanche noise	NISTSP800-22	Closed	MIT
+TectroLabs	USA	SwiftRNG	2016	USB	Windows/Linux/Mac	$249	100 Mbit/s	Reverse biasedZener diodes	NISTSP 800-90B, NIST SP800-22	Closed	Proprietary
+TectroLabs	USA	SwiftRNG LE	2016	USB	Windows/Linux/Mac	$149	20 Mbit/s	Reverse biasedZener diodes	NISTSP 800-90B, NIST SP800-22	Closed	Proprietary
+TectroLabs	USA	SwiftRNG Pro	2018	USB	Windows/Linux/Mac	$449	200 Mbit/s	Reverse biasedZener diodes	NISTSP 800-90B, NIST SP800-22	Closed	Proprietary
+TRNG98	USA	TRNG9803	2009	Serial	Linux/Windows/Solaris/BSD	€109	72 Kbit/s		NISTSP800-22	Closed	Proprietary
+TRNG98	USA	TRNG9815	2009	USB	Linux/Windows/Solaris/BSD	€620	550 Kbit/s		NISTSP800-22	Closed	Proprietary
+ubld.it (http://ubld.it/)	USA	TrueRNG v2 (http://ubld.it/products/truerng-hardware-random-number-generator/)	2014	USB	Linux/Windows/Mac	$49.95	350 Kbit/s	Reverse-biasedsemiconductorjunction(avalanche/Zenernoise)	DIEHARDER / FIPS-140-2/NIST STS	Closed	Proprietary
+ubld.it (http://ubld.it/)	USA	TrueRNG v3 (http://ubld.it/truerng_v3)	2016	USB	Linux/Windows/Mac	$49.95	400 Kbit/s	Reverse-biasedsemiconductorjunction(avalanche/Zenernoise)	DIEHARDER / FIPS-140-2/NIST STS	Closed	Proprietary
+ubld.it (http://ubld.it/)	USA	TrueRNG Pro (http://ubld.it/products/truerngpro)	2015	USB	Linux/Windows/Mac	$99	3.2 Mbit/s	Reverse-biasedsemiconductorjunction(avalanche/Zenernoise)	DIEHARDER / FIPS-140-2/NIST STS	Closed	Proprietary
+WaywardGeek	USA	Infinite Noise TRNG	2014	USB	Linux/Windows	$35	300 Kbit/s	Johnson–Nyquistnoise	NISTSP800-22	Open	Public domain
+Whitewood	USA	Entropy Engine	2015	PCIe	Linux	N/A	350 Mbit/s	Photon bunching	NIST SP800-22/NISTSP800-90 B & C/ DIE HARD/ ENT/ TEST U01	Closed	Proprietary

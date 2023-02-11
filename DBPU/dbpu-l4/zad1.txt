@@ -1,0 +1,20 @@
+Istnieją dwa główne pliki związane z uwierzytelnianiem użytkownika systemu: /etc/passwd i /etc/shadow. Rzeczywiste hasła użytkownika są przechowywane jako wersja mieszana w pliku cienia. Są one mieszane przez funkcję szyfrowania. Nie można „odszyfrować” żadnego hasła z pliku cienia, ponieważ haszowanie jest mechanizmem jednokierunkowym.
+
+Gdy użytkownik wprowadzi hasło, jest ono przetwarzane i porównywane z hashowanym hasłem przechowywanym w pliku cienia Shadow (/etc/shadow). Ale kiedy ktoś próbuje „odszyfrować” hasło z pliku cienia - istnieje ponad tysiąc możliwych wyników.
+
+Otwierając podręcznik użytkownika dotyczący programu crypt (man crypt) 
+
+ID  | Metoda
+────────────────────────────────────────────────
+1   | MD5
+2a  | Blowfish (nie w głównym glibc; dodane
+    | w kilku dystrybucjach Linuksa)
+5   | SHA-256 (od glibc 2.7)
+6   | SHA-512 (od glibc 2.7)
+
+
+MD5     | 22 znaki
+SHA-256 | 43 znaki
+SHA-512 | 86 znaków
+
+

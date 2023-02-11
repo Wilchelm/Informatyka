@@ -1,0 +1,167 @@
+I. IDA i Hex-Rays
+
+IDA czyli Interactive DisAssembler to niekwestionowany król wśród narzędzi wykorzystywanych w reverse enigneeringu. IDA to deasembler i debugger z wbudowaną obsługą analizy kodu dla ponad 60 rodzajów procesorów. Posiada własny język skryptowy, bogatą bazę sygnatur najpopularniejszych bibliotek programistycznych oraz obsługę wtyczek, które dodatkowo zwiększają funkcjonalność np. obsługę poprzez skrypty w Pythonie.
+
+Najbardziej znaną i cenioną wtyczką dla IDA jest dekompilator Hex-Rays, który obsługuje dekompilację kodu x86, x64 i ARM, co jest niezastąpionym narzędziem analizy.
+
+IDA posiada również wbudowane debuggery dla wielu platform sprzętowych, co czyni z tego narzędzia prawdziwy kombajn do analizy wszelkiej maści plików wykonywalnych.
+
+Strona:		https://www.hex-rays.com
+Licencja:	Komercyjna od 449 EUR oraz darmowa wersja demonstracyjna.
+Zalety: 	
+1. Obsługa ogromnej ilości typów procesorów
+2. Wbudowane sygnatury popularnych bibliotek programistycznych
+3. Spore możliwości konfiguracji
+4. Wbudowane debuggery
+5. System wtyczek
+6. Język skryptowy
+7. Wersje dla Windows, Mac OS X i Linux
+Wady: 	
+1. Cena
+2. Brak dobrych, darmowych alternatywnych rozwiązań
+Wtyczki:
+1. FindCrypt – wyszukiwarka sygnatur algorytmów kryptograficznych - http://www.hexblog.com/?p=27
+2. IDAStealth – ukrywanie przed metodami antydebug - https://github.com/nihilus/idastealth
+3. BinDiff – porównywanie baz danych w poszukiwaniu różnic kodu - http://www.zynamics.com/bindiff.html 
+
+II. Ghidra
+
+Ghidra to nowe i darmowe narzędzie wprost z amerykańskiej agencji wywiadowczej NSA do deasemblacji i dekompilacji binarnych aplikacji.
+
+Jedną z najbardziej wyróżniających się cech Ghidry jest wbudowany dekompilator, który w niektórych przypadkach jak np. analiza kodu ARM potrafi poradzić sobie z rekonstrukcją kodu znacznie lepiej niż dekompilator HexRays.
+
+Być może obecnie nie dorównuje całkowicie funkcjonalnościa HexRays (należy pamiętać, że Ghidra to nowy projekt), jednak narzędzia takie jak dekompilatory wymagają ogromu pracy i rzadko się zdarza pojawienie produktu, który ktoś oferuje zupełnie za darmo.
+
+Strona:		https://ghidra-sre.org/
+Licencja:	Apache License 2.0Zalety:
+1. Darmowa licencja!
+2. Obsługa wielu rodzajów procesorów
+3. Dekompilator, który czasami radzi sobie znacznie lepiej niż ten z HexRays
+4. Możliwość kolaboracji wielu osób przy tym samym projekcie
+5. System wtyczek i własny interfejs API
+6. Wersje dla Windows, Mac OS X i Linux
+Wady:
+1. Nieco przestarzały interfejs
+2. Kontrowersje związane z samym faktem, że wydała to agencja NSA (niektórzy wszędzie będą węszyć spisek)
+Wtyczki: 
+1. https://gist.github.com/adulau/a3a0eefb7828d52747a9d247a82eeeef
+
+III. .NET Reflector
+
+Jeśli przyjdzie nam się zmierzyć z analizą oprogramowania stworzonego w języku programowania opartym o .NET Framework czyli np. C# lub VB#, niezastąpiony okaże się dekompilator .NET Reflector. Dzięki niemu łatwo i sprawnie będzie można podejrzeć strukturę aplikacji i kod.
+
+Ogromną zaletą Reflectora jest to, że posiada małą, lecz bardzo użyteczną bazę wtyczek, dostępna jest przykładowo wtyczka pozwalająca na odtworzenie całego projektu dla Visual Studio ze zdekompilowanej aplikacji. Dodatkowo integracja z Microsoft Visual Studio pozwala na jednoczesne debugowanie własnego kodu oraz kodu zamkniętych bibliotek.
+
+Ze względu na łatwość dekompilacji programów stworzonych dla .NET Framework, powstało wiele narzędzi zabezpieczających, mowa oczywiście o obfuscatorach, które ze skompilowanych programów usuwają metadane, potrafią zmodyfikować kod IL, szyfrują ciągi tekstowe etc. Jeśli natrafimy na taki program, warto zapoznać się z deobfuscatorem de4dot, który automatycznie potrafi usunąć metody zabezpieczeń kilkudziesięciu typów obfuscatorów.
+
+Strona:		https://www.red-gate.com/products/dotnet-development/reflector/
+Licencja:	Komercyjna od 99 USD oraz darmowa wersja czasowa.
+Zalety:
+1. Znakomita prezentacja i nawigacja po zdekompilowanym kodzie
+2. Dekompilacja do wielu wyjściowych języków C#, VB#, IL
+3. Dekompilacja i debugowanie wprost z Microsoft Visual Studio
+4. Wiele przydatnych wtyczek jak np. patcher Reflexil
+Wady:
+1. Brak obsługi zabezpieczonych aplikacji (brak deobfuscatora)
+2. Powolne uruchamianie (sprawdzanie online licencji)
+Wtyczki: 
+1. Reflexil – edytor kodu .NET - http://reflexil.net
+2. Deblector – debugger - https://deblector.codeplex.com
+3. ReflectionEmitLanguage – generator kodu IL - http://reflectoraddins.codeplex.com/wikipage?title=ReflectionEmitLanguage
+4. Baza wtyczek – https://archive.codeplex.com/?p=reflectoraddins
+
+IV. dnSpy
+
+Prawdziwy kombajn do dekompilacji, edycji pseudokodu IL i debuggowania aplikacji napisanych w .NET. Do tego darmowy i z intuicyjnym oraz nowoczesnym interfejsem graficznym.
+
+Strona:		https://github.com/0xd4d/dnSpy
+Licencja:	GNU GPL v3
+Zalety: 	
+1. Szybkość działania
+2. Prosta edycja kodu IL
+3. Wbudowany debugger
+4. Nowoczesny wygląd
+Wady: 	
+1. Brak
+
+V. Java Decompiler
+
+JD-GUI czy też Java Decompiler to dekompilator jak nazwa wskazuje dla aplikacji Java. Pozwala na przeglądanie kodu skompilowanych unitów *.class lub całych paczek *.jar.
+
+Posiada bardzo użyteczną wyszukiwarkę z filtrowaniem pozwalającą na wyszukiwanie po nazwach typów, konstruktorów, polach, metodach i stałych ciągach tekstowych.
+
+Oprócz samodzielnej aplikacji istnieją również wtyczki dla środowiska programistycznego Eclipse oraz IntelliJ IDEA, które pozwalają na przeglądanie kodu skompilowanych modułów.
+
+Jeśli kiedyś korzystałeś lub nadal korzystasz ze znanego dekompilatora JAD (który przestał być rozwijany w 2001 roku) to najwyższa pora na aktualizację, nie dość, że JD-GUI wspiera nowe elementy języka Java to nawigacja po zdekompilowanym projekcie jest bardzo prosta i przyjemna.
+
+Należy tutaj wspomnieć, że tak samo jak w przypadku aplikacji .NET, które zostały zabezpieczone obfuscatorami, tak samo aplikacje w Java mogą być zabezpieczane i wtedy działanie dekompilatora jest ograniczone lub wręcz niemożliwe.
+
+Strona:		http://jd.benow.ca
+Licencja:	Freeware
+Zalety:
+1. Intuicyjna nawigacja po zdekompilowanym kodzie
+2. Wtyczki dla środowiska Eclipse oraz IntelliJ IDEA
+Wady: 	
+1. Brak obsługi zabezpieczonych aplikacji (brak deobfuscatora)
+2. Brak deasemblacji do IL w przypadku wykrytych błędów
+
+VI. JustDecompile
+
+Darmowa alternatywa dla komercyjnego .NET Reflector od firmy Telerik znanej z komponentów UI. Darmowa nie znaczy gorsza, posiada wbudowaną wyszukiwarkę referencji, generowanie projektu ze zdekompilowanych źródeł oraz obsługę wtyczek, w tym wtyczkę deobfuscatora de4dot.
+
+Strona:		https://www.telerik.com/products/decompiler.aspx
+Licencja:	Freeware
+Zalety:
+1. Obsługa własnych wtyczek
+2. Generowanie wyjściowego kodu w C#, VB# i IL
+3. Wtyczka dla Visual Studio
+Wady:
+1. Jest trochę toporny w obsłudze w porównaniu do .NET Reflectora
+Alternatywy:
+1. dotPeek – darmowy dekompilator od JetBrains - https://www.jetbrains.com/decompiler/
+2. Simple Assembly Explorer – edytor i deasembler dla .NET - https://github.com/wickyhu/simple-assembly-explorer/releases
+3. DisSharp – darmowy dekompilator - http://netdecompiler.com
+
+VII. ReFox
+
+Dekompilator dla aplikacji stworzonych w bazodanowym środowisku programowania Visual FoxPro od firmy Microsoft. Jest to bardzo niszowe rozwiązanie do równie niszowego środowiska, jednak nie istnieją alternatywne rozwiązania pozwalające na analizę takich aplikacji, a te które są dostępne przestały być rozwijane i nie wspierają najnowszych wersji aplikacji VFP. ReFox pozwala na dekompilację klas, podgląd form oraz wbudowanych danych.
+
+Strona:		http://www.refox.net
+Licencja:	Komercyjna od 290 EUR oraz wersja demonstracyjna.
+Zalety:
+1. Dekompilacja klas
+2. Podgląd form
+3. Odtwarzanie projektów Visual FoxPro
+Wady:
+1. Trochę przestarzały interfejs
+2. Czasami nie radzi sobie z dekompilacją kodu
+
+VII. VB Decompiler
+
+Aplikacje stworzone w Visual Basic 5 oraz 6 należą już do przeszłości, jednak wewnętrzna struktura kodu bazująca na P-Code była zalążkiem technologii .NET i od samego początku sprawiała problemy przy analizie kodu, gdyż nie istniały dedykowane narzędzia do jej analizy. Można powiedzieć, że VB Decompiler powstał odrobinę za późno jak na potrzeby rynku, jednak jest niezastąpiony przy analizie aplikacji Visual Basic (EXE, DLL oraz kontrolek OCX) skompilowanych do P-Code (Visual Basic umożliwiał również kompilację do kodu x86).
+
+Strona:		https://www.vb-decompiler.org
+Licencja:	Komercyjna od 99 EUR oraz wersja lite.
+Zalety:
+1. Podgląd kodu form i eventów
+2. System wtyczek
+3. Deasemblacja natywnego kodu x86
+Wady:
+1. Ograniczona nawigacja po zdekompilowanym kodzie
+Alternatywy:
+2. VBDIS4 – dekompilator dla VB4 - http://vbdis4.angelfire.com
+
+VIII. IDR
+
+Deasembler i dekompilator IDR czyli Interactive Delphi Reconstructor służy jedynie do analizy aplikacji stworzonych w popularnym środowisku Delphi. Jest to narzędzie bardzo przydatne w porównaniu np. do IDA z tego względu, że potrafi przeanalizować wewnętrzne struktury aplikacji Delphi, posiada wbudowaną przeglądarkę form, która w łatwy sposób pozwala na szybkie i łatwe odnalezienie przypisanych zdarzeń do kontrolek znajdujących się na formie (np. button1.OnClick). IDR posiada bogate bazy sygnatur standardowych bibliotek środowiska Delphi we wszystkich znanych wersjach, dzięki czemu w wyjściowym deadlistingu zobaczymy przyjazne nazwy funkcji.
+
+Strona 	http://kpnc.org/idr32/en/
+Licencja:	Wersja darmowa z opcją zakupu bardziej aktualnej kopii
+Zalety:
+1. Podgląd form Delphi i eventów kontrolek
+2. Eksport mapy z nazwami funkcji i zmiennych (np. dla IDA lub debuggera)
+3. Wbudowane sygnatury wszystkich wersji środowiska Delphi
+Wady:
+1. Nieregularne aktualizacje
+2. Niejasne zasady dostępu do najnowszych wersji
+

@@ -1,0 +1,26 @@
+Oznaczenia jakie posiada GrSecurity:
+
+  a - Ten obiekt można otworzyć w celu dołączenia.
+  c - Zezwól na utworzenie pliku / katalogu.
+  d - Pozwól na usunięcie pliku / katalogu.
+  f - Potrzebny do oznaczenia potoku używanego do komunikacji z init, aby przenieść przywilej stałej roli; ważne tylko w ramach stałej roli. Przesyłanie następuje tylko wtedy, gdy plik jest otwarty do zapisu.
+  h - Ten obiekt jest ukryty.
+  i - Ten tryb dotyczy tylko plików binarnych. Gdy obiekt jest wykonywany, dziedziczy listę ACL podmiotu, w którym był zawarty.
+  l - Małe litery L. Pozwól na hardlink na tej ścieżce. Łączenie na stałe wymaga co najmniej trybów ci l, a łącze docelowe nie może mieć większych uprawnień niż plik źródłowy.
+  m - Zezwól na tworzenie plików / katalogów setuid / setgid i modyfikację plików / katalogów, aby były setuid / setgid.
+  p - Odrzuć wszystkie ścieżki do tego obiektu.
+  r - Ten obiekt można otworzyć do czytania.
+  t - Ten obiekt może być śledzony, ale nie może modyfikować uruchomionego zadania. Jest to określane jako „ptrace tylko do odczytu”.
+  w - Ten obiekt można otworzyć do pisania lub dołączania.
+  x - Ten obiekt może zostać wykonany (lub mmap'd z PROT_EXEC w zadanie).
+
+Aby firefox miał dostęp do odczytu do folderu domowego użytkownika "/home/username", możliwość robienia wszystkiego (czytanie, pisać, tworzyć i niszczyć pliki, wykonywać) w katalogu "/home/username/Downloads", ale brak możliwości zobaczenia czegokolwiek w "/home/username/secretstuff" i "/", zestaw reguł może wyglądać następująco:
+
+
+# Role: username
+  subject /usr/lib/firefox/firefox o {
+      /                            h
+      /home/username               r
+      /home/username/Downloads     rwxcd
+      /home/username/secretstuff   h
+  }

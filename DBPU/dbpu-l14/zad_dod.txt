@@ -1,0 +1,13 @@
+Kod skopiowany tekst ze strony daje: of ​​user
+do HEX: 6f 66 20 e2 80 8b e2 80 8b 75 73 65 72
+do bit: 01101111 01100110 00100000 11100010 10000000 10001011 11100010 10000000 10001011 01110101 01110011 01100101 01110010
+
+Gdy weźmiemy inne kodowanie np. ISO-8859-1 (Latin1/Western European) To wyjdzie nam: of â€‹â€‹user
+
+Z tego wychodzi, że znak â€‹ nie jest interpreowany w utf-8.
+
+Gdy damy sam tekst: of user
+do HEX: 6f 66 20 75 73 65 72
+do bit: 01101111 01100110 00100000 01110101 01110011 01100101 01110010
+
+Dane tekst widać identycznie w utf-8 na stronie internetowej choć różnią się długością bitów.

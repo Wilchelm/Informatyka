@@ -1,0 +1,44 @@
+W informatyce wyciek zasobów jest szczególnym rodzajem zużycia zasobów przez program komputerowy, w którym program nie uwalnia zasobów, które zdobył. Ten warunek jest zwykle wynikiem błędu w programie. Typowe wycieki zasobów obejmują wycieki pamięci i wycieki, w szczególności wycieki w plikach, choć pamięć jest często rozpatrywana oddzielnie od innych zasobów.
+
+Przykłady zasobów dostępnych w ograniczonej liczbie dla systemu operacyjnego obejmują gniazda internetowe, uchwyty plików, wpisy tabeli procesów i identyfikatory procesów (PID). Wycieki zasobów są często niewielkim problemem, powodującym co najwyżej niewielkie spowolnienie i odzyskiwane po zakończeniu procesów. W innych przypadkach wycieki zasobów mogą stanowić poważny problem, powodując głód zasobów i poważne spowolnienie lub niestabilność systemu, awarię nieszczelnego procesu, inne procesy, a nawet system. Wycieki zasobów często pozostają niezauważone przy niewielkim obciążeniu i krótkich czasach działania, a problemy te objawiają się tylko przy dużym obciążeniu systemu lub systemach, które działają przez długi czas.
+
+Wycieki zasobów stanowią szczególnie problem w przypadku zasobów dostępnych w bardzo małych ilościach. Wyciek unikalnego zasobu, takiego jak blokada, jest szczególnie poważny, ponieważ powoduje natychmiastowe głodzenie zasobów (uniemożliwia uzyskanie innych procesów) i powoduje impas. Celowo wyciekające zasoby mogą zostać wykorzystane w ataku typu „odmowa usługi”, takim jak bomba rozwidlona, ​​a zatem wycieki zasobów stanowią błąd bezpieczeństwa.
+
+Przyczyny
+
+Wycieki zasobów są na ogół spowodowane błędami programistycznymi: zasoby, które zostały przejęte, muszą zostać zwolnione, ale ponieważ uwolnienie często następuje zasadniczo po przejęciu, a w międzyczasie może wystąpić wiele rzeczy (np. Zgłoszony wyjątek lub nieprawidłowe zakończenie programu), jest to łatwe do wydania, które zostanie pominięte.
+
+Bardzo częstym przykładem jest niepowodzenie zamykania otwartych plików, co powoduje wyciek uchwytu pliku; dzieje się tak również w przypadku rur. Innym częstym przykładem jest proces nadrzędny, który nie wywołuje oczekiwania na proces podrzędny, który pozostawia ukończony proces podrzędny jako proces zombie, przeciekając pozycję tabeli procesów.
+
+Zapobieganie i łagodzenie
+
+Zarządzaniu zasobami można zapobiegać lub usuwać wycieki zasobów: techniki programowania lub konstrukcje językowe mogą zapobiegać wyciekom poprzez szybkie uwalnianie zasobów, podczas gdy osobny proces może odzyskać wyciekły zasoby. Wiele wycieków zasobów jest naprawianych przez odzyskiwanie zasobów przez system operacyjny po zakończeniu procesu i wykonaniu zewnętrznego wywołania systemowego.
+
+Wycieki zasobów są zatem przede wszystkim problemem dla długotrwałych procesów, ponieważ przeciekające zasoby przechowywane przez wciąż działające procesy często nie są odzyskiwane; i dla procesów, które szybko zdobywają i wyciekają wiele zasobów.
+
+Handle Leak
+
+Wyciek uchwytu jest rodzajem błędu oprogramowania, który występuje, gdy program komputerowy prosi o uchwyt do zasobu, ale nie zwalnia uchwytu, gdy nie jest już używany. Jeśli zdarza się to często lub wielokrotnie przez dłuższy czas, duża liczba uchwytów może być oznaczona w użyciu, a tym samym niedostępna, powodując problemy z wydajnością lub awarię.
+
+Termin pochodzi od wycieku pamięci. Obsługa wycieków, podobnie jak wycieki pamięci, są szczególnymi przypadkami wycieków zasobów.
+Przyczyny
+
+Jedną z przyczyn wycieku uchwytu jest to, że programista błędnie uważa, że ​​odzyskanie uchwytu do encji po prostu uzyskuje niezarządzane odwołanie, nie rozumiejąc, że faktycznie wykonywane jest zliczanie, kopiowanie lub inna operacja. Inna sytuacja występuje z powodu złych wzorców projektowych obsługi wyjątków, gdy programiści nie biorą pod uwagę, że gdy wystąpi wyjątek i przedwczesne wyjście z podprogramu, kod czyszczenia na końcu procedury może nie zostać wykonany.
+
+Przykładem może być pobranie uchwytu do urządzenia wyświetlającego. Programiści mogą użyć tego uchwytu do sprawdzenia niektórych właściwości (np. Zapytania o obsługiwane rozdzielczości), a następnie po prostu kontynuować bez zwalniania uchwytu. Gdyby uchwyt był tylko wskaźnikiem do jakiejś struktury danych bez dodatkowego zarządzania, zezwolenie na wyjście poza zakres nie spowodowałoby problemu. Jednak w wielu przypadkach takie uchwyty muszą być wyraźnie zamknięte lub zwolnione, aby uniknąć wycieku związanych z nimi zasobów; dokładne wymagania dotyczące tego, co należy zrobić z uchwytem, ​​różnią się w zależności od interfejsu.
+
+Przepełnienie bufora (ang. buffer overflow) – błąd programistyczny polegający na zapisaniu do wyznaczonego obszaru pamięci (bufora) większej ilości danych niż zarezerwował na ten cel programista. Taka sytuacja prowadzi do zamazania danych znajdujących się w pamięci bezpośrednio za buforem, a w rezultacie do błędnego działania programu. Gdy dane, które wpisywane są do bufora, podlegają kontroli osoby o potencjalnie wrogich intencjach, może dojść do nadpisania struktur kontrolnych programu w taki sposób, by zaczął on wykonywać operacje określone przez atakującego.
+
+Przyczyną powstawania takich błędów jest najczęściej brak odpowiedniej wiedzy lub należytej staranności ze strony autora oprogramowania. 
+
+Wyciek pamięci (ang. memory leak) – szczególny rodzaj niezamierzonego użycia pamięci przez program komputerowy, gdy nie zwalnia on zaalokowanej wcześniej pamięci, która nie jest już mu potrzebna, a może nawet rezerwować nową.
+
+Wycieki pamięci są efektem bardzo niepożądanym. Program bowiem zajmuje coraz więcej pamięci, ale nie jest w stanie jej wykorzystać ani zwolnić. Szczególnie w aplikacjach, które działają przez długi czas (w większości serwerowych), efekt wycieku pamięci stopniowo narasta. Sam wyciek prowadzi do spadku wydajności systemu, w skrajnym przypadku zawieszenia się programu lub innych programów, którym system nie może przydzielić wystarczającej ilości pamięci, a nawet zablokowania całego systemu operacyjnego. Doprowadzenie w wadliwym programie do możliwie dużego wycieku pamięci może być jednym ze sposobów wykonania ataku DoS.
+
+Kod programu, który powoduje wycieki pamięci, jest kodem błędnym. 
+
+Row Hammer (również zapisany jako rowhammer) to exploit zabezpieczający, który wykorzystuje niezamierzony i niepożądany efekt uboczny w dynamicznej pamięci o swobodnym dostępie (DRAM), w którym komórki pamięci wyciekają swoje ładunki przez interakcje między sobą, prawdopodobnie przeciekając lub zmieniając zawartość wiersze pamięci w pobliżu, które nie zostały zaadresowane w pierwotnym dostępie do pamięci. To obejście izolacji między komórkami pamięci DRAM wynika z wysokiej gęstości komórek we współczesnej pamięci DRAM i może zostać uruchomione przez specjalnie spreparowane wzorce dostępu do pamięci, które szybko aktywują te same rzędy pamięci wiele razy. Podczas gdy wyciek ładunku z ogniwa jest normalny i łagodzony przez odświeżanie, dodatkowy wyciek występuje podczas ataku młotem wierszy, który powoduje wyciek wystarczającej ilości komórek, aby zmienić jego zawartość w przedziale odświeżania.
+
+Efekt row hammera został wykorzystany w niektórych exploitach eskalacji zabezpieczeń komputerowych i ataki sieciowe są również teoretycznie możliwe w szybkim połączeniu sieciowym między atakującym a ofiarą.
+
+Istnieją różne techniki sprzętowe, aby zapobiec wystąpieniu efektu row hammer, w tym wymagana obsługa niektórych procesorów i typów modułów pamięci DRAM. Row hammer rzadko lub nigdy nie wpływa na moduły DDR i DDR2 SDRAM. Wpływa na wiele modułów DDR3 i DDR4 SDRAM.

@@ -1,0 +1,14 @@
+Bezpieczny klawisz uwagi (secure attention key(SAK)) lub bezpieczna sekwencja uwagi (secure attention sequence(SAS)) to specjalny klawisz lub kombinacja klawiszy, które należy nacisnąć na klawiaturze komputera przed ekranem logowania, co musi być całkowicie godne zaufania dla użytkownika. Jądro systemu operacyjnego, które współdziała bezpośrednio ze sprzętem, jest w stanie wykryć, czy został naciśnięty klawisz bezpiecznej uwagi. Po wykryciu tego zdarzenia jądro rozpoczyna przetwarzanie zaufanego logowania.
+
+Klucz bezpiecznej uwagi został zaprojektowany w taki sposób, aby uniemożliwić fałszowanie danych logowania, ponieważ jądro zawiesi każdy program, w tym programy podszywające się pod proces logowania komputera, przed rozpoczęciem zaufanej operacji logowania.
+
+Control+Alt+Delete (skrót Ctrl+Alt+Del lub [ALT]+[CTRL]+[DEL]) – sekwencja klawiszy mająca specjalne znaczenie w systemach operacyjnych. Pozwala ona, w zależności od rodzaju i wersji systemu na:
+
+1. Natychmiastowe i bezwarunkowe zrestartowanie komputera (np. MS-DOS, Windows 3.x, Windows 9x po dwukrotnym wciśnięciu skrótu)
+2. Zamknięcie systemu i zrestartowanie komputera (np. Linux)
+3. Wyświetlenie okna pozwalającego na administrację systemem (wyświetlenie Menedżera zadań, opcji wylogowania lub zamknięcia systemu i inne) (np. Windows 2000, Windows XP przy wyłączonym szybkim przełączaniu użytkowników, Windows Vista, Windows 7)
+4. Bezpośrednie wyświetlenie Menedżera zadań (np. Windows 9x (okno Zamykanie programu), Windows XP)
+
+Sekwencja Ctrl+Alt+Del w zależności od ustawień może być konieczna przed zalogowaniem w niektórych wersjach systemu Windows. Stanowi ona zabezpieczenie przed keyloggerami: jeśli wyświetlany monit o zalogowanie się stanowi część programu służącego do wykradania haseł, po wciśnięciu tej sekwencji zamiast okna logowania wyświetlony zostanie menedżer zadań lub ekran opcji zabezpieczeń.
+
+Kombinacja Ctrl+Alt+Del zyskała humorystyczne miano trzech króli. W większości systemów operacyjnych jest obsługiwana niskopoziomowo i nie istnieje możliwość jej programowego zablokowania lub przechwycenia.

@@ -1,0 +1,8 @@
+FairPlay jest systemem zabezpieczeń przed nielegalnym używaniem danych cyfrowych (DRM) firmy Apple Computer. Technologia ta wbudowana jest w iPodach, iTunes, oraz iTunes Store. Wszelkie pliki zakupione w iTunes Store za pośrednictwem iTunes są zakodowane właśnie dzięki FairPlay. FairPlay jest technologią szyfrującą pliki muzyczne AAC, która nie pozwala na odsłuchiwanie ich na nieautoryzowanych komputerach oraz innych urządzeniach. 
+
+
+Content Scramble System – system szyfrowania zawartości płyt DVD-Video. Jego celem jest ograniczenie niekontrolowanego przepływu płyt DVD pomiędzy rynkami, na które są wydawane. System opiera się o wykorzystanie zapisanych w odtwarzaczu kluczy kryptograficznych: urządzenie sprzedane w danym rejonie może odtworzyć tylko płyty przeznaczone dla tego obszaru geograficznego, a użytkownik może zmienić ustawienie regionu tylko skończoną liczbę razy w czasie życia urządzenia. 
+
+Advanced Access Content System (AACS) – technologia DRM odpowiedzialna za chronienie płyt HD DVD i blu-ray przed nieautoryzowanym kopiowaniem. 
+
+SCMS (ang. Serial Copy Management System) to system zabezpieczający przed nieograniczonym kopiowaniem nagrań w formacie cyfrowym. Powstał w odpowiedzi na pojawienie się urządzeń DAT (ang. Digital Audio Tape), które umożliwiały tworzenie cyfrowych kopii każdego materiału. Aktualnie system SCMS można znaleźć w urządzeniach CD, DAT, MD, DCC i innych wyposażonych w port cyfrowy (S/PDIF). 

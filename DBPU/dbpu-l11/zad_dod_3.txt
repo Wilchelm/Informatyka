@@ -1,0 +1,1 @@
+drop http any any <> any any (msg: "Expires" ; content: "Expires: Fri, 13" ; sid:4014501)

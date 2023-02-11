@@ -1,0 +1,52 @@
+Schematy ochrony oprogramowania komputerowego:
+
+-> Klucz sprzętowy
+   Klucz sprzętowy zawierający elektroniczny numer seryjny wymagany do uruchomienia oprogramowania; stosunkowo drogi i nie ma możliwości odzyskania po awarii sprzętu.
+
+-> Aktywacja produktu
+   Wymaganie od użytkownika weryfikacji licencji, często poprzez wprowadzenie klucza produktu w celu aktywacji i korzystania z oprogramowania; niektóre schematy aktywacji wymagają wysyłania informacji rejestracyjnych przez Internet, aby zapobiec użyciu tego samego klucza produktu przez wielu użytkowników. W niektórych przypadkach użytkownicy muszą zadzwonić pod numer, aby się zarejestrować i otrzymać numer seryjny specyficzny dla urządzenia.
+
+-> Szyfrowanie magistrali
+   Używanie zaszyfrowanego kodu razem z Bezpiecznym kryptoprocesorem, aby tylko maszyna z kryptoprocesorem mogła uruchomić program; stosowany w systemach wymagających wysokiego bezpieczeństwa, takich jak bankomaty.
+
+-> Plik klucza
+   Plik z kluczem aktywacyjnym, który należy zainstalować w tym samym katalogu co oprogramowanie; podobnie nośnik dysku (często dysk instalacyjny) może być wymagany jako dysk klucza do aktywacji.
+
+-> Morphing kodu
+   Ukrywanie kodu pośredniego za pomocą zaciemnienia kodu, aby logika wykonania nie była widoczna. Ta metoda nie chroni przed śledzeniem środowiska wykonawczego.
+
+Komercyjne systemy ochrony dysków Blu-ray:
+
+-> AACS
+   Zaszyfrowaną treść można odszyfrować tylko przy użyciu kombinacji klucza multimedialnego (uzyskanego z Media Key Block przez jeden z kluczy urządzenia dostępnych dla każdego urządzenia odtwarzającego) i identyfikatora woluminu (unikalne identyfikatory przechowywane na każdym dysku) nośnika.
+
+-> BD +
+   Maszyna wirtualna BD + osadzona w autoryzowanych odtwarzaczach będzie wykonywać programy zawarte na dyskach Blu-ray, umożliwiając weryfikację kluczy odtwarzacza, przekształcanie danych wyjściowych w taki sposób, aby zawartość była nieszyfrowana i / lub wykonywanie natywnego kodu w celu łatania systemu przed lukami w zabezpieczeniach. Oparty na koncepcji samoobrony treści cyfrowych.
+
+-> Znak ROM
+   Rejestratory sprawdzą znak wodny, którego nie mogą powielać urządzenia nagrywające na poziomie konsumenta, pozwalając na autentyczne odtwarzanie filmów, muzyki i gier.
+
+Schematy ochrony cyfrowej transmisji audio/wideo:
+
+-> DTCP
+   Szyfruje połączenia między urządzeniami, więc technologie „cyfrowego domu”, takie jak odtwarzacze DVD i telewizory, są ograniczone.
+
+-> HDCP
+   Urządzenie nadawcze sprawdza przed wysłaniem tego odbiornika jest upoważniony do odbioru danych. Dane są szyfrowane podczas transmisji, aby zapobiec podsłuchowi.
+
+-> System zarządzania kopiowaniem szeregowym
+   Zapisuje w bitach danych subkodu, który wyraża, czy nośnik jest dozwolony do kopiowania (00), kopiuj raz (10), czy kopiuj zabroniony (11).
+
+-> Zdradzieckie śledzenie
+   Zamiast bezpośrednio zapobiegać kopiowaniu, osadza informacje o użytkownikach w plikach, więc jeśli zostaną przesłane, właściciel praw autorskich może dowiedzieć się, kto przesłał plik.
+
+Systemy ochrony innych mediów:
+
+-> CGMS-A (analogowe sygnały telewizyjne)
+   Wstawia kształt fali do nieobrazowego pionowego odstępu wygaszania (VBI) analogowego sygnału wideo, aby kompatybilne urządzenie mogło blokować lub ograniczać nagrywanie po wykryciu kształtu fali.
+
+-> Spiradisc (dyskietka)
+   Zapisuje dane o spiralnych ścieżkach zamiast w koncentrycznych okręgach.
+
+-> USB-Cops (pamięć USB)
+   Używanie zwykłej pamięci USB jako klucza.

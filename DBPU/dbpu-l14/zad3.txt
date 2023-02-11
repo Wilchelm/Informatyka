@@ -1,0 +1,21 @@
+Sudo / Root jest używany za każdym razem, gdy robisz coś, na co zwykły użytkownik nie powinien mieć ryzyka uszkodzenia / zmiany konfiguracji systemu w sposób, na który administrator systemu normalnie nie pozwoliłby. Innymi słowy sudo jest używane podczas ingerencji w system.
+
+Zarządzanie pakietami, edycja plików konfiguracyjnych, instalacja programu ze źródła i nie tylko są to techniczne funkcje administracyjne i mogą drastycznie uszkodzić system, jeśli zrobisz coś nieprawidłowego. W środowisku korporacyjnym, jako Sysadmin, są to rzeczy, których NIE pozwoliłbyś przeciętnemu użytkownikowi zrobić bez mojej wyraźnej wiedzy, stąd sudo.
+
+Na przykład, jeśli plik pakietu / konfiguracji mógłby zostać zmodyfikowany bez podniesionych uprawnień, byłoby bardzo proste dla zewnętrznego źródła, aby po prostu wykonać zdalny kod, który mógłby złamać / naruszyć system. Wymuszając, aby te akcje wymagały dostępu do konta root, zmusza Cię jako użytkownika do podjęcia decyzji, czy te akcje mają miejsce.
+
+Jest bardzo podobny do UAC (System kontroli użytkownika) z Windows, w rzeczywistości to właśnie tam Windows wpadł na pomysł UAC.
+
+Oferta, którą otrzymujesz przy pierwszym użyciu sudo, jest bardzo trafna i bardzo ważna:
+# 1) Szanuj prywatność innych osób.
+# 2) Zastanów się, zanim napiszesz.
+# 3) Z wielką mocą wiąże się wielka odpowiedzialność.
+
+Szczególnie # 2, Pomyśl zanim napiszesz. Jest to ważny powód, dla którego sudo istnieje, kiedy wpiszesz polecenie i odrzuci „musi być root, aby wykonać tę akcję”, zmusza cię do zatrzymania się i POMYŚLENIA o tym, co faktycznie robisz.
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+$ sudo mkdir kat
+
+$ sudo chmod 773 kat
+
+$ sudo ls -l kat
+total 0
+-rw-rw---- 1 root root 0 cze  3 13:46 plik.txt
+
+$ sudo touch kat/plik.txt
+
+$ sudo chmod 660 kat/plik.txt
+
+$ sudo ls -l kat/plik.txt
+-rw-rw---- 1 root root 0 cze  3 13:46 kat/plik.txt
+
+1. Czy możemy sprawdzić jakie są prawa dostępu do plik.txt za pomocą ls -l?
+
+$ ls -l kat
+ls: cannot open directory 'kat': Permission denied
+
+$ ls -l kat/plik.txt
+-rw-rw---- 1 root root 0 cze  3 13:46 kat/plik.txt
+
+2. Czy możemy zmienić zawartość pliku plik.txt?
+
+$ echo "Ala ma kota i psa." >> kat/plik.txt
+bash: kat/plik.txt: Permission denied
+
+$ cat kat/plik.txt
+cat: kat/plik.txt: Permission denied
+
+3. Czy możemy usunąć plik plik.txt?
+
+$ rm kat/plik.txt
+rm: remove write-protected regular empty file 'kat/plik.txt'? yes
+
+$ ls -l kat/plik.txt
+ls: cannot access 'kat/plik.txt': No such file or directory
+
+4. Czy możemy usunąć katalog kat?
+
+$ rmdir kat
+
+$ ls -l
+total 0

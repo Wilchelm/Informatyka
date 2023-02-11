@@ -1,0 +1,22 @@
+mlock () blokuje strony w zakresie adresów zaczynając od addr i
+       kontynuacja dla bajtów len. Wszystkie strony, które zawierają część
+       określony zakres adresów ma gwarancję przebywania w pamięci RAM, gdy
+       połączenie zwraca się pomyślnie; gwarantujemy, że strony pozostaną w pamięci RAM
+       do późniejszego odblokowania.
+
+munlock () odblokowuje strony w zakresie adresów zaczynając od addr i
+       kontynuacja dla bajtów len. Po tej rozmowie wszystkie strony zawierające
+       część określonego zakresu pamięci można przenieść na zewnętrzną wymianę
+       ponownie spacja przy jądrze.
+
+mlockall () blokuje wszystkie strony zmapowane w przestrzeni adresowej
+       proces dzwonienia. Obejmuje to strony kodu, danych i stosu
+       segment, a także biblioteki współdzielone, dane jądra przestrzeni użytkownika, współdzielone
+       pamięć i pliki mapowane w pamięci. Wszystkie zmapowane strony są gwarantowane
+       być rezydentem w pamięci RAM po pomyślnym powrocie połączenia; strony są
+       gwarantuje pozostanie w pamięci RAM, dopóki nie zostanie odblokowane.
+
+munlockall () odblokowuje wszystkie strony zmapowane w przestrzeni adresowej
+       proces dzwonienia.
+
+Przypinanie aplikacji do pamięci jest specyficzne dla systemu operacyjnego i nie jest obsługiwane przez standardowe interfejsy API JVM.

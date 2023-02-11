@@ -1,0 +1,190 @@
+Przykładowa polityka bezpieczeństwa
+
+I. Definicja bezpieczeństwa
+
+Przez bezpieczeństwo informacji w systemach IT rozumie się zapewnienie:
+
+1. Poufności informacji (uniemożliwienie dostępu do danych osobom trzecim).
+2. Integralności informacji  (uniknięcie nieautoryzowanych zmian w danych).
+3. Dostępności informacji (zapewnienie dostępu do danych, w każdym momencie żądanym przez użytkownika)
+4. Rozliczalności operacji wykonywanych na informacjach (zapewnie przechowywania pełnej historii dostępu do danych, wraz z informacją kto taki dostęp uzyskał).
+
+Zarząd Firmy stosuje adekwatne do sytuacji środki aby zapewnić bezpieczeństwo informacji w Firmie.
+
+II. Oznaczanie danych
+
+Jako dane podlegające szczególnej ochronie (informacje poufne) rozumie się:
+
+1. informacje  o realizowanych kontraktach (zarówno planowane, bieżące jak i historyczne),
+2. informacje finansowe Firmy,
+3. informacje organizacyjne,
+4. dane dostępowe do systemów IT,
+5. dane osobowe,
+6. informacje stanowiące o przewadze konkurencyjnej Firmy,
+7. inne informacje oznaczone jako „informacji poufne” lub „dane poufne”.
+
+III. Zasada minimalnych uprawnień
+
+W ramach nadawania uprawnień do danych przetwarzanych w systemach IT Firmy należy stosować zasadę „minimalnych uprawnień”, to znaczy przydzielać minimalne uprawnienia, które są konieczne do wykonywania pracy na danym stanowisku.
+
+Przykładowo:  pracując na komputerze PC każdy pracownik powinien posiadać tylko takie uprawnienia jakie są wymagane do realizacji swoich obowiązków (a nie na przykład uprawnienia administracyjne).
+
+IV. Zasada wielowarstwowych zabezpieczeń
+
+System IT Firmy powinien być chroniony równolegle na wielu poziomach.  Zapewnia to pełniejszą oraz skuteczniejszą ochronę danych.
+
+Przykładowo: w celu ochrony przed wirusami stosuje się równolegle wiele technik: oprogramowanie antywirusowe, systemy typu firewall, odpowiednią konfigurację systemu aktualizacji Windows.
+
+V. Zasada ograniczania dostępu
+
+Domyślnymi uprawnieniami w systemach IT powinno być zabronienie dostępu. Dopiero w przypadku zaistnienia odpowiedniej potrzeby, administrator IT przyznaje stosowne uprawnienia.
+
+Przykładowo: domyślnie dostęp do bazy przechowującej dane klientów jest zabroniony. Stosowny dostęp zostaje przyznany osobie, której zajmowane stanowisko wiąże się z koniecznością pracy w tego typu systemie.
+
+VI. Dostęp do danych poufnych na stacjach PC.
+
+1. Dostęp do danych poufnych w LAN realizowany jest na przeznaczonych do tego serwerach.
+2. Dostęp do danych poufnych (udany lub nieudany) na serwerach jest odnotowywany. Lista systemów objętych tego typu działaniami dostępna jest w osobnym dokumencie.
+3. Jeśli stacja PC jest komputerem przenośnym (laptopem) to musi ona być dodatkowo zabezpieczona (np. z wykorzystaniem szyfrowania dysku twardego – FDE).
+4. Dostęp do danych poufnych z zewnątrz firmy powinien odbywać się z wykorzystaniem kanału szyfrowanego (np. VPN, dostęp do e-mail poprzez protokół szyfrowany).
+5. Dostęp do danych poufnych poprzez firmową sieć WiFi powinien odbywać się z wykorzystaniem kanału szyfrowanego (np. VPN).
+
+VII. Zabezpieczenie stacji roboczych
+
+1. Stacje robocze powinny być zabezpieczone przed nieautoryzowanych dostępem osób trzecich.
+2. Minimalne środki ochrony to:
+   a) zainstalowane na stacjach systemy typu: firewall oraz antywirus,
+   b) wdrożony system aktualizacji systemu operacyjnego oraz jego składników,
+   c) wymaganie podania hasła przed uzyskaniem dostępu do stacji,
+   d) niepozostawianie niezablokowanych stacji PC bez nadzoru,
+   e) bieżąca praca z wykorzystaniem konta nieposiadającego uprawnień administracyjnych.
+3. Szczegółowe informacje dotyczące korzystania ze stacji roboczych można znaleźć w stosownym dokumencie.
+
+VIII. Wykorzystanie haseł
+
+1. Hasła powinny być okresowo zmieniane.
+2. Hasła nie mogą być przechowywane w formie otwartej (nie zaszyfrowanej).
+3. Hasła nie powinny być łatwe do odgadnięcia, to znaczy:
+   a) powinny składać się z minimum 9 znaków, w tym jeden znak specjalny
+   b) nie mogą przybierać prostych form, np. 123456789, stanislaw, dom99, haslo, Magda8, itp.
+4. Hasła mogą być tworzone według łączenia „losowych” (tj nie istniejących w popularnych słownikach) sylab/słów, np,: mal-tra-laza-#topa. W ten sposób można uzyskać długie hasło stosunkowo proste do zapamiętania.
+
+IX. Odpowiedzialność pracowników za dane poufne
+
+Każdy pracownik odpowiada za utrzymanie w tajemnicy danych poufnych, do których dostęp został mu powierzony.
+
+X. Monitoring bezpieczeństwa
+
+W celu zapewnienia ochrony informacji Zarząd może stosować monitoring wykorzystania firmowej infrastruktury informatycznej, w szczególności obejmujący następujące elementy:
+1. analiza oprogramowania wykorzystanego na stacjach roboczych,
+2. analiza stacji roboczych pod względem wykorzystania nielegalnego oprogramowania / plików multimedialnych oraz innych elementów naruszających Prawo Autorskie,
+3. analiza odwiedzanych stron WWW,
+4. analiza godzin pracy na stanowiskach komputerowych,
+5. analiza wszelakich dostępów (autoryzowanych oraz nieautoryzowanych) do systemów IT będących w posiadaniu Firmy,
+6. Analiza ruchu sieciowego pod względem komunikacji, szkodliwej dla bezpieczeństwa danych Firmy.
+
+Monitoring bezpieczeństwa musi odbywać się z zachowaniem obowiązującego prawa.
+
+XI. Edukacja pracowników w zakresie bezpieczeństwa
+
+Firma dba o cykliczną edukację pracowników w zakresie bezpieczeństwa informacji. Pracownicy w zależności od zajmowanego stanowiska mogą uczestniczyć w szkoleniach z zakresu:
+
+1. ochrony Danych Osobowych,
+2. świadomości istnienia problemów bezpieczeństwa,
+3. szczegółowych aspektów bezpieczeństwa.
+    
+XII. Odpowiedzialność pracowników za dane dostępowe do systemów
+
+Każdy pracownik zobowiązany jest do ochrony swoich danych dostępowych do systemów informatycznych. Dane dostępowe obejmują między innymi takie elementy jak:
+
+1. hasła dostępowe,
+2. klucze softwareowe (pliki umożliwiające dostęp – np. certyfikaty do VPN) oraz sprzętowe,
+3. inne mechanizmy umożliwiające dostęp do systemów IT.
+
+XIII. Przykłady ochrony danych dostępowych:
+
+1. nieprzekazywanie dostępów do systemów IT innym osobom (np. przekazywanie swojego hasła dostępowego osobom trzecim),
+2.  nieprzechowywanie danych w miejscach publicznych (np. zapisywanie haseł dostępowych w łatwo dostępnych miejscach),
+3. Ochrona danych dostępowych przed kradzieżą przez osoby trzecie.
+
+XIV. Transport danych poufnych przez pracowników
+
+Zabrania się przenoszenia niezabezpieczonych danych poufnych poza teren Firmy. W szczególności zabrania się przenoszenia danych poufnych na nośnikach elektronicznych (np.: pendrive, nośniki CD) poza teren Firmy.
+
+XV. Korzystanie z firmowej infrastruktury IT w celach prywatnych
+
+Zabrania się korzystania firmowej infrastruktury IT w celach prywatnych.
+
+XVI. Sieć lokalna (LAN).
+
+Sieć lokalna musi być odpowiednio chroniona przed nieuprawnionym dostępem, przykładowo:
+
+1. istotne serwery muszą być odseparowowane od sieci klienckich,
+2. gniazdka sieciowe dostępne publiczne muszą być nieaktywne,
+3. goście nie mogą uzyskiwać dostępu do sieci LAN.
+
+Szczegółowe informacje dotyczące przyjętych metod ochrony zostały zawarte w osobnej procedurze.
+
+XVII. Systemy IT / serwery
+
+1. Systemy IT przechowujące dane poufne (np. dane osobowe) muszą być odpowiednio zabezpieczone.
+2. W szczególności należy dbać o poufność, integralność i rozliczalność danych przetwarzanych w systemach.
+3. Szczegółowe informacje dotyczące przyjętych metod ochrony zostały zawarte w osobnej procedurze.
+
+XVIII. Dokumentowanie bezpieczeństwa
+
+Firma prowadzi dokumentacje w zakresie:
+
+1. obecnie wykorzystywanych metod zabezpieczeń systemów IT,
+2. budowy sieci IT,
+3. ewentualnych naruszeń bezpieczeństwa systemów IT,
+4. dostępów do zbiorów danych / systemów udzielonych pracownikom.
+
+Wszelkie zmiany w obszarach objętych dokumentacją, uwzględniane są w tejże dokumentacji.
+
+XIX. Dane osobowe
+
+Szczegółowe wytyczne dotyczące przetwarzania danych osobowych zawarte są w osobnym dokumencie.
+
+XX. Publiczne udostępnianie infrastruktury IT
+
+Infrastruktura udostępniona publicznie musi być szczególnie zabezpieczona. Przykładowe środki bezpieczeństwa:
+
+1. Separacja od sieci LAN (np. z wykorzystaniem strefy DMZ)
+2. Wykonanie hardeningu systemu (zwiększenia bezpieczeństwa oferowanego domyślne przez system)
+3. Wewnętrzna lub zewnętrzna weryfikacja bezpieczeństwa systemu (np. poprzez realizację testów penetracyjnych)
+  
+XXI.Kopie zapasowe.
+
+1. Każde istotne dane (w tym dane poufne) powinny być archiwizowane na wypadek awarii w firmowej infrastrukturze IT.
+2. Nośniki z kopiami zapasowymi powinny być przechowywane w miejscu uniemożliwiającym dostęp osobom nieupoważnionym.
+3. Okresowo kopie zapasowe muszą być testowane pod względem rzeczywistej możliwości odtworzenia danych.
+
+XXII. Dostęp do systemów IT po rozwiązaniu umowy o pracę
+
+W przypadku rozwiązania umowy o pracę z pracownikiem, dezaktywowane są wszelakie jego dostępy w systemach IT.
+
+XXIII. Naruszenie bezpieczeństwa
+
+Wszelakie podejrzenia naruszenia bezpieczeństwa danych w Firmie należy zgłaszać  w formie ustnej lub za pośrednictwem poczty elektronicznej do Zarządu Spółki.
+
+Każdy incydent jest odnotowywany w stosownej bazie danych, a Zarząd Firmy podejmuje stosowne kroki zaradcze.
+
+XXIV. Weryfikacja przestrzegania polityki bezpieczeństwa.
+
+Zarząd okresowo wykonuje wewnętrzny lub zewnętrzny audyt bezpieczeństwa mający na celu wykrycie ewentualnych uchybień w realizacji założeń polityki bezpieczeństwa.
+Zastrzeżenia / zasady korzystania z dokumentu
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Dodaję to poniżej, bo było na stronie.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+    Powyższa przykładowa polityka bezpieczeństwa może być wykorzystywana na wewnętrzne potrzeby firmy bezpłatnie całości lub w części.
+    Dokument nie może być udostępniany publicznie w innym miejscu niż niniejsza strona www (https://securitum.pl/baza-wiedzy/przykladowa-polityka-bezpieczenstwa/).
+    Zabrania się wykorzystywania dokumentu w celach odsprzedaży / świadczenia komercyjnych usług.
+    Powyższa przykładowa polityka nie jest Polityką Bezpieczeństwa w rozumieniu Ustawy o Ochronie Danych Osobowych
+    Za prawidłowe – w tym zgodne z prawem – wdrożenie dokumentu polityki bezpieczeństwa odpowiada osoba wdrażająca.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+We wczesnych wersjach Unixa była dostępna lista użytkowników. Szybko ten problem rozwiązano.
+Jednak pojawił się także nowy problem tj. można było wizualnie od razu stwierdzić czy użytkownik istnieje. Ponieważ funkcja crypt() zasjmowała dużo czasu, a jak nie isniał to od razu była się kończyło. Bardzo dobrym sposobem na taki atak jest dodanie funkcji czekania tj. wait(). Dzięki temu nie można w łatwy sposób sprawdzić i dodatkowo spowoduje, że porgramy do zgadywania użytkowników będą kosztowały zbyt dużo czasu, aby były opłacalne.
