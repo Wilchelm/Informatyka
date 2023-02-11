@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" <meta charset="UTF-8">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+#myInput {
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 72%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+}
+
+#myInput2 {
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+}
+
+#myUL {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#myUL li a {
+	border: 1px solid #ddd;
+	margin-top: -1px; /* Prevent double borders */
+	background-color: #ffffff;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block;
+}
+
+#myButton {
+	background-color: #6a53f0;
+	border-radius:20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	width: 19%;
+	padding:13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	font-size: 16px;
+	border: 1px solid #ddd;
+}
+
+#myButton2 {
+	background-color: #6a53f0;
+	border-radius:20px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	width: 10%;
+	padding:13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+	font-size: 16px;
+	border: 1px solid #ddd;
+}
+
+
+#myUL li a:hover:not(.header) {
+	background-color: #eee;
+}
+
+#myPagination button {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	background-color: #ffffff
+}
+	
+</style>
+</head>
+<body bgcolor="#E6E6FA">
+
+<h2 align="center">My Search Engine</h2>
+<form align="center">
+<h4>    Text:
+<input type="text" id="myInput" placeholder="Write text..." title="Type in a name">
+<button id="myButton" onclick="myFunction(0)">Search</button>
+</h4>
+</form>
+<form>
+<h4>Number of rows:
+<input id="myInput2" type="number" value=5/>
+<button id="myButton2" onclick="changeRows()">Ok</button>
+</h4>
+</form>
+<p id="demo1"></p>
+<p>
+<p id="demo2"></p>
+<p>
+<p>
+<ul id="myUL">
+</ul>
+<div id="myPagination">
+</div>
+<script>
+var rows = 5;
+
+function myFunction(x) {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+	var xhr = new XMLHttpRequest();
+	var input;
+	input = document.getElementById("myInput");
+	var jsonData;
+	var start = x;
+
+	xhr.open("Get", 'http://localhost:8983/solr/core1/select?q=text%3A"'+input.value+'"&rows='+rows+'&start='+start, true);
+	//alert('http://localhost:8983/solr/core1/select?q=text%3A"'+input.value+'"&rows='+rows+'&start=0');
+	xhr.send();
+	xhr.onload=function(){
+		jsonData=JSON.parse(xhr.responseText);
+		document.getElementById("demo1").innerHTML = "Writed text: " + input.value;
+		document.getElementById("demo2").innerHTML = "Numbers of results: " + jsonData.response.numFound;
+		if (jsonData.response.numFound != 0) {
+			if (jsonData.response.numFound > rows) {
+				var text = "";
+				var i = 0;
+				do {
+					var a = JSON.stringify(jsonData.response.docs[i].title);
+					var b = JSON.stringify(jsonData.response.docs[i].text);
+					var c = a.replace(new RegExp('(' + input.value + ')','ig'), '<b>$1</b>');				
+					var d = b.replace(new RegExp('(' + input.value + ')','ig'), '<b>$1</b>');
+					var e = d.replace(/\\n/gi, '<br>');
+					text += "<li><a>" + c + "<br><br><small>" + e + "</a></li><br><br>";
+					i++;
+				}
+				while (i < rows);
+				document.getElementById("myUL").innerHTML = text;
+			
+				var text2 = "";
+				var i2 = 0;
+				var blabla = parseInt(rows);
+				var bla = parseInt(i2);
+				var i3 = 1;
+				do {
+					text2 += '<button onclick="myFunction('+bla+')">'+i3+'</button>';
+					bla += blabla;
+					i3 += 1;
+				}
+				while (jsonData.response.numFound > bla);
+				document.getElementById("myPagination").innerHTML = text2;	
+			} else {
+				var text = "";
+				var i = 0;
+				do {
+					var a = JSON.stringify(jsonData.response.docs[i].title);
+					var b = JSON.stringify(jsonData.response.docs[i].text);
+					var c = a.replace(new RegExp('(' + input.value + ')','ig'), '<b>$1</b>');				
+					var d = b.replace(new RegExp('(' + input.value + ')','ig'), '<b>$1</b>');
+					var e = d.replace(/\\n/gi, '<br>');
+					text += "<li><a>" + c + "<br><br><small>" + e + "</a></li><br><br>";
+					i++;
+				}
+				while (i < jsonData.response.numFound);
+				document.getElementById("myUL").innerHTML = text;
+			}
+		}
+	};	
+};
+
+function changeRows() {
+	var input = document.getElementById("myInput2").value;
+	rows = input;
+	alert("Number of rows changed");
+};
+
+
+</script>
+
+</body>
+</html>
+
