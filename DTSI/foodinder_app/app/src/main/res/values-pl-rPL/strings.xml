@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Foodinder</string>
+    <string name="attentio" translatable="false">Proszę wybrać liczbę z przedziału 5-99</string>
+    <string name="change" translatable="false">Zmień</string>
+    <string name="proposition" translatable="false">Danie dnia:</string>
+    <string name="start" translatable="false">Rozpocznij</string>
+    <string name="text" translatable="false">Wpisz liczbę dań jaką chcesz przeanalizować:</string>
+    <string name="yourproposition">Najbardziej dopasowane danie:</string>
+</resources>

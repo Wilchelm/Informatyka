@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Foodinder</string>
+    <string name="start">Start</string>
+    <string name="text">Enter the number of dishes to be analyzed:</string>
+    <string name="change">Change</string>
+    <string name="proposition">Dish of the day:</string>
+    <string name="attentio">Please enter the number in the range of 5-99</string>
+    <string name="yourproposition">Your the best matched dish:</string>
+</resources>

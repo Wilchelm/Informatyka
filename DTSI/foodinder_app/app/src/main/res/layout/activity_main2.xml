@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:text="@string/proposition" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/pom"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textView2"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:id="@+id/avatar2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="75dp"
+            android:contentDescription="@null"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_gravity="bottom"
+            android:gravity="center|left"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/name2"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/pom"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:text="@string/text" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:text="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/editText"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:text="@string/start" />
+
+</RelativeLayout>
