@@ -1,0 +1,9 @@
+allocatemem(120*10^6);
+{
+p=random(10^30);
+g=random(p);
+x=random(p);
+y=Mod(g,p)^x;
+print("y=",lift(y));
+}
+\q;

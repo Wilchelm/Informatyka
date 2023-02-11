@@ -1,0 +1,15 @@
+allocatemem(120*10^6);
+p=random(2^1000);
+while(!isprime(p),p=random(2^1000));
+q=random(p);
+while(!isprime(q),q=random(p));
+n=p*q;
+fi=(p-1)*(q-1);
+e=random(fi);
+while(gcd(e,fi)!=1 , e=random(fi));
+d=lift(Mod(e,fi)^(-1));
+write("publiczny.txt","e=",e);
+write("publiczny.txt","n=",n);
+write("prywatny.txt","d=",d);
+write("prywatny.txt","n=",n);
+\q;

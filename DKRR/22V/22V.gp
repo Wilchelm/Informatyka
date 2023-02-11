@@ -1,0 +1,15 @@
+{
+q=41;
+p=3;
+fp=Mod(1,p)*(x^6)-Mod(1,p)*x^4+Mod(1,p)*x^3+Mod(1,p)*x^2-Mod(1,p);
+fq=Mod(1,q)*x^6-Mod(1,q)*x^4+Mod(1,q)*x^3+Mod(1,q)*x^2-Mod(1,q);
+g=Mod(1,q)*x^6+Mod(1,q)*x^4-Mod(1,q)*x^2-Mod(1,q)*x;
+fpModN=Mod(fp,x^7-1);
+fqModN=Mod(fq,x^7-1);
+F=fpModN^(-1);
+G=fqModN^(-1);
+h=G*g;
+print("F=",F);
+print("G=",G);
+print("h=",h);
+}

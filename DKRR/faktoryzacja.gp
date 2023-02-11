@@ -1,0 +1,13 @@
+allocatemem(120*10^6);
+read("rsa4.out");
+t=e*d-1;
+a=random(n)+1;
+s=0;
+while(lift(Mod(t,2))==0, s=s+1 ; t=t/2);
+if(gcd(a,n)>1, p=gcd(a,n));
+v=lift(Mod(a,n)^t);
+if(1==lift(Mod(v,n)), print("brak sukcesu"));
+while(1!=lift(Mod(v,n)),v0=lift(Mod(v,n)); v=lift(Mod(v,n)^2));
+p=gcd( v0 + 1, n);
+q=n\p;
+\q;

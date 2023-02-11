@@ -1,0 +1,13 @@
+allocatemem(120*10^6);
+read("PrivateKey.out");
+M = 123456;
+k = random(p);
+r = lift(Mod(q,p)^k);
+s = lift(Mod((M - (x*r)) * (k^(-1)),(p-1)));
+write("Podpis.out","M=",M);
+write("Podpis.out","r=",r);
+write("Podpis.out","s=",s);
+print("M=",M);
+print("r=",r);
+print("s=",s);
+\q;
