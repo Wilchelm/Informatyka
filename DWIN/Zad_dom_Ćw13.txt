@@ -1,0 +1,12 @@
+Parados urodzinowy jest to paradoks rozwiązujący problem znalezienia takiej liczby osób, aby prawdopodobieństwo powtarzania się takiego samego dnia urodzin było większe od 1/2.
+Rozwiązaniem danego paradoksu są 23 osoby. To znaczy, że w grupie 23 osobowej prawdopodobieństwo takiego samego dnia urodzin jest większe od 1/2.
+
+Atak urodzinowy to atak brutalny (sprawdzający wszystkie kombinacje) mający na celu znalezienia kolizji funkcji haszującej wykorzystujący powyższy paradok urodzinowy. To znaczy, że aby otrzymać taką samą liczbę po zastosowaniu funkcji haszującej wystarczy mieć znacznie mniejszy zbiór aniżeli zbiór funkcji haszującej.
+
+Wzór paradoksu urodzinowego
+wynik = e^(-K * (K - 1) / (2 * N))
+prawdopodobienstwo = 1 - wynik
+
+Przykładowo, aby otrzymać dwa identyczne ciągi 32 bitowe wystarczy wygenerować ich 77164. Przy czym 2^32 to 4294967296.
+
+1-e^(-77164*(77164-1) / (2*4294967296)) = 0.5000067979

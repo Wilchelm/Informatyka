@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sklep [
+<!ELEMENT sklep (dzial+)>
+<!ELEMENT dzial (polki+)>
+<!ATTLIST dzial nazwa CDATA #REQUIRED>
+<!ELEMENT polki ((produkt)*)>
+<!ATTLIST polki kategoria CDATA #REQUIRED>
+<!ELEMENT produkt (nazwa_produktu, opis, cena)>
+<!ELEMENT nazwa_produktu (#PCDATA)>
+<!ELEMENT opis (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+]>
+
+<sklep>
+	<dzial nazwa="RTV">
+		<polki kategoria="telewizory">
+			<produkt>
+				<nazwa_produktu>Samsung QLED 8K QE75Q950TST</nazwa_produktu>
+				<opis>Telewizor 8K</opis>
+				<cena>29999</cena>
+			</produkt>
+			<produkt>
+				<nazwa_produktu>Sony KD-65XH9096</nazwa_produktu>
+				<opis>Telewizor 4K</opis>
+				<cena>4799</cena>
+			</produkt>
+		</polki>
+		<polki kategoria="radia">
+			<produkt>
+				<nazwa_produktu>Sencor SPT 4700</nazwa_produktu>
+				<opis>Klasyczny radioodbiornik</opis>
+				<cena>219</cena>
+			</produkt>
+			<produkt>
+				<nazwa_produktu>Sharp XL-B510</nazwa_produktu>
+				<opis>Miniwieża</opis>
+				<cena>299</cena>
+			</produkt>
+		</polki>
+	</dzial>
+	<dzial nazwa="komputery">
+		<polki kategoria="laptopy">
+			<produkt>
+				<nazwa_produktu>ASUS ROG Strix G15 i7-10750H - 16GB RAM - 512GB Dysk - RTX2060 Grafika</nazwa_produktu>
+				<opis>Laptop gamingowy</opis>
+				<cena>6499</cena>
+			</produkt>
+			<produkt>
+				<nazwa_produktu>Lenovo Yoga S730-13IML 13,3" i5-10210U - 8GB RAM - 256GB Dysk</nazwa_produktu>
+				<opis>Nowoczesny Ultrabook</opis>
+				<cena>2999</cena>
+			</produkt>
+		</polki>
+		<polki kategoria="monitory">
+			<produkt>
+				<nazwa_produktu>LG 27UL850-W</nazwa_produktu>
+				<opis>Monitor 4K</opis>
+				<cena>1999</cena>
+			</produkt>
+			<produkt>
+				<nazwa_produktu>LG 29UB67-B</nazwa_produktu>
+				<opis>Ultrapanoramiczny monitor</opis>
+				<cena>1169</cena>
+			</produkt>
+		</polki>
+	</dzial>
+	<dzial nazwa="telefony">
+		<polki kategoria="smartfony">
+			<produkt>
+				<nazwa_produktu>Xiaomi Redmi Note 8 Pro 6/128GB (czarny)</nazwa_produktu>
+				<opis>Xiaomi najlepsze</opis>
+				<cena>999</cena>
+			</produkt>
+			<produkt>
+				<nazwa_produktu>Apple iPhone 11 64GB (czarny)</nazwa_produktu>
+				<opis>Liczy się logo</opis>
+				<cena>2979</cena>
+			</produkt>
+		</polki>
+		<polki kategoria="telefony klasyczne">
+			<produkt>
+				<nazwa_produktu>Philips Xenium E106</nazwa_produktu>
+				<opis>Ma kolorowy ekran</opis>
+				<cena>49</cena>
+			</produkt>
+			<produkt>
+				<nazwa_produktu>Nokia 8110 4G (żółty)</nazwa_produktu>
+				<opis>Wygląda jak banan</opis>
+				<cena>219</cena>
+			</produkt>
+		</polki>
+	</dzial>
+</sklep>

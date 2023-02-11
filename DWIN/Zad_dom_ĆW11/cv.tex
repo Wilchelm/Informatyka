@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{polski}
+\usepackage[margin=3cm]{geometry}
+\usepackage{array, xcolor}
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
+\newcolumntype{R}{p{0.8\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+\title{\bfseries\Huge Imię Nazwisko}
+\author{mail@mail.mail}
+\date{}
+\begin{document}
+	\maketitle
+	\begin{minipage}[ht]{0.48\textwidth}
+		ul.Nowa Droga 25\\
+		Nowa Wieś 12-345\\
+		Polska
+	\end{minipage}
+	\begin{minipage}[ht]{0.48\textwidth}
+		Poznań\\
+		1 stycznia 1000\\
+		+48 123 456 789
+	\end{minipage}
+
+	\section*{Edukacja}
+	\begin{tabular}{L!{\VRule}R}
+		1020--teraz&{\bf Uniwersytet im. Adama Mickiewicza w Poznaniu, kierunek Biotechnologia.}\\[5pt]
+		1016--1019&Uniwersytet im. Adama Mickiewicza w Poznaniu, kierunek Biologia.\\
+		1012--1015&XV Liceum Ogólnokształcące im. prof. Wiktora Degi w Poznaniu.\\
+	\end{tabular}
+
+	\section*{Języki}
+	\begin{tabular}{L!{\VRule}R}
+		Angielski&Zaawansowany\\
+		Niemiecki&Początkujący\\
+		Polski&Zaawansowany\\
+	\end{tabular}
+
+	\section*{Doświadczenie zawodowe}
+	\begin{tabular}{L!{\VRule}R}
+		1017--1017&{\bf BMZ}\\
+		&Tworzenie stron internetowych.\\
+\end{tabular}
+
+\end{document}
