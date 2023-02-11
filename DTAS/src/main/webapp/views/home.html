@@ -1,0 +1,42 @@
+<div ng-controller="UserController as ctrl">
+    <div class="jumbotron" ng-if="!ctrl.isLogged()">
+        <h1>Witaj</h1>
+        <p>
+            Proin elementum velit eu magna dignissim varius. Proin id tellus facilisis, ultrices nisl ac, fermentum nulla. Nullam placerat ac quam vitae imperdiet.
+        </p>
+
+        <p>
+            Donec tristique porta augue, nec consequat lectus laoreet eget.
+        </p>
+
+        <p>
+            <a class="btn btn-lg btn-primary" ui-sref="register" role="button">Załóż konto &raquo;</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-8 col-xs-12" ng-controller="PostController as ctrl">
+        <h3>Ostatnie wpisy</h3>
+
+        <div ng-repeat="post in ctrl.recentlyCreated" class="form-group col-md-12" layout="row" layout-align="center center">
+            <fieldset disabled><legend><h2 style="color: gray;font-weight: bold;"><a href="#/post/{{post.id}}">{{post.title}}</a></h2></legend></fieldset>
+            <p style="white-space:pre-line;background: white;font-size: 16px;border-radius: 1px;color: black;border-width: 5px;" >{{post.excerpt}}...</p>
+            <cite style="color: black;">Utworzony przez
+                <a ui-sref="profile({id: post.author.id, name: post.author.name})">{{post.author.name}}</a>
+            </cite>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-xs-12" ng-controller="UserController as ctrl">
+        <h3>Ostatnio zarejestrowani</h3>
+
+        <ul class="list-unstyled">
+            <li ng-repeat="u in ctrl.recentlyRegistered" style="display: inline-block;">
+                <a ui-sref="profile({id: u.id, name: u.name})" ng-bind="u.name" class="last-user"></a>
+            </li>
+        </ul>
+
+    </div>
+</div>

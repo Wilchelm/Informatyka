@@ -1,0 +1,109 @@
+<h3>Wyszukiwarka</h3>
+
+<form class="form-horizontal">
+    <div class="row">
+        <div class="form-group col-md-12">
+            <label class="col-md-1 control-lable">Szukaj w </label>
+            <select ng-model="myVar">
+                <option value="post">Post
+                <option value="user">User
+            </select>
+        </div>
+    </div>
+</form>
+
+<div ng-switch="myVar">
+    <div ng-switch-when="post">
+
+        <div class="generic-container" ng-controller="SearchController as ctrl">
+            <form name="myForm" class="form-horizontal">
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="col-md-1 control-lable" for="name">Tytuł</label>
+                        <div class="col-md-7">
+                            <input type="text" ng-model="ctrl.title" id="title"
+                                   class="username form-control input-sm" placeholder="Wpisz tytuł" required
+                                   ng-minlength="3"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-actions floatRight">
+                        <input type="submit" value="Szukaj" class="btn btn-primary btn-sm"
+                               ng-disabled="myForm.$invalid" ng-click="ctrl.searchPosts()">
+                    </div>
+                </div>
+
+                <div ng-if="ctrl.notFoundPosts" class="row" style="padding-top: 30px;">
+                    <div class="col-xs-12">
+                        <div class="alert alert-danger">Nic nie znaleziono postów spełniających zadane kryteria</div>
+                    </div>
+                </div>
+
+                <div ng-if="ctrl.showResults" class="row" style="padding-top: 30px;">
+                    <div class="col-xs-12">
+                        <h3>Wyniki wyszukiwania:</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <ul class="list-unstyled">
+                        <li ng-repeat="p in ctrl.results" style="display: inline-block;">
+                            <a href="#/post/{{p.id}}" ng-bind="p.title" class="last-user"></a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div ng-switch-when="user">
+
+        <div class="generic-container" ng-controller="SearchController as ctrl">
+            <form name="myForm" class="form-horizontal">
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label class="col-md-1 control-lable" for="name">Nick</label>
+                        <div class="col-md-7">
+                            <input type="text" ng-model="ctrl.username" id="name"
+                                   class="username form-control input-sm" placeholder="Wpisz nick" required
+                                   ng-minlength="3"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-actions floatRight">
+                        <input type="submit" value="Szukaj" class="btn btn-primary btn-sm"
+                               ng-disabled="myForm.$invalid" ng-click="ctrl.searchUsers()">
+                    </div>
+                </div>
+
+                <div ng-if="ctrl.notFound" class="row" style="padding-top: 30px;">
+                    <div class="col-xs-12">
+                        <div class="alert alert-danger">Nic nie znaleziono użytkowników spełniających zadane kryteria</div>
+                    </div>
+                </div>
+
+                <div ng-if="ctrl.showResults" class="row" style="padding-top: 30px;">
+                    <div class="col-xs-12">
+                        <h3>Wyniki wyszukiwania:</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <ul class="list-unstyled">
+                        <li ng-repeat="u in ctrl.results" style="display: inline-block;">
+                            <a href="#/profile/{{u.id}}/{{u.name}}" ng-bind="u.name" class="last-user"></a>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

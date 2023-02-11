@@ -1,0 +1,91 @@
+<div class="generic-container" ng-controller="PostController as ctrl">
+
+    <div class="form-group col-md-12" layout="row" layout-align="center center">
+        <fieldset disabled><legend><h2 style="color: gray;font-weight: bold;">{{post.title}}</h2></legend></fieldset>
+        <button type="button" ng-click="ctrl.imageId(post.author.id)" class="btn btn-warning btn-sm"
+                ng-disabled="myForm.$pristine">ShowImage
+        </button>
+        <button type="button" ng-click="ctrl.imageHide()" class="btn btn-warning btn-sm"
+                ng-disabled="myForm.$pristine">HideImage
+        </button>
+        <div class="row" ng-show="ctrl.imageid != null">
+            <img src="/v1/image2/{{ctrl.imageid}}.png" alt="image" height="400"/>
+        </div>
+        <p style="white-space:pre-line;background: white;font-size: 16px;border-radius: 1px;color: black;border-width: 5px;">{{post.content}}</p>
+        <cite style="color: black;">Utworzony: {{post.createDateTime}} przez
+            <a ui-sref="profile({id: post.author.id, name: post.author.name})">{{post.author.name}}</a>
+        </cite>
+    </div>
+    <div align="right">
+        <div class="row" ng-show="activeUser.id == post.author.id">
+            <button type="button" ng-click="ctrl.tryUpdatePost(post.id)" class="btn btn-warning btn-sm"
+                    ng-disabled="myForm.$pristine">Edit
+            </button>
+            <button type="button" ng-click="ctrl.deletePost(post.id)" class="btn btn-warning btn-sm"
+                    ng-disabled="myForm.$pristine">Delete
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+        <div class="col-xs-12" ng-controller="CommentController as ctrl">
+            <div class="row">
+            <button type="button" ng-click="ctrl.searchByPost(post.id)" class="button button2"
+                    >Wyświetl komentarze
+            </button>
+            <ul class="list-unstyled">
+                <li ng-repeat="c in ctrl.commentsByPost">
+                    <div class="comment" layout="row" layout-align="center center">
+                        <cite style="color: black; font-size: 18px;">
+                            <a ui-sref="profile({id: comment.author.id, name: comment.author.name})" style="white-space:pre-line;font-size: 16px;border-radius: 1px;color: black;border-width: 5px;font-weight: bold;">{{c.author.name}}
+                            </a>
+                        </cite>
+                        <p style="white-space:pre-line;font-size: 16px;border-radius: 1px;color: black;border-width: 5px;">{{c.content}}</p>
+                        <cite style="color: black;">Utworzony: {{c.createDateTime}}</cite>
+                        <div align="right">
+                            <div class="row" ng-show="activeUser.id == c.author.id"><br>
+                            <button type="button" ng-click="ctrl.editMode(c.id)" class="btn btn-warning btn-sm">Edytuj</button>
+                            <button type="button" ng-click="ctrl.remove(c.id,c)" class="btn btn-warning btn-sm">Usuń komentarz</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+    <h4>Dodanie komentarza</h4>
+
+    <form ng-submit="ctrl.submit()" name="myForm" class="form-horizontal">
+        <input type="hidden" ng-model="ctrl.comment.id" />
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-lable" for="content">Treść</label>
+                <div class="col-md-7">
+                    <textarea ng-model="ctrl.comment.content" id="content"
+                              class="username form-control input-sm" placeholder="Co chcesz powiedzieć?" required
+                              ng-minlength="3" style="height:200px;" ></textarea>
+                    <div class="has-error" ng-show="myForm.$dirty">
+                        <span ng-show="myForm.textarea.$error.required">This is a required field</span>
+                        <span ng-show="myForm.textarea.$error.minlength">Minimum length required is 1</span>
+                        <span ng-show="myForm.textarea.$invalid">This field is invalid </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-actions floatRight">
+                <input type="submit" value="{{!ctrl.comment.id ? 'Dodaj komentarz' : 'Update'}}" class="btn btn-primary btn-sm" ng-click="ctrl.setPost(post.id);$event.stopPropagation();"
+                       ng-disabled="myForm.$invalid">
+                <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm"
+                        ng-disabled="myForm.$pristine">Wyczyść pole
+                </button>
+            </div>
+        </div>
+    </form>
+    </div>

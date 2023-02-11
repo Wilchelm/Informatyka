@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Platforma blogowa</title>
+    <link rel="stylesheet"  href="/css/app.css">
+</head>
+<body ng-app="dtas">
+
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container" ng-controller="UserController as ctrl">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Platforma blogowa</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Strona główna</a></li>
+                <li><a ui-sref="register" ng-if="!ctrl.isLogged()">Załóż konto</a></li>
+                <li><a ui-sref="addpost" ng-if="ctrl.isLogged()">Dodaj post</a></li>
+                <li><a ui-sref="search">Szukaj</a></li>
+                <!--<li><a ui-sref="files"  ng-if="ctrl.isLogged()">Pliki</a></li>-->
+            </ul>
+
+            <form ng-if="!ctrl.isLogged()" name="loginForm" ng-submit="ctrl.login()" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" ng-model="loginData.name" placeholder="Login" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" ng-model="loginData.password" placeholder="Hasło" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-success">Zaloguj</button>
+            </form>
+
+            <div ng-if="ctrl.isLogged()" class="navbar-form navbar-right">
+                <span style="font-size: 16px; padding-right: 20px;">Cześć
+                    <a ui-sref="profile({id: ctrl.user.id, name: ctrl.user.name})">{{ctrl.user.name}}</a>!
+                </span>
+                <a ng-click="ctrl.logout();" class="btn btn-danger">Wyloguj</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container" ui-view></div>
+
+<!-- Angular -->
+<script src="/webjars/angularjs/1.4.9/angular.js"></script>
+<script src="/webjars/angularjs/1.4.9/angular-resource.js"></script>
+
+<!-- UI-Router -->
+<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+<!-- App Script -->
+<script>
+    var App = angular.module('dtas', ["ui.router"])
+    App.config(function($stateProvider, $urlRouterProvider) {
+
+        // For any unmatched url, redirect to /home
+        $urlRouterProvider.otherwise("/home");
+
+        // Now set up the states
+        $stateProvider
+            .state('register', {
+                url: "/register",
+                templateUrl: "/views/registration.html"
+            })
+            .state('home', {
+                url: "/home",
+                templateUrl: "views/home.html"
+            })
+            .state('search', {
+                url: "/search",
+                templateUrl: "views/search.html"
+            })
+//            .state('files',{
+//                url: "/files",
+//                templateUrl: "views/files.html"
+//            })
+            .state('profile', {
+                url: "/profile/:id/:name",
+                templateUrl: "views/profile.html",
+                controller: function($scope, $stateParams, UserService){
+                    UserService.getUserById($stateParams.id)
+                    .then(
+                        function(d) {
+                            d.registrationDateTime = prettyDateTime(d.registrationDateTime);
+                            d.lastSeen = prettyDateTime(d.lastSeen);
+                            $scope.user = d;
+                        },
+                        function(errResponse){
+                            console.error('Error while fetching user..');
+                        }
+                    );
+
+                    UserService.fetchActiveUser()
+                    .then(
+                        function(d) {
+                            d.registrationDateTime = prettyDateTime(d.registrationDateTime);
+                            d.lastSeen = prettyDateTime(d.lastSeen);
+                            $scope.activeUser = d;
+                        },
+                        function(errResponse){
+                            console.error('Error while fetching active user..');
+                        }
+                    );
+
+                    $scope.submit = function(user) {
+                        if(user.password !== user.password2)
+                        {
+                            $scope.errormsg = "Podane hasła są różne!";
+                            return;
+                        }
+
+                        var userToSend = {};
+                        userToSend.name = user.name;
+                        userToSend.mail = user.mail;
+                        userToSend.password = user.password;
+
+                        UserService.updateUser(userToSend, user.id)
+                        .then(
+                            function(d){
+                                location.reload();
+                            },
+                            function(errResponse){
+                                $scope.errormsg = "Błąd " + errResponse.status + ": " + errResponse.data.message;
+                                return;
+                            }
+                        );
+                    }
+                }
+            })
+            .state('viewpost', {
+                url: "/post/:id",
+                templateUrl: "views/viewpost.html",
+                controller: function($scope, $stateParams, PostService, UserService)
+                {
+                    PostService.getPostById($stateParams.id)
+                    .then(
+                            function(d) {
+                                d.createDateTime = prettyDateTime(d.createDateTime);
+                                $scope.post = d;
+                            },
+                            function(errResponse){
+                                console.error('Error while fetching post..');
+                            }
+                    );
+                    UserService.fetchActiveUser()
+                    .then(
+                            function(d) {
+                                d.registrationDateTime = prettyDateTime(d.registrationDateTime);
+                                d.lastSeen = prettyDateTime(d.lastSeen);
+                                $scope.activeUser = d;
+                            },
+                            function(errResponse){
+                                console.error('Error while fetching active user..');
+                            }
+                    );
+                }
+            })
+            .state('editpost', {
+                url: "/editpost/:id",
+                templateUrl: "views/editpost.html",
+                controller: function($scope, $stateParams, PostService)
+                {
+                    PostService.getPostById($stateParams.id)
+                            .then(
+                                    function(d) {
+                                        $scope.post = d;
+                                    },
+                                    function(errResponse){
+                                        console.error('Error while fetching post..');
+                                    }
+                            );
+                }
+            })
+            .state('editcomment', {
+                url: "/editcomment/:id",
+                templateUrl: "views/editcomment.html",
+                controller: function($scope, $stateParams, CommentService)
+                {
+                    CommentService.getCommentById($stateParams.id)
+                            .then(
+                                    function(d) {
+                                        $scope.comment = d;
+                                    },
+                                    function(errResponse){
+                                        console.error('Error while fetching comment..');
+                                    }
+                            );
+                }
+            })
+            .state('addpost', {
+                url: "/addpost",
+                templateUrl: "views/addpost.html"
+            })
+    });
+
+    function prettyDateTime(date)
+    {
+        if(date === null)
+        {
+            return null;
+        }
+
+        return date[2] + "." + date[1] + "." + date[0] + " roku, o godzinie " + addLeadingZeros(date[3]) + ":" + addLeadingZeros(date[4]);
+    }
+
+    function addLeadingZeros(x)
+    {
+        if(x < 10)
+        {
+            return "0"+x;
+        }
+        else
+        {
+            return ""+x;
+        }
+    }
+</script>
+
+
+<script src="/js/service/user_service.js"></script>
+<script src="/js/controller/user_controller.js"></script>
+<script src="/js/service/post_service.js"></script>
+<script src="/js/controller/post_controller.js"></script>
+<script src="/js/service/comment_service.js"></script>
+<script src="/js/controller/comment_controller.js"></script>
+<script src="js/controller/image_controller.js"></script>
+<script src="js/service/image_service.js"></script>
+<script src="/js/service/user_service.js"></script>
+<script src="/js/controller/SearchController.js"></script>
+
+<!-- Load Dropzone JS -->
+<script src="js/Dropzone/dropzone.js"></script>
+
+<script type="text/javascript">
+    Dropzone.autoDiscover = false;
+</script>
+
+<link rel="stylesheet" href="/webjars/bootstrap/3.3.6/css/bootstrap.css">
+<link rel="stylesheet" href="/webjars/bootstrap/3.3.6/js/bootstrap.js">
+
+
+</body>

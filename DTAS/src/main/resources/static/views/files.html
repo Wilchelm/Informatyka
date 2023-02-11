@@ -1,0 +1,29 @@
+<div>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <!-- Load Dropzone CSS -->
+    <link href="css/dropzone/basic.css" rel="stylesheet" />
+    <link href="css/dropzone/dropzone.css" rel="stylesheet" />
+
+</div>
+
+<div ng-controller="fileCtrl" ng-cloak>
+
+<div class="col-xs-6 col-xs-offset-3">
+    <div class="well">
+        <form action="" class="dropzone" dropzone="" id="dropzone">
+            <div class="dz-default dz-message">
+            </div>
+        </form>
+    </div>
+    <div class="pull-right">
+        <button class="btn btn-success" ng-click="uploadFile()">Upload File</button>
+        <button class="btn btn-danger" ng-click="reset()">Reset Dropzone</button>
+    </div>
+</div>
+</div>

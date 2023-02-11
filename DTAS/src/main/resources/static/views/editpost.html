@@ -1,0 +1,76 @@
+<div class="generic-container" ng-controller="PostController as ctrl">
+    <h3>Edycja postu</h3>
+
+    <form ng-submit="ctrl.updatePost(post)" name="myForm" class="form-horizontal">
+        <input type="hidden" ng-model="ctrl.post.id" />
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-lable" for="title">Tytuł</label>
+                <div class="col-md-7">
+                    <input type="text" ng-model="post.title" id="title"
+                           class="username form-control input-sm" placeholder="Wpisz tytuł posta" required
+                           ng-minlength="1" />
+                    <div class="has-error" ng-show="myForm.$dirty">
+                        <span ng-show="myForm.title.$error.required">This is a required field</span>
+                        <span ng-show="myForm.title.$error.minlength">Minimum length required is 1</span>
+                        <span ng-show="myForm.title.$invalid">This field is invalid </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-lable" for="content">Treść</label>
+                <div class="col-md-7">
+                    <textarea ng-model="post.content" id="content"
+                              class="username form-control input-sm" placeholder="Halo! Napiszesz coś w końcu?" required
+                              ng-minlength="1"  style="height:200px;" >{{post.content}}</textarea>
+                    <div class="has-error" ng-show="myForm.$dirty">
+                        <span ng-show="myForm.content.$error.required">This is a required field</span>
+                        <span ng-show="myForm.content.$error.minlength">Minimum length required is 1</span>
+                        <span ng-show="myForm.content.$invalid">This field is invalid </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-actions floatRight">
+                <input type="submit" value="{{!post.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm"
+                       ng-disabled="myForm.$invalid">
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<div>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <!-- Load Dropzone CSS -->
+    <link href="css/dropzone/basic.css" rel="stylesheet" />
+    <link href="css/dropzone/dropzone.css" rel="stylesheet" />
+
+</div>
+
+<div ng-controller="fileCtrl" ng-cloak>
+
+    <div class="col-xs-6 col-xs-offset-3">
+        <div class="well">
+            <form action="" class="dropzone" dropzone="" id="dropzone">
+                <div class="dz-default dz-message">
+                </div>
+            </form>
+        </div>
+        <div class="pull-right">
+            <button class="btn btn-success" ng-click="uploadFile()">Upload File</button>
+            <button class="btn btn-danger" ng-click="reset()">Reset Dropzone</button>
+        </div>
+    </div>
+</div>

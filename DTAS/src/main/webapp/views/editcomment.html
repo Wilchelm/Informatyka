@@ -1,0 +1,31 @@
+<div class="generic-container" ng-controller="CommentController as ctrl">
+    <h3>Edycja komentarza</h3>
+
+    <form ng-submit="ctrl.updateComment(comment)" name="myForm" class="form-horizontal">
+        <input type="hidden" ng-model="ctrl.comment.id" />
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-2 control-lable" for="content">Treść</label>
+                <div class="col-md-7">
+                    <textarea ng-model="comment.content" id="content"
+                              class="username form-control input-sm" placeholder="Co chcesz powiedzieć?" required
+                              ng-minlength="1"  style="height:200px;" >{{comment.content}}</textarea>
+                    <div class="has-error" ng-show="myForm.$dirty">
+                        <span ng-show="myForm.content.$error.required">This is a required field</span>
+                        <span ng-show="myForm.content.$error.minlength">Minimum length required is 1</span>
+                        <span ng-show="myForm.content.$invalid">This field is invalid </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-actions floatRight">
+                <input type="submit" value="{{!comment.id ? 'Add' : 'Update'}}" class="btn btn-primary btn-sm"
+                       ng-disabled="myForm.$invalid">
+            </div>
+        </div>
+    </form>
+
+</div>

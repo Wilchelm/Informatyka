@@ -1,0 +1,92 @@
+<div class="row" ng-show="activeUser.id == user.id">
+    <div class="col-xs-12" ng-controller="UserController as ctrl">
+        <h3>Zmiana danych</h3>
+
+        <div class="row" ng-show="errormsg">
+            <div class="col-xs-12">
+                <div class="alert alert-danger">{{ errormsg }}</div>
+            </div>
+        </div>
+
+        <form ng-submit="submit(activeUser)" name="myForm" class="form-horizontal">
+            <input type="hidden" ng-model="user.id"/>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label class="col-md-2 control-lable" for="name">Nazwa</label>
+                    <div class="col-md-7">
+                        <input type="text" ng-model="activeUser.name" id="name"
+                               class="username form-control input-sm" placeholder="Wpisz nazwę użytkownika" required
+                               ng-minlength="3"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label class="col-md-2 control-lable" for="mail">Email</label>
+                    <div class="col-md-7">
+                        <input type="email" ng-model="activeUser.mail" id="mail"
+                               class="email form-control input-sm" placeholder="adres@mail.pl" required/>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label class="col-md-2 control-lable" for="password">Hasło</label>
+                    <div class="col-md-7">
+                        <input type="password" ng-model="activeUser.password" id="password" class="form-control input-sm"
+                               placeholder="****"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label class="col-md-2 control-lable" for="password2">Powtórz hasło:</label>
+                    <div class="col-md-7">
+                        <input type="password" ng-model="activeUser.password2" id="password2" class="form-control input-sm"
+                               placeholder="****"/>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="form-actions floatRight">
+                    <input type="submit" value="Zmień" class="btn btn-primary btn-sm"
+                           ng-disabled="myForm.$invalid">
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3>Użytkownik {{user.name}}</h3>
+
+        Data rejestracji: <i>{{user.registrationDateTime}}</i><br>
+        Ostatnio zalogowany: <i ng-if="user.lastSeen">{{user.lastSeen}}</i>
+                             <i ng-if="!user.lastSeen">Nigdy</i>
+
+    </div>
+
+    <div class="col-xs-12" ng-controller="PostController as ctrl">
+        <h3>Ostatnie wpisy użytkownika</h3>
+        <button type="button" ng-click="ctrl.searchByAuthor(user.name)" class="btn btn-warning btn-sm"
+                ng-disabled="myForm.$pristine">Pokaż
+        </button>
+        <button type="button" ng-click="ctrl.resetAll()" class="btn btn-warning btn-sm"
+                ng-disabled="myForm.$pristine">Ukryj
+        </button>
+        <!--{{ctrl.searchByAuthor(user.name)}}-->
+        <ul class="list-unstyled">
+            <li ng-repeat="p in ctrl.postsByAuthor" style="display: inline-block;">
+                <a href="#/post/{{p.id}}" ng-bind="p.title" class="last-user"></a>
+            </li>
+        </ul>
+    </div>
+</div>
