@@ -1,0 +1,8 @@
+description: Pytorch nn, minibatch, improved previous solution
+tags:
+  - python
+  - pytorch-nn
+param-files:
+  - "*yaml"
+
+
