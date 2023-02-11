@@ -1,0 +1,11 @@
+
+1.
+a)princomp(USArrests)
+b)plot(princomp(USArrests))
+
+2.
+a)hclust(dist(USArrests))
+b)plot( hclust(dist(USArrests), "complete") )
+c)plot( hclust(dist(USArrests, method = "manhattan"), "average") )
+
+3.

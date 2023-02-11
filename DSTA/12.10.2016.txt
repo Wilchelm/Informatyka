@@ -1,0 +1,39 @@
+Zadanie 1
+a)
+x=c('Styczeñ','Luty','Marzec','Kwiecieñ','Maj','Czerwiec','Lipiec','Sierpieñ','Wrzesieñ','PaŸdziernik','Listopad','Grudzieñ')
+NY_F=c(32,33,41,52,62,72,77,75,68,58,47,35)
+Miasta=data.frame(x,y)
+rownames(Miasta)=Miasta$x
+Miasta$x=NULL
+View(Miasta)
+b)
+z=round((Miasta&y-32)*(5/9),2)
+Miasta=cbind(Miasta,z)
+c) !zapis do RData!
+setwd("J:/Desktop/DSTA")
+save(Miasta,file='Miasta.RData')
+!wczytywanie! load("j:/Desktop/DSTA/Miasta.RData")
+
+Zadanie 2
+a)
+Cities=read.csv2("j:/Downloads/Cities.csv")
+b)
+Atlanta_C=c(5.555556,7.222222,10.555556,16.111111,20.555556,24.444444,25.555556,25.555556,22.222222,16.666667,10.555556,6.666667)
+Phoenix_C=c(10.55556,14.44444,13.88889,19.44444,27.22222,31.11111,34.44444,33.88889,29.44444,23.33333,16.11111,12.77778)
+SanDiego_C=c(13.33333,15.55556,14.44444,16.66667,17.22222,20.00000,20.55556,21.66667,20.55556,19.44444,16.11111,14.44444)
+c)
+Atlanta_C=round(Atlanta_C,2)
+Phoenix_C=round(Phoenix_C,2)
+SanDiego_C=round(SanDiego_C,2)
+Miasta=cbind(Miasta,Atlanta_C,Phoenix_C,SanDiego_C)
+d)
+Miasta$y=NULL
+e)
+colnames(Miasta) <- c('Nowy York','Atlanta','Phoenix','San Diego')
+f)
+setwd("J:/Desktop/DSTA")
+save(Miasta,file='Miasta1.RData')
+g)
+matplot(Miasta,ylab='Temperatura (w stopniach C)',xlab='Miesiac',type="o",pch=1:4)
+legend("topleft", colnames(Miasta), pch=1:4, col=1:4, lty=1:4)
+

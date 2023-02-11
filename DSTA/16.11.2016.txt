@@ -1,0 +1,25 @@
+Zadanie 1
+a)
+srednia_szybkosc=c(0.9,6.2,2.1,4.1,7.3,1.0,4.6,6.4,3.8,5.0,2.7,9.2,5.9,7.4,3.0,4.9,8.2,5.0,1.2,10.1,12.2,2.8,5.9,8.2,0.5)
+ENW = 1/length(srednia_szybkosc)*sum(srednia_szybkosc^2)
+b)
+par.lambda = function(x)
+{
+  z = 1/length(x)*sum(x^2)
+  return (z)
+}
+
+Zadanie 2
+
+par.b = function(x,y)
+{
+  z=sum(x*y)/sum(x*x)
+  return(z)
+}
+
+Zadanie 3
+a)
+plot(cars)
+abline(lm(dist~speed,data=cars))
+b)
+summary(lm(dist~speed,data=cars))

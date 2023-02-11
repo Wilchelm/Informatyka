@@ -1,0 +1,21 @@
+Zadanie 3
+a)
+Ankieta = read.table('Ankieta.txt',header = TRUE)
+b)
+b1=table(Ankieta$WYNIK)
+PROCENTY
+prop.table(b1)
+
+b2=table(Ankieta[Ankieta$SZKOLA=='p',]$WYNIK)
+PROCENTY
+round(prop.table(b2),2)
+c)
+par(mfrow=c(1,3))
+> pie(table(Ankieta[Ankieta$SZKOLA=='p',]$WYNIK),main='Podstawowe')
+> pie(table(Ankieta[Ankieta$SZKOLA=='s',]$WYNIK),main='Srednie')
+> pie(table(Ankieta[Ankieta$SZKOLA=='w',]$WYNIK),main='Wyzsze')
+d)
+subset(Ankieta,PLEC=='k' & (SZKOLA=='w' | SZKOLA=='s'))
+e)
+library(car)
+recode(Ankieta$WYNIK,"c('a','b')=1;c('c','d')=2;c('e')=3")

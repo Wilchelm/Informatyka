@@ -1,0 +1,6 @@
+Zad 1
+t.test(UsingR::rat,m=120, alternative = "les")
+Zad 2
+a)
+boxplot(UsingR::homework)
+b)
