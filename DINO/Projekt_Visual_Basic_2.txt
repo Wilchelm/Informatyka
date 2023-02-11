@@ -1,0 +1,53 @@
+' Napisz program (algorytm) wyznaczający wartość bezwzględną największej różnicy między liczbami zawartymi w tej tablicy. 
+' Dla tablicy {2,-4,6,-3,11,8,0,12} odpowiedź wynosi 16.
+
+' Wskazówki: 
+' wykorzystaj narzędzie https://dotnetfiddle.net/
+' wykorzystaj własność tabeli GetUpperBound(0), która zwraca indeks (liczony od 0) ostatniego elementu w tabeli
+' funkcja Math.Abs(x) oblicza wartość Math.Absolutną liczby x
+' skorzystaj ze schematu:
+
+Imports System
+
+ 
+
+Public Module Module1			   
+
+
+Public Sub Main()
+
+	Dim Tab As Integer() = {2,-4,6,-3,11,8,0,12}
+
+	Dim i As Integer = 0
+
+	Dim j As Integer = 0
+
+	Dim iMaxDiff As Integer = 0
+
+				      
+
+	For i = 0 To Tab.GetUpperBound(0)
+
+		For j = 0  To Tab.GetUpperBound(0)
+		
+			if Tab(i) <> Tab(j) then
+
+				if Tab(i) - Tab(j) >= iMaxDiff then
+		      
+				iMaxDiff = Math.Abs(Tab(i)) + Math.Abs(Tab(j))
+				
+				end if
+				
+			end if      
+
+		Next j
+
+	Next i
+
+	Console.WriteLine("Największa wartość bezwzględna z różnicy elementów to: " & iMaxDiff)
+
+End Sub
+
+ 
+
+End Module

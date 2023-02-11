@@ -1,0 +1,39 @@
+Imports System
+Imports System.Math
+
+Public Module Module1
+
+	Public Sub Main()
+		Call Licz(1,2,1)
+		Call Licz(2,2,1)
+		Call Licz(2,1,-5)
+		Call Licz(3,4,-5)
+   	End Sub
+   	
+	Private Sub Licz(a as double, b as double, c as double)
+
+		dim dDelta as double
+		dim x1 as double
+		dim x2 as double
+	
+		dDelta = (b ^ 2) - (4 * a * c)
+	
+		if Round(dDelta,8) > 0 then
+	
+			x1 = (-b - Sqrt(dDelta)) / (2 * a)
+			x2 = (-b + Sqrt(dDelta)) / (2 * a)
+			console.WriteLine("Rozwiązania równania: " & a &"x^2+" & b & "x+" & c & " to: " & x1 & ", " & x2)
+
+		else
+			if  Round(dDelta,8) = 0 then
+		
+				x1 = (-b) / 2 * a
+				console.WriteLine("Równanie: " & a &"x^2+" & b & "x+" & c & " ma jedno, podwójne, rozwiązanie: " & x1)
+			else
+				console.WriteLine("Równanie: " & a &"x^2+" & b & "x+" & c & " nie ma rozwiązań")
+			end if 
+
+		end if
+
+	End Sub
+End Module
