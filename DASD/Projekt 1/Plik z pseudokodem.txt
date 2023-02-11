@@ -1,0 +1,79 @@
+//metoda 1 
+int a,b
+czytaj(a,b)
+a = a + b
+b = a - b
+a = a - b
+pisz(a,b)
+
+//metoda 2 
+int a,b
+czytaj(a,b)
+b = a + b
+a = b - a
+b = b - a
+pisz(a,b)
+
+//metoda 3 
+int a,b
+czytaj(a,b)
+if(a ≠ 0 AND b ≠ 0) 
+  a = a × b
+  b = a ÷ b
+  a = a ÷ b
+  pisz(a,b)
+
+//metoda 4 
+int a,b
+czytaj(a,b)
+if(a ≠ 0 AND b ≠ 0) 
+  b=a × b
+  a=b ÷ a
+  b=b ÷ a
+  pisz(a,b)
+
+//metoda 5 
+int a,b
+czytaj(a,b)
+a = a + b - (b = a)
+pisz(a,b)
+
+//metoda 6 
+int a,b
+czytaj(a,b)
+b = a + b - (a = b)
+pisz(a,b)
+
+//metoda 7 
+// ⊕ to tu XOR na bitach
+int a,b
+czytaj(a,b)
+a = a ⊕ b
+b = a ⊕ b
+a = a ⊕ b
+pisz(a,b)
+
+//metoda 8 
+// ⊕ to tu XOR na bitach
+int a,b
+czytaj(a,b)
+b = a ⊕ b
+a = a ⊕ b
+b = a ⊕ b
+pisz(a,b)
+
+//metoda 9 
+int a,b
+czytaj(a,b)
+a = a - b
+b = a + b
+a = b - a
+pisz(a,b)
+
+//metoda 10 
+int a,b
+czytaj(a,b)
+b = b - a
+a = a + b
+b = a - b
+pisz(a,b)
