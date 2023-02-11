@@ -1,0 +1,20 @@
+fstcompile --acceptor --isymbols=ascii.syms Aga.txt > Aga.bin
+fstcompile --acceptor --isymbols=ascii.syms Ala.txt > Ala.bin
+fstcompile --acceptor --isymbols=ascii.syms Ania.txt > Ania.bin
+fstcompile --acceptor --isymbols=ascii.syms Zdzisia.txt > Zdzisia.bin
+fstcompile --acceptor --isymbols=ascii.syms Zosia.txt > Zosia.bin
+
+fstunion Aga.bin Ala.bin > a.bin
+fstunion Zosia.bin Zdzisia.bin > b.bin
+fstunion a.bin Ania.bin > c.bin
+fstunion b.bin c.bin > all.bin
+
+
+fstrmepsilon all.bin | fstdeterminize | fstminimize > min_det.bin
+fstprint --isymbols=ascii.syms min_det.bin 
+
+
+#Check
+fstintersect min_det.bin Aga.bin | fstprint --acceptor --isymbols=ascii.syms 
+
+

@@ -1,0 +1,42 @@
+cat slowa.lst | recode l2..utf8 > slowa.u.lts
+cat korpus.txt | recode l2..utf8 > korpus.u.txt
+
+
+
+1.
+
+egrep -c "at$" slowa.u.lst
+
+2.
+
+egrep -o "(....$)" slowa.u.lst | sort | uniq -c | sort -nr | head -n 1
+
+3.
+
+egrep -o '^(.?)(.?)(.).?\3\2\1$' slowa.u.lts
+
+4.
+
+cat korpus.u.txt | sed -r 's/^([[:alpha:]]+)( [[:alpha:]]+)( [[:alpha:]]+)(.*)/\1\2\3\4\n\2\3\4\n\3\4/'| egrep -o "\b[[:alpha:]]+( [[:alpha:]]+){2}\b" | sort | uniq -c | sort -n
+
+5.
+
+egrep -aon '\b([[:alpha:]]+)\b[[:space:]]+\1\b' korpus.u.txt 
+
+6.
+
+ls -l | grep -oP "[[:alpha:]]+[[:space:]]+\K([0-9]+)" && grep -oP "[0-9:]{4,5} \K(.*)"
+
+7.
+
+who | grep -oP "^([[:alpha:]]|[[:alnum:]])+" | sort |uniq -c
+
+
+8.
+
+who | grep -ocP "^([[:alpha:]]|[[:alnum:]])+"
+
+
+
+14. cat 2.12.we | sed -r ':x ; /^(.*);(.*)/ {N ; s/^(.*);(.*)\n\1;(.*)$/\1;\2;\3/g ; tx ; P ; D}
+

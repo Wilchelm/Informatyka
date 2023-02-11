@@ -1,0 +1,4 @@
+export alfabet = "a" | "b" | "c" | "d" | "e";
+
+export zamien = ("a":"") | alfabet*:alfabet*;
+

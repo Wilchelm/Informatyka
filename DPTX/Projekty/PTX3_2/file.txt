@@ -1,0 +1,60 @@
+.sub main
+.local pmc stos
+    stos = new 'ResizableFloatArray'
+.local num tmp
+.local num tmp2
+.local num tmp3
+.local num a
+.local num b
+.local num x
+push stos,5.0
+pop tmp,stos
+a = tmp
+push stos,8.0
+pop tmp,stos
+b = tmp
+push stos,1.0
+pop tmp,stos
+x = tmp
+BEGINLOOP:
+push stos,40.0
+pop tmp,stos
+if x > tmp goto ENDLOOP
+if x < 8 goto ETYKIETA0
+ETYKIETA0:
+push stos,a
+push stos,x
+pop tmp2,stos
+pop tmp3,stos
+ tmp=tmp2+tmp3
+ push stos,tmp
+pop tmp,stos
+a = tmp
+push stos,a
+pop tmp,stos
+say tmp
+if 8 <= 2 goto ETYKIETA1
+ETYKIETA1:
+push stos,b
+push stos,x
+pop tmp2,stos
+pop tmp3,stos
+ tmp=tmp2+tmp3
+ push stos,tmp
+pop tmp,stos
+b = tmp
+push stos,b
+pop tmp,stos
+say tmp
+inc x
+goto BEGINLOOP
+ENDLOOP:
+push stos,a
+push stos,b
+pop tmp2,stos
+pop tmp3,stos
+ tmp=tmp2+tmp3
+ push stos,tmp
+pop tmp,stos
+say tmp
+.end

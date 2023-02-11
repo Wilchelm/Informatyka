@@ -1,0 +1,25 @@
+
+zmniejsz
+zwieksz
+
+definiuj zmniejsz
+m jest zmienną
+n jest zmienną
+umieść 10 w n
+dla m od 1 do 10
+wykonaj
+pokaż n
+umieść n-m w n
+dotąd
+stopdefiniuj
+
+definiuj zwieksz
+m jest zmienną
+n jest zmienną
+umieść 10 w n
+dla m od 1 do 10
+wykonaj
+pokaż n
+umieść n+m w n
+dotąd
+stopdefiniuj

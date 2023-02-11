@@ -1,0 +1,77 @@
+.sub main
+.local pmc stos
+    stos = new 'ResizableFloatArray'
+.local num tmp
+.local num tmp2
+.local num tmp3
+zmniejsz()
+zwieksz()
+.end
+
+.sub zmniejsz
+.local pmc stos
+    stos = new 'ResizableFloatArray'
+.local num tmp
+.local num tmp2
+.local num tmp3
+.local num m
+.local num n
+push stos,10.0
+pop tmp,stos
+n = tmp
+push stos,1.0
+pop tmp,stos
+m = tmp
+BEGINLOOP:
+push stos,10.0
+pop tmp,stos
+if m > tmp goto ENDLOOP
+push stos,n
+pop tmp,stos
+say tmp
+push stos,n
+push stos,m
+pop tmp2,stos
+pop tmp3,stos
+ tmp=tmp3-tmp2
+ push stos,tmp
+pop tmp,stos
+n = tmp
+inc m
+goto BEGINLOOP
+ENDLOOP:
+.end
+
+.sub zwieksz
+.local pmc stos
+    stos = new 'ResizableFloatArray'
+.local num tmp
+.local num tmp2
+.local num tmp3
+.local num m
+.local num n
+push stos,10.0
+pop tmp,stos
+n = tmp
+push stos,1.0
+pop tmp,stos
+m = tmp
+BEGINLOOP:
+push stos,10.0
+pop tmp,stos
+if m > tmp goto ENDLOOP
+push stos,n
+pop tmp,stos
+say tmp
+push stos,n
+push stos,m
+pop tmp2,stos
+pop tmp3,stos
+ tmp=tmp2+tmp3
+ push stos,tmp
+pop tmp,stos
+n = tmp
+inc m
+goto BEGINLOOP
+ENDLOOP:
+.end

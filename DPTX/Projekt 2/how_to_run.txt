@@ -1,0 +1,8 @@
+thraxmakedep kor.grm
+make
+thraxrewrite-tester --noutput=10 --far=kor.far --rules=korektor
+
+
+ cat slowa.txt | tr -d '\015' > slowa1.txt znaki windowsowe
+
+

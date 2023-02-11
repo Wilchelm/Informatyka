@@ -1,0 +1,11 @@
+#https://www.graphviz.org/doc/info/shapes.html
+#wierzchołek nazwa label shape pattern
+v 1 "Pierwswszy wierzchołek" "box" ""
+v 2 "drugi wierzchołek" "oval" ""
+v 3 "3" "box" "dotted"
+v 4 "4" "circle" ""
+#krawedz nazwa nazwa label
+e 1 2 "alfa"
+e 1 3 "beta"
+e 2 4 ""
+e 3 4 ""

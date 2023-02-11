@@ -1,0 +1,13 @@
+a jest zmienną
+b jest zmienną
+x jest zmienną
+umieść 5 w a
+umieść 8 w b
+
+dla x od 1 do 10
+wykonaj
+wjeśli x mniejsze 2 to
+pokaż a
+wpr
+pokaż b
+dotąd

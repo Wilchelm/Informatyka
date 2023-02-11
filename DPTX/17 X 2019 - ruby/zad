@@ -1,0 +1,42 @@
+ruby -pe '$_.gsub! "a", "b"'
+vab
+vbb
+aaa
+bbb
+bbb
+bbb
+aba
+bbb
+
+
+ruby -ne 'puts "X"'
+af
+X
+af
+vas
+X
+vas
+
+
+irb
+gets - bierze jedna linie
+
+readlines - czyta linie do CTRL+D
+CTRL+D koniec pliku
+
+
+cat x.txt | ./a.rb
+./a.rb < x.txt
+
+h = { 1=> 2, 3 => 4}
+
+h.each{|k,v| puts k.to_s + v.to_s}
+=
+for k,v in h do puts k.to_s+ v.v.to_s
+
+
+ZAD 2
+readlines
+...
+CTRL+D
+readlines.lenght

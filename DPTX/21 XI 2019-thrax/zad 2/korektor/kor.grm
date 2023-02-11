@@ -1,0 +1,15 @@
+
+litera = "a"|"ą"|"b"|"c"|"ć"|"d"|"e"|"ę"|"f"|"g"|"h"|"i"|"j"|"k"|"l"|"ł"|"m"|"n"|"ń"|"o"|"ó"|"p"|"r"|"s"|"ś"|"t"|"u"|"w"|"y"|"z"|"ź"|"ż";
+
+export slownik = StringFile['slowa.txt'];
+
+kopia = litera<0>;
+zmiana = ( ("u":"ó") | ("ó":"u") | ("rz":"ż") | ("ż":"rz") )<1> ;
+
+export popraw = (litera|zmiana)*;
+
+export korektor = Optimize[Invert[slownik @ popraw]];
+
+export rozwin = litera* ("":(litera*)) ;
+
+export uzup = popraw @ rozwin @ slownik ;

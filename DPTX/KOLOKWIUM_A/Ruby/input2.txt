@@ -1,0 +1,7 @@
+alfa = 23
+beta = 45
+gamma = 65
+alfa = 10
+beta=75
+alfa=13
+delta=    95

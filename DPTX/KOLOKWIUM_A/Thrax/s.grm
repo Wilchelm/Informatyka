@@ -1,0 +1,4 @@
+zamien1 = (("a":"a") | ("b":"b") | ("c":"c") | ("d":"d"));
+zamien2 = (("a":"a") | ("b":"b") | ("c":"c") | ("d":"d") | ("e":"e"));
+zamien3 = (("a":"") | ("b":"") | ("c":"") | ("d":""));
+export zamien = (zamien2*)("e":"")(zamien2)*|(zamien3)+;

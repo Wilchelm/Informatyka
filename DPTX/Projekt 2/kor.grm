@@ -1,0 +1,30 @@
+litery = Optimize[StringFile['alfabet.txt']];
+
+slownik01 = StringFile['./dane/waga0/xaa']<0>;
+slownik02 = StringFile['./dane/waga0/xab']<0>;
+slownik03 = StringFile['./dane/waga0/xac']<0>;
+slownik04 = StringFile['./dane/waga0/xad']<0>;
+slownik05 = StringFile['./dane/waga0/xae']<0>;
+slownik06 = StringFile['./dane/waga0/xaf']<0>;
+slownik07 = StringFile['./dane/waga0/xag']<0>;
+slownik08 = StringFile['./dane/waga0/xah']<0>;
+slownik09 = StringFile['./dane/waga0/xai']<0>;
+slownik010 = StringFile['./dane/waga0/xaj']<0>;
+
+slownik1 = StringFile['./dane/waga-1.txt']<-1>;
+slownik2 = StringFile['./dane/waga-2.txt']<-2>;
+slownik3 = StringFile['./dane/waga-3.txt']<-3>;
+slownik4 = StringFile['./dane/waga-4.txt']<-4>;
+slownik5 = StringFile['./dane/waga-5.txt']<-5>;
+
+export slownik = Optimize[slownik01 | slownik02 | slownik03 | slownik04 | slownik05 | slownik06 | slownik07 | slownik08 | slownik09 | slownik010 | slownik1 | slownik2| slownik3 | slownik4 | slownik5];
+
+zmniejsz = (("A":"a") | ("Ą":"ą") | ("B":"b") | ("C":"c") | ("Ć":"ć") | ("D":"d") | ("E":"e") | ("Ę":"ę") | ("F":"f") | ("G":"g") | ("H":"h") | ("I":"i") | ("J":"j") | ("K":"k") | ("L":"l") | ("Ł":"ł") | ("M":"m") | ("N":"n") | ("Ń":"ń") | ("O":"o") | ("Ó":"ó") | ("P":"p") | ("R":"r") | ("S":"s") | ("Ś":"ś") | ("T":"t") | ("U":"u") | ("W":"w") | ("Y":"y") | ("Z":"z") | ("Ź":"ź") | ("Ż":"ż"))<0>;
+
+zmiana = (("ś":"s") | ("s":"ś") | ("ń":"n") | ("n":"ń") | ("ć":"c") | ("c":"ć") | ("ż":"z") | ("z":"ż") | ("ź":"z") | ("z":"ź") | ("ó":"o") | ("o":"ó") | ("l":"ł") | ("ł":"l") | ("e":"ę") | ("ę":"e") | ("om":"ą") | ("ą":"om") | ("a":"ą") | ("ą":"a") | ("h":"ch") | ("ch":"h") | ("u":"ó") | ("ó":"u") | ("ż":"rz") | ("rz":"ż"))<1> ;
+
+rozwin = ("":(litery))<1>;
+
+kompozycja = (rozwin|litery|zmniejsz|zmiana)+ @ slownik;
+
+export korektor = Optimize[kompozycja];

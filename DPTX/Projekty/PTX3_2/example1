@@ -1,0 +1,17 @@
+a jest zmienną
+b jest zmienną
+x jest zmienną
+umieść 5 w a
+umieść 8 w b
+
+dla x od 1 do 40
+wykonaj
+jeśli x mniejsze 8 to
+umieść a + x w a
+pokaż a
+jeśli 8 mniejsze równe 2 to
+umieść b + x w b
+pokaż b
+dotąd
+
+pokaż a + b

@@ -1,0 +1,6 @@
+fstintersect pomzad3_1.bin pomzad3_2.bin | fstprint --acceptor --isymbols=ascii.syms 
+
+
+jeśli jest puste to automaty nie akceptują tego samego
+
+jeśli nie to tak

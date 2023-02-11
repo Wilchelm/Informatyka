@@ -1,0 +1,10 @@
+digraph noname {
+    1 [label="Pierwswszy wierzchołek", shape="box", style=""]
+    2 [label="drugi wierzchołek", shape="oval", style=""]
+    3 [label="3", shape="box", style="dotted"]
+    4 [label="4", shape="circle", style=""]
+    1 -> 2 [label="alfa"]
+    1 -> 3 [label="beta"]
+    2 -> 4 [label=""]
+    3 -> 4 [label=""]
+}
