@@ -1,0 +1,8 @@
+#!/bin/bash
+suma=0
+for i in {001..100}.txt
+do
+    k=`curl http://bprzybylski.github.io/DSOP/files/suma/$i 2> /dev/null`
+    suma=$((suma+k))
+done
+echo $suma

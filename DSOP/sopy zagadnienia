@@ -1,0 +1,8 @@
+1 uprawnienia - zmiana uprawniec co robi
+2 skrypty bash
+a) 
+b) co robi skrypt
+c) pseudokod -> skrypt
+d) napisz skrypt
+
+["$l" -eq "$l"] zwraca false jeśli nie jestliczbą

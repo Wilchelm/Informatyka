@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# $1 - rozszerzenie zrodlowe
+# $2 - rozszerzenie docelowe
+
+for f in *.$1
+do
+    basename=`basename "$f" .$1`
+    cp -p "$f" "$basename".$2
+    echo "$f => $basename.$2"
+done
