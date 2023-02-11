@@ -1,0 +1,5 @@
+description: Linear regression (Pytorch) on two variables (+bias) 
+tags:
+  - linear-regression
+param-files:
+  - "*yaml"
