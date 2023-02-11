@@ -1,0 +1,4 @@
+description: Runed a ready-made Fairseq model
+tags:
+param-files:
+  - "*yaml"
