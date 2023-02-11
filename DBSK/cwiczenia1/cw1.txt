@@ -1,0 +1,18 @@
+Zad 3:
+
+fcrackzip -c 1 -l 4 archiwum_z3.zip |  egrep "[2458]{4}"
+possible pw found: 4528 ()
+
+zad 4: 
+
+fcrackzip -D -p imiona_polskie.txt archiwum_z4.zip 
+possible pw found: daniel () <--- imie mieskie
+possible pw found: emiliana ()
+
+zad 5:
+
+fcrackzip -b -l 6 archiwum_z5.zip
+possible pw found: basia1 ()
+
+
+
