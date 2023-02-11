@@ -1,0 +1,17 @@
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\bin\Debug\WEB_SERWIS_PISY.exe.config
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\bin\Debug\WEB_SERWIS_PISY.exe
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\bin\Debug\WEB_SERWIS_PISY.pdb
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.formWeather.resources
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.Properties.Resources.resources
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.csproj.GenerateResource.Cache
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.exe
+c:\users\x\documents\visual studio 2010\Projects\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.pdb
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\bin\Debug\WEB_SERWIS_PISY.exe.config
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.exe
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.pdb
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\bin\Debug\WEB_SERWIS_PISY.exe
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\bin\Debug\WEB_SERWIS_PISY.pdb
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.csprojResolveAssemblyReference.cache
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.formWeather.resources
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.Properties.Resources.resources
+E:\WEB_SERWIS_PISY\WEB_SERWIS_PISY\obj\x86\Debug\WEB_SERWIS_PISY.csproj.GenerateResource.Cache
