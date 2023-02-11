@@ -1,0 +1,5 @@
+a=input()
+c,d=a.split()
+e=int(c)+int(d)
+suma="suma="+str(e)
+print (suma)

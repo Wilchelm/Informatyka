@@ -1,0 +1,7 @@
+a=input()
+c,d,e=a.split()
+c=int(c)
+d=int(d)
+e=int(e)
+f=(2*c*d)+(2*c*e)+(2*e*d)
+print (f)
