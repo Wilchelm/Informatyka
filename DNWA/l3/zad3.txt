@@ -1,0 +1,1 @@
+Nie jestem do końca pewien, ale wydaje mi sie, że musi pokrywać się nasz wysyłany pakiet RST z TTL pakietu od strony serwera.

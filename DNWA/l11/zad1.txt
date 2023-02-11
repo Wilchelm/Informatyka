@@ -1,0 +1,281 @@
+Otwierając plik services w katalogu etc tj./etc/services można dowiedzieć się jakie porty do czego są wykorzystywane.
+
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+cat /etc/services | less
+
+
+tcpmux          1/tcp                           # TCP port service multiplexer
+echo            7/tcp
+echo            7/udp
+discard         9/tcp           sink null
+discard         9/udp           sink null
+systat          11/tcp          users
+daytime         13/tcp
+daytime         13/udp
+netstat         15/tcp
+qotd            17/tcp          quote
+....
+....
+....
+....
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+Analiza kkcup99
+
+cat kddcup.data | cut -d"," -f2 | sort -n | uniq -c
+2833545 icmp
+1870598 tcp
+ 194288 udp
+
+cat kddcup.data | cut -d"," -f3 | sort -n | uniq -c
+      2 aol
+   3382 auth
+   1047 bgp
+   1021 courier
+   1051 csnet_ns
+   1068 ctf
+   1056 daytime
+   1059 discard
+   1113 domain
+  57782 domain_u
+   1059 echo
+  16338 eco_i
+2811660 ecr_i
+   1042 efs
+   1045 exec
+   6891 finger
+   5214 ftp
+  40697 ftp_data
+   1077 gopher
+      2 harvest
+   1050 hostnames
+ 623091 http
+      1 http_2784
+   1044 http_443
+      2 http_8001
+   1069 imap4
+    521 IRC
+   1052 iso_tsap
+   1050 klogin
+   1040 kshell
+   1041 ldap
+   1069 link
+   1045 login
+   1076 mtp
+   1067 name
+   1052 netbios_dgm
+   1054 netbios_ns
+   1055 netbios_ssn
+   1056 netstat
+   1038 nnsp
+   1059 nntp
+   3833 ntp_u
+  72653 other
+      5 pm_dump
+   1055 pop_2
+   1981 pop_3
+   1045 printer
+1100831 private
+      9 red_i
+   1073 remote_job
+   1070 rje
+   1051 shell
+  96554 smtp
+   1052 sql_net
+   1075 ssh
+   1056 sunrpc
+   1060 supdup
+   1056 systat
+   4277 telnet
+      3 tftp_u
+   1579 time
+     12 tim_i
+    148 urh_i
+   5378 urp_i
+   1041 uucp
+   1057 uucp_path
+   1053 vmnet
+   1073 whois
+    135 X11
+   1078 Z39_50
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+Analiza network
+
+Wypisanie portów żródłowych i docelowych występujących w pliku net1.csv (sprawdzenie portów, aby na ich podstawie określić wykorzystywane usługi sieciowe) a objaśnienia zabrane z /etc/services
+cut -d "," -f3 net1.csv | sort -u -n | less
+cut -d "," -f5 net1.csv | sort -u -n | less
+
+port 7 - echo
+port 11 - systat
+port 13 - daytime
+port 17 - qotd
+port 20 - ftp-data
+port 21 - FTP
+port 23 - telnet
+port 25 - smtp
+port 37 - time
+port 42 - nameserver
+port 43 - whois
+port 45 - mpm
+port 49 - tacacs
+port 53 - DNS
+port 67 - bootps
+port 68 - bootpc
+port 70 - gopher
+port 79 - finger
+port 80 - http
+port 86 - mfcobol
+port 95 - supdup
+port 102 - iso-tsap
+port 105 - cso
+port 110 - pop3
+port 113 - auth
+port 119 - nntp
+port 123 - ntp
+port 137 - netbios-ns
+port 138 - netbios-dgm
+port 443 - https
+port 513 - login
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+Analiza wywołań systemu
+
+cat syn.int | sort -n | uniq -c
+Dane bez sensu nic nie mówią.
+      3 1524 100  
+     28 1524 104  
+     14 1524 105  
+     14 1524 106  
+      2 1524 112  
+      2 1524 119  
+      1 1524 121  
+      2 1524 127  
+      1 1524 128  
+      1 1524 138  
+      1 1524 143  
+      1 1524 155  
+      3 1524 167  
+      2 1524 17  
+      2 1524 18  
+      3 1524 19  
+     12 1524 2  
+      1 1524 23  
+      6 1524 27  
+      7 1524 3  
+      1 1524 32  
+     12 1524 4  
+      1 1524 45  
+     16 1524 5  
+      5 1524 50  
+      2 1524 56  
+      1 1524 59  
+     10 1524 66  
+      1 1524 7  
+      1 1524 83  
+      1 1524 85  
+      2 1524 88  
+      1 1524 89  
+      4 1524 9  
+      2 1524 93  
+      3 1530 100  
+     20 1530 104  
+     10 1530 105  
+     10 1530 106  
+      2 1530 112  
+      3 1530 119  
+      1 1530 121  
+      2 1530 127  
+      1 1530 128  
+      1 1530 138  
+      1 1530 143  
+      1 1530 155  
+      4 1530 167  
+      5 1530 17  
+      3 1530 18  
+      3 1530 19  
+    238 1530 2  
+      1 1530 23  
+      8 1530 27  
+    234 1530 3  
+      1 1530 32  
+     16 1530 4  
+      1 1530 45  
+     23 1530 5  
+      5 1530 50  
+      4 1530 56  
+      1 1530 59  
+     10 1530 66  
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+Analiza UNIX shell log
+
+cat USER4 | sort -n | uniq -c | sort -nr
+  10699 <1>
+   4501 cd
+   2395 ll
+   1682 vi
+   1465 dir
+   1396 <2>
+    955 **SOF**
+    955 **EOF**
+    641 elm
+    559 logout
+    531 rm
+    518 ls
+    493 xlock
+    449 make
+    419 -i
+    370 &
+    359 cat
+    349 >
+    325 grep
+    324 cp
+    296 rlogin
+    294 pwd
+    282 finger
+    251 man
+    247 head
+    236 grepall
+    230 test
+    227 latex
+    223 <3>
+    221 |
+    191 mv
+    180 -dmsa15
+    171 contour
+    152 dvips
+    149 !
+    143 netscape
+    132 -l
+    123 echo
+    116 wc
+    114 lp
+    109 matlab
+    101 emacs
+     92 tail
+     81 -f
+     78 <4>
+     73 sed
+     73 search1
+     73 ps
+     68 enscript
+...
+...
+...

@@ -1,0 +1,56 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Skalowanie po stronie odbierającej (RSS), znane również jako odbiór wielu kolejek, rozdziela przetwarzanie odbioru sieciowego na kilka sprzętowych kolejek odbiorczych, umożliwiając przetwarzanie przychodzącego ruchu sieciowego przez wiele procesorów. RSS można wykorzystać do zmniejszenia wąskich gardeł w przetwarzaniu przerwań odbieranych spowodowanych przeciążeniem pojedynczego procesora oraz w celu zmniejszenia opóźnień sieci.
+
+RSS jest domyślnie włączony. Liczba kolejek (lub procesorów, które powinny przetwarzać aktywność sieciową) dla RSS jest skonfigurowana w odpowiednim sterowniku urządzenia sieciowego. Dla sterownika bnx2x jest on skonfigurowany w num_queues. Dla sterownika sfc jest on skonfigurowany w parametrze rss_cpus. Niezależnie od tego, zazwyczaj jest konfigurowany w / sys / class / net / device / queues / rx-queue /, gdzie device to nazwa urządzenia sieciowego (np. Eth1), a rx-queue to nazwa odpowiedniej kolejki odbiorczej.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+──────▄▀▄─────▄▀▄
+─────▄█░░▀▀▀▀▀░░█▄
+─▄▄──█░░░░░░░░░░░█──▄▄
+█▄▄█─█░░▀░░┬░░▀░░█─█▄▄█
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Odbieranie sterowania pakietami (RPS) jest podobne do RSS, ponieważ służy do kierowania pakietów do określonych procesorów w celu przetworzenia. Jednak RPS jest implementowany na poziomie oprogramowania i pomaga zapobiec sytuacji, w której kolejka sprzętowa pojedynczej karty interfejsu sieciowego stanie się wąskim gardłem w ruchu sieciowym.
+
+
+RPS jest skonfigurowany dla urządzenia sieciowego i kolejki odbiorczej w pliku / sys / class / net / device / queues / rx-queue / rps_cpus, 
+gdzie device to nazwa urządzenia sieciowego (np. Eth0), a kolejka rx to nazwa odpowiedniej kolejki odbiorczej (na przykład rx-0).
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+▕▔╲┊┊┊┊┊┊┊┊┊╱▔▏
+┊╲┈╲╱▔▔▔▔▔╲╱┈╱
+┊┊╲┈╭╮┈┈┈╭╮┈╱┊
+┊┊╱┈╰╯┈▂┈╰╯┈╲┊
+┊┊▏╭╮▕━┻━▏╭╮▕┊
+┊┊╲╰╯┈╲▂╱┈╰╯╱┊
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Odbieranie sterowania przepływem (RFS) wydłuża zachowanie RPS w celu zwiększenia częstotliwości trafień w pamięci podręcznej procesora, a tym samym zmniejszenia opóźnień sieci. Tam, gdzie RPS przekazuje pakiety wyłącznie na podstawie długości kolejki, RFS używa zaplecza RPS do obliczenia najbardziej odpowiedniego procesora, a następnie przekazuje pakiety na podstawie lokalizacji aplikacji używającej pakietu. Zwiększa to wydajność pamięci podręcznej procesora.
+
+
+RFS jest domyślnie wyłączony. Aby włączyć RFS, musisz edytować dwa pliki:
+
+/ proc / sys / net / core / rps_sock_flow_entries
+    Ustaw wartość tego pliku na maksymalną oczekiwaną liczbę jednocześnie aktywnych połączeń. Zalecamy wartość 32768 przy umiarkowanym obciążeniu serwera. Wszystkie wprowadzone wartości są w praktyce zaokrąglane w górę do najbliższej potęgi 2.
+/ sys / class / net / device / queues / rx-queue / rps_flow_cnt
+    Zamień urządzenie na nazwę urządzenia sieciowego, które chcesz skonfigurować (na przykład eth0), a kolejkę rx na kolejkę odbiorczą, którą chcesz skonfigurować (na przykład rx-0).
+    Ustaw wartość tego pliku na wartość rps_sock_flow_entries podzieloną przez N, gdzie N jest liczbą kolejek odbiorczych na urządzeniu. Na przykład, jeśli rps_flow_entries jest ustawiony na 32768 i istnieje 16 skonfigurowanych kolejek odbiorczych, rps_flow_cnt powinien być ustawiony na 2048. W przypadku urządzeń z jedną kolejką wartość rps_flow_cnt jest taka sama jak wartość rps_sock_flow_entries.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+╥━━━━━━━━╭━━╮━━┳
+╢╭╮╭━━━━━┫┃▋▋━▅┣
+╢┃╰┫┈┈┈┈┈┃┃┈┈╰┫┣
+╢╰━┫┈┈┈┈┈╰╯╰┳━╯┣
+╢┊┊┃┏┳┳━━┓┏┳┫┊┊┣
+╨━━┗┛┗┛━━┗┛┗┛━━┻
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Transmit Packet Steering (XPS) dla urządzeń wielokolejkowy(multiqueue). XPS wprowadza bardziej wydajną transmisję pakietów sieciowych dla urządzeń wielokolejkowych poprzez specjalne ukierunkowanie na procesor zaangażowany w wysyłanie pakietu. XPS umożliwia wybór kolejki transmisji do transmisji pakietów na podstawie konfiguracji.
+
+Kolejną funkcją, która pomaga poprawić lokalizację pamięci, jest funkcja jądra o nazwie XPS, Transmit Packet Steering. Pozwala to użytkownikowi określić, że wolą, aby aplikacje wybrały kolejkę transmisji na podstawie lokalnego procesora zamiast funkcji skrótu. Zaletą jest to, że transmisja i czyszczenie mogą odbywać się na lokalnym CPU lub co najmniej jednym na tym samym węźle NUMA. Pomoże to zmniejszyć opóźnienia transmisji i poprawić wydajność. Włączenie XPS jest dość proste. Jest to tylko kwestia echa wartości maski procesora do wartości xps_cpus sysfs dla kolejki w następujący sposób:
+
+echo 02> / sys / class / net / enp5s0f0 / queues / tx-1 / xps_cpus
+
+Sprawiłoby to, że każdy ruch przesyłany przez CPU 1 byłby kierowany do kolejki Tx 1. Domyślnie sterownik Intel ixgbe konfiguruje te pola automatycznie z odwzorowaniem 1: 1 w ramach inicjalizacji sterownika. Coś podobnego można zrobić ręcznie na innych sterownikach za pomocą prostego skryptu i prawdopodobnie poprawiłoby to wydajność Tx i zmniejszyło opóźnienia.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

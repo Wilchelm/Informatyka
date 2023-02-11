@@ -1,0 +1,13 @@
+Metodą na oszukanie timelina jest modyfikacja metadanych pliku:
+
+daty utworzenia, modyfikacji, dostępu itd.
+
+Istnieje wiele już gotowych programów do tego typu modyfikacji pod Windowsa np. BulkFileChanger, Atributte Changer itd.
+
+https://www.online-tech-tips.com/computer-tips/how-to-change-the-last-modified-date-creation-date-and-last-accessed-date-for-files-and-folders/
+
+Natomiast pod linuksem można wykorzystac touch'a
+
+touch -a -t 201611161200.10 file.txt
+
+dana komenda zmieni czas dostępu na 2016-11-16 12:00:10.000000000

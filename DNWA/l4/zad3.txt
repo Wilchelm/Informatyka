@@ -1,0 +1,17 @@
+Aby zapewnić ochronę przed spamem zgodnie z mechanizmem "Proof od work" dobrze jest użyc fukcji skrótu. 
+Tj. wykorzytsywac i zawierać w wiadomościach Hashe. 
+
+Przykładowy nagłówek:
+	X-Hashcash: 1:20:1303030600:adam@cypherspace.org::McMybZIhxKXu57jd:ckvi
+
+
+Pieczęć hashcash stanowi dowód pracy procesora jaka musiała zostać wykonana do jej wygenerowania. Ilość koniecznej pracy po stronie nadawcy może być parametryzowana, natomiast po stronie odbiorcy można zweryfikować pieczęć błyskawicznie. Opiera się to na funkcji której wykonanie odbywa się szybko a znalezienie danych wejściowych dla zadanego wyjścia może trwać bardzo długo. Takimi funkcjami są funkcje skrótu (nazywanymi funkcjami haszującymi) które przyporządkowują ciągowi danych o dowolnej długości liczbę o stałej długości. Dla tej liczby w zależności od wyboru funkcji haszującej może być bardzo trudne znalezienie jakiegokolwiek ciągu z przeciwobrazu, to znaczy takiego dla którego skrótem będzie żądana liczba. Jako funkcji skrótu używana jest SHA-1 dająca w wyniku 160-bitową liczbę. Udowodnienie pracy hashcash jest znalezieniem ciągu z przeciwobrazu dla częściowo danej liczby, to znaczy ciągu którego skrót miałby wyzerowaną zadaną ilość najstarszych bitów (należy zaznaczyć że w SHA-1 stosowana jest konwencja big endian). Przez wybranie ilości bitów które są równe 0, praca wymagana do znalezienia ciągu może być dowolnie droga – od ułamków sekund do minut i godzin. Natomiast weryfikacja jest wydajna ponieważ polega na jednokrotnym wykonaniu funkcji skrótu niezależnie od wymaganej ilości wyzerowanych bitów. Narzędzie hashcash pozwala na utworzenie pieczęci która jest dołączana do wysłanych maili i do weryfikowania pieczęci w otrzymanych e-mailach. 
+
+
+Nadawca przegotowuje nagłówek i dodaje początkowy losowy ciąg. Następnie oblicza 160-bitowy SHA-1 nagłówka. Jeśli określona liczba pierwszych bitów jest zerami (domyślnie 20) nagłówek jest dopuszczalny. Jeśli nie, bierze inny losowy ciąg i próbuje ponownie. Czas znalezienia odpowiedniego nagłówka rośnie wykładniczo względem ilości początkowym bitów które muszą być wyzerowane. Dla zwykłego użytkownika koszt jest akceptowalny jednak nie dla nadawców spamu wysyłających masowo maile.
+
+
+
+
+
+

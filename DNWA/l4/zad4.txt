@@ -1,0 +1,26 @@
+Za co system spamassassin przyznaje punkty spamowe?
+Aby uniknąć sytuacji, w której Twoja wiadomość zostanie przez system SpamAssassin uznana za spam, powinieneś poznać reguły, które nim kierują i trzymać się ich. Możesz także testować wiadomośc we FreshMailu, który zna wszystkie reguły SpamAssassina ;)
+
+Nie zamieszczaj dużej ilości grafiki (zwłaszcza załączanej wraz z mailem) - SpamAssassin zwraca uwagę, jaką część maila stanowi grafika, a jaką tekst. Należy uważać także na przesyłane załączniki wraz z mailami, a przede wszystkim na to, jaka treść znajduje się w samej wiadomości. Nigdy nie powinieneś używać samych WIELKICH LITER, ani zbyt dużej ilości wykrzykników !!!!
+
+Jeżeli chodzi o samą treść wiadomości, SpamAssassin poza standardową wrażliwością na takie słowa jak sex, viagra, porn itp. jest bardzo wyczulony na wszelkie próby obchodzenia ustawy o świadczeniu usług drogą elektroniczną, tzn. o próbę przesłania w treści wiadomości tekstów w stylu “adres pochodzi z ogólnodostępnej bazy”, “to nie jest informacja handlowa w myśl..”, “niezainteresowanych przepraszamy”, “nie stanowi oferty w rozumieniu”, itp.
+
+Wszyscy dostajemy spam, więc wiemy jak on wygląda - temat jest PISANY DUŻYMI LITERAMI, wybrane słowa są pogrubione i podkreślone na czerwono albo niebiesko, krzyczą na nas armią znaków interpunkcyjnych !!!!!!! i używają słów-haczyków: kliknij tutaj, 100%, promocja itd.
+
+Unikaj tego. Nasze badania pokazują, że najlepiej sprawdzają się tematy informacyjne, trafne i  dobrze dopasowane do grupy docelowej.
+
+Niestety, ze względu na praktyki spamerów, dotyczących wykorzystania linków rezygnacji do potwierdzenia de facto autentyczności danego adresu email, SpamAssassin stał się również bardzo wrażliwy na frazy takie jak “jeżeli nie chcesz ..., kliknij tutaj”, “kliknij tutaj”, “wypisz” itp.
+
+Jeszcze raz przypominamy najpopularniejsze błędy:
+
+pisanie spamerskim stylem, jak np. "kliknij tutaj!" albo "To jedyna taka okazja w Twoim życiu!"
+nadużywanie znaków interpunkcyjnych !!!!!!!!
+prośba "KLIKNIJ TUTAJ" - pisane dużymi literami
+używanie zwrotu "Szanowni Państwo"
+lakoniczne uzasadnienie dlaczego wysyłasz ten newsletter
+HTML ma "tbody" tag,
+tytuł w HTML jest oznaczony jako "Untitled" - pamiętaj, że większość wiadomości HTML słanych przez spamerów ma bardzo ubogi kod
+UŻYWANIE CAPS LOCKA JEST JAK KRZYCZENIE W MAILU (szczególnie w temacie wiadomości)
+kolorowanie czcionek na rażący czerwony, niebieski albo zielony
+mailing, jako jeden wielki obrazek z niewielką ilością tekstu lub w ogóle bez niego
+wpisywanie słowa "test" w temacie

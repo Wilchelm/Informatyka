@@ -1,0 +1,6 @@
+grep -oP "\d+-\d+" server-apache.rules  | sort
+
+2018-11776
+
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"SERVER-APACHE Apache Struts OGNL getRuntime.exec static method access attempt"; flow:to_server,established; content:"@java.lang.Runtime@getRuntime("; http_uri; content:".exec"; within:10; http_uri; metadata:policy balanced-ips drop, policy connectivity-ips drop, policy max-detect-ips drop, policy security-ips drop, service http; reference:cve,2018-11776; reference:url,cwiki.apache.org/confluence/display/WW/S2-057; classtype:attempted-admin; sid:47634; rev:1;)
+

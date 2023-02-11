@@ -1,0 +1,98 @@
+Komenda do zakończenia:
+-----------------------
+hping3 150.254.79.170 -F
+-----------------------
+
+
+
+
+HPING3 jest naządzędziem działającym w poziomu lini komend(Linux, FreeBSD, NetBSD, OpenBSD, Solaris, MacOs X, Windows) do analizy oraz rozpakowywania pakietów TCP/IP. Inspiracją projektu miało być unixowe narzędzie ping, ale hping nie wysyła jedynie żądań ICMP echo. Wspiera również takie protokoły jak TCP, UDP, ICMP i RAW-IP, ma również tryb śledzenia trasy, zdolność wysyłania plików pomiędzy wpieranymi kanałami oraz wiele innych użytecznych funkcji.
+
+Hping został stworzony w przeszłości głównie jako narzędzie dla pentesterów. Obecnie znajduje zastosowanie również dla użytkowników, którzy nie dbają o bezpieczeńśtwo a jedynie chcą przetestować sieć lub hosty w niej się znajdujące. Zadania jakie możesz przykładowo wykonać przy pomocy HPING:
+*testowanie zapory
+*zaawansowane skanowanie portów
+*testowanie sieci za pomocą różnych pakietów, TOS, gramentacji
+*manualnie odkrywanie MTU(Maximum Transmission Unit)
+*zaawansowane śledzenie trasy poprzez wszystkie wpierane protokoły
+*”odciski systemu”(OS Fingerprinting)
+*odgadywanie uptime’u
+*audytowanie stosu TCP/IP
+
+ŹRÓDŁO:
+http://www.hping.org
+
+OPCJE:
+-h –help [pokaż dostępną pomoc]
+-v –version [pokaż wersję aplikacji]
+-c –count [licznik pakietów]
+-i –interval [czekaj (uX gdzie X jest wartością milisekund np: -i u1000)]
+–fast alias dla -i u10000 (10 pakietów na sekundę)
+–faster alias dla -i u1000 (100 pakietów na sekundę)
+–flood [wysyłaj pakiey jak szybko to możliwe nie pokazując odpowiedzi]
+-n –numeric [numeryczne wyjście]
+-q –quiet [tryb cichy]
+-I –interface [nazwa interfejsu (bez zdefiniowany użyty zostanie domyślny interfejs sieciowy)]
+-V –verbose [tryb „gadatliwy”]
+-D –debug [dodatkowe informacje do debugowania]
+-z –bind [binduj ctrl+z do ttl(domyślnie dla portu docelowego)]
+-Z –unbind [odbinduj ctrl+z]
+–beep [użyj sygnału systemowego za każdym razem gdy trafi na pasujący pakiet]
+
+Tryb:
+domyślny tryb to TCP
+-0 –rawip [tryb RAW IP]
+-1 –icmp [tryb ICMP]
+-2 –udp [tryb UDP]
+-8 –scan [tryb SKANOWANIA. Przykład: hping –scan 1-30,70-90 -S www.twoj_cel.pl]
+-9 –listen [tryb nasłuchiwania]
+IP
+-a –spoof [zmień adres źródłowy IP]
+–rand-dest [losowy adres docelowy]
+–rand-source [losowy adres źródłowy]
+-t –ttl [ttl(domyślnie 64)]
+-N –id [id(domyślnie jest losowe)]
+-W –winid [użyj win* id kolejności bitów]
+-f –frag [podziel pakiety na więcej flag]
+-x –morefrag [ustaw więcej pakietów flag]
+-y –dontfrag [ustaw flagę „nie framentowania”]
+-m –mtu [ustaw wirtualne MTU]
+-o –tos [typ usługi]
+ICMP
+-C –icmptype [typ ICMP(domyślnie żądanie echo)]
+-K –icmpcode [kod ICMP(domyślnie 0)]
+–force-icmp [wyślij wszystkie obsługiwane rodzaje ICMP]
+–icmp-gw [ustaw bramkę do przekierowywania pakietów ICMP]
+–icmp-ts [alias dla –icmp –icmptype 13]
+–icmp-addr [alias dla –icmp –icmptype 17]
+–icmp-help [wyświetla dostępną pomoc dla ICMP]
+
+UDP/TCP
+-s –baseport [bazowy adres portu źródłowego]
+-p –destport [numer portu docelowego]
+-k –keep [podtrzymuj numer portu źródłowego]
+-w –win [winsize]
+-O –tcpoff [ustaw zmyślony offset TCP]
+-Q –seqnum [pokazuje tylko sekwencję TCP]
+-b –badcksum [próbuje wysłać pakiety z błędną checksum’ą]
+-M –setseq [ustaw sekwencję TCP]
+-L –setack [ustaw TCP ack]
+-F –fin [ustaw flagę FIN]
+-S –syn [ustaw flagę SYN]
+-R –rst [ustaw flagę RST]
+-P –push [ustaw flagę PUSH]
+-A –ack [ustaw flagę ACK]
+-U –urg [ustaw flagę URG]
+-X –xmas [ustaw X nieużywanej flagi (0x40)]
+-Y –ymas [ustaw Y nieużywanej flagi (0x80)]
+–tcpexitcode [użyj osatniej tcp->th_flags jako kod wyjścia]
+OGÓLNE
+-d –data [wielkość danych(domyślnie 0)]
+-E –file [dane z pliku]
+-e –sign [dodaj sygnaturę]
+-j –dump [zrzucaj pakiety w hex’ach]
+-J –print[zrzucaj tylko ‚drukowalne’ znaki]
+-B –safe [użyj „bezpiecznego” protokołu]
+-u –end [powiadam kiedy –file osiągnie EOF(koniec pliku)]
+-T –traceroute [tryb TRACEROUTE]
+–tr-stop [zakończ gdy otrzyma pierwszy pakiet ICMP w trybie TRACEROUTE]
+–tr-no-rtt [nie obliczaj/pokazuj informacji RTT]

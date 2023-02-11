@@ -1,0 +1,236 @@
+==========================================================
+Summary of Results
+==========================================================
+
+SPF Check : pass
+Sender-ID Check : pass
+DKIM Check : pass
+SpamAssassin Check : ham (non-spam)
+==========================================================
+Details:
+==========================================================
+
+HELO hostname: mx-out.tlen.pl
+Source IP: 193.222.135.145
+mail-from: x@o2.pl
+Anonymous To: ins-snkztswg@isnotspam.com
+---------------------------------------------------------
+SPF check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: smtp.mail=x@o2.pl
+DNS record(s):
+o2.pl.	14400	IN	TXT	"v=spf1 include:wp.pl -all"
+
+
+----------------------------------------------------------
+Sender-ID check details:
+----------------------------------------------------------
+
+Result: pass
+
+ID(s) verified: smtp.mail=x@o2.pl
+DNS record(s):
+o2.pl.	14400	IN	TXT	"v=spf1 include:wp.pl -all"
+
+
+----------------------------------------------------------
+DKIM check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: header.From=x@o2.pl
+Selector=1024a
+domain=o2.pl
+DomainKeys DNS Record=1024a._domainkey.o2.pl
+
+----------------------------------------------------------
+SpamAssassin check details:
+----------------------------------------------------------
+SpamAssassin 3.4.1 (2015-04-28)
+
+Result: ham (non-spam) (03.7points, 10.0 required)
+
+pts rule name description
+---- ---------------------- -------------------------------
+
+
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+* See http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+* for more information.
+* [URIs: o2.pl]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (x[at]o2.pl)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=3.7 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,SPF_PASS,
+URIBL_BLOCKED autolearn=no autolearn_force=no version=3.4.0
+X-Spam-Score: 3.7
+
+To learn more about the terms used in the SpamAssassin report, please search
+here: http://wiki.apache.org/spamassassin/
+
+==========================================================
+Explanation of the possible results (adapted from 
+draft-kucherawy-sender-auth-header-04.txt):
+==========================================================
+
+"pass"
+the message passed the authentication test.
+
+"fail"
+the message failed the authentication test.
+
+"softfail"
+the message failed the authentication test, and the authentication
+method has either an explicit or implicit policy which doesn't require
+successful authentication of all messages from that domain.
+
+"neutral"
+the authentication method completed without errors, but was unable
+to reach either a positive or a negative result about the message.
+
+"temperror"
+a temporary (recoverable) error occurred attempting to authenticate
+the sender; either the process couldn't be completed locally, or
+there was a temporary failure retrieving data required for the
+authentication. A later retry may produce a more final result.
+
+"permerror"
+a permanent (unrecoverable) error occurred attempting to
+authenticate the sender; either the process couldn't be completed
+locally, or there was a permanent failure retrieving data required
+for the authentication.
+
+
+==========================================================
+Original Email
+==========================================================
+
+From x@o2.pl Tue Oct 29 16:31:03 2019
+Return-path: <x@o2.pl>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+localhost.localdomain
+X-Spam-Flag: YES
+X-Spam-Level: ***
+X-Spam-Report: 
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+* See http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+* for more information.
+* [URIs: o2.pl]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (x[at]o2.pl)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=3.7 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,SPF_PASS,
+URIBL_BLOCKED autolearn=no autolearn_force=no version=3.4.0
+Envelope-to: ins-snkztswg@isnotspam.com
+Delivery-date: Tue, 29 Oct 2019 16:31:03 +0000
+Received: from mx-out.tlen.pl ([193.222.135.145])
+by localhost.localdomain with esmtp (Exim 4.84_2)
+(envelope-from <x@o2.pl>)
+id 1iPUOc-0009be-Kt
+for ins-snkztswg@isnotspam.com; Tue, 29 Oct 2019 16:31:02 +0000
+Received: (wp-smtpd smtp.tlen.pl 26045 invoked from network); 29 Oct 2019 17:32:35 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=o2.pl; s=1024a;
+t=1572366755; bh=/v1l2KRGaPGEqCaQq1PEXbEXPe5ccMW6moWR7sRMYUs=;
+h=Subject:From:To;
+b=XdxVFWFzGsvOpK26nK394PLpBpWhHpS7DYaqdhMOS7KEr3gtZ5ROPtUFi4B/j26FF
+nilapBnJu03zkr3DMdlaDECkVWZiBh2341arjIUZTrvFWmEWb34y44hrZFK48U05vL
+kE6MTWiiFBSinGHn62pYGQjwdmILO1r7cPCuQI8Q=
+Received: from localhost.localdomain (HELO localhost) ([127.0.0.1])
+(envelope-sender <x@o2.pl>)
+by smtp.tlen.pl (WP-SMTPD) with SMTP
+for <ins-snkztswg@isnotspam.com>; 29 Oct 2019 17:32:35 +0100
+Content-Type: multipart/alternative; boundary="2MMDFRTFELRSLRHLMTLJMnhgwp"
+MIME-Version: 1.0
+User-Agent: GWP-Draft
+X-Originator: 150.254.79.54
+X-FactoryStamp: H---
+Date: Tue, 29 Oct 2019 17:32:35 +0100
+X-Draft-Variant: forward
+X-Draft-Parentmailid: d7d141220f49e154e190c6fd
+X-Draft-Contenttype: text/html
+Priority: normal
+Subject: =?UTF-8?Q?Pd=3A_This_is_the?=
+From: x <x@o2.pl>
+To: =?UTF-8?Q?ins-snkztswg=40isnotspam=2Ecom?= <ins-snkztswg@isnotspam.com>
+Message-ID: <2d3ac76297ab4b0db05a761b4e63894c@grupawp.pl>
+In-Reply-To: <<d7f6c83b33a04c31a98a5607885a8dd9@grupawp.pl>>
+References: <d7f6c83b33a04c31a98a5607885a8dd9@grupawp.pl>
+X-WP-MailID: c370dc4d2da01376c1c7f00031513e4b
+X-WP-AV: skaner antywirusowy Poczty o2
+X-WP-SPAM: NO 0000010 [8SPk] 
+X-DKIM-Status: pass (o2.pl)
+--2MMDFRTFELRSLRHLMTLJMnhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Dnia 29 pa=C5=BAdziernika 2019 17:24 x &lt;x@o2.pl&gt; napisa=
+=C5=82(a):
+
+
+
+This is the Gtube, the Generic Test for Unsolicited Bulk Email I=
+f your mail filter supports it, the Gtube provides a test by which you can=
+verify that the filter is installed correctly and is detecting incoming m=
+ail. You can send yourself a test mail containing the following string of =
+characters (in upper case and with no white spaces and line breaks): You =
+should send this test mail from an account outside of your network.=0D
+
+--2MMDFRTFELRSLRHLMTLJMnhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+
+
+<br>
+
+<div class=3D"nh_extra">
+
+<p>
+Dnia 29 pa=C5=BAdziernika 2019 17:24 x &lt;x@o2.pl&gt=
+; napisa=C5=82(a):
+</p>
+
+<blockquote class=3D"nh_quote" style=3D"border-left: 2px solid #999; =
+padding-left: 8px; margin: 0;">
+<div id=3D"gwp3869226d"><div id=3D"gwp3869226dh"><div class=3D"gwp3=
+869226db" data-message-body=3D"true"><div>This is the Gtube, the Generic Te=
+st for Unsolicited Bulk Email<br/></div><div><br/></div><div>If your mail f=
+ilter supports it, the Gtube provides a test by which you<br/></div><div>ca=
+n verify that the filter is installed correctly and is detecting incoming<b=
+r/></div><div>mail. You can send yourself a test mail containing the follow=
+ing string of<br/></div><div>characters (in upper case and with no white sp=
+aces and line breaks):<br/></div><div><br/></div><div>You should send this =
+test mail from an account outside of your network.<br/></div></div></div></=
+div>
+</blockquote>
+</div>
+
+
+--2MMDFRTFELRSLRHLMTLJMnhgwp--
+
+
+

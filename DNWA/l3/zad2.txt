@@ -1,0 +1,22 @@
+# alert udp any 123 -> any 123 (msg:"SERVER-OTHER NTP crypto-NAK possible DoS attempt"; flow:to_server; dsize:52; content:"|24|"; depth:1; content:"|00 00 00 00|"; within:4; distance:47; metadata:policy max-detect-ips drop, service ntp; reference:cve,2016-1547; reference:url,attack.mitre.org/techniques/T1209; reference:url,www.talosintelligence.com/reports/TALOS-2016-0081; classtype:attempted-dos; sid:37843; rev:4;)
+
+
+msf > search crypto-NAK
+
+Matching Modules
+================
+
+   Name                                         Disclosure Date  Rank    Description
+   ----                                         ---------------  ----    -----------
+   auxiliary/scanner/ntp/ntp_nak_to_the_future                   normal  NTP "NAK to the Future"
+
+msf > search heartbleed
+
+Matching Modules
+================
+
+   Name                                              Disclosure Date  Rank    Description
+   ----                                              ---------------  ----    -----------
+   auxiliary/scanner/ssl/openssl_heartbleed          2014-04-07       normal  OpenSSL Heartbeat (Heartbleed) Information Leak
+   auxiliary/server/openssl_heartbeat_client_memory  2014-04-07       normal  OpenSSL Heartbeat (Heartbleed) Client Memory Exposure
+

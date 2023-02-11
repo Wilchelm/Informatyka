@@ -1,0 +1,22 @@
+Ze względu na niemożność posiadania własnego serwera i braku takiej potrzeby dodaję w rozwiązaniach htmle, cssy itd. w katalogu ZAD 3.
+
+Starałem się umieścić na stonach studenckich wedlug:
+
+https://laboratoria.wmi.amu.edu.pl/uslugi/serwery-www/
+
+Niestety po próbie wejścia na stronę przekierowuje na stronę laboratoriów. Próbowałem także odczekać dobę.
+
+Strona startowa to index.html ze względu na konfigurację pod serwer wydziałowy.
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Jakby się było użytkownikiem magicznej sieci publicznej (np. z galerii handlowej), która magicznie wciska własne reklamy. To równie magiczne można dodać przeskok na wlasne np. facebuok.com co wygląda zupełnie jak logowanie facebooka, pobrać dane i w następnym kroku przerzucić na prawdziwe logowanie. Większość użytkowników nawet nie zwróci na to uwagi, albo uznają, że coś źle wpisali.  
+
+------------------------------------------------------------------------------------------
+Dlatego też ważnym aspektem bezpieczeństwa znanych domen powinno być wykupienie podobnych.
+
+
+
+

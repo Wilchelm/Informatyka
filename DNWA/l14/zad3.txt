@@ -1,0 +1,5 @@
+https://www.snort.org/faq/readme-tag
+
+Reguła:
+
+drop any any -> any any (msg:"abcd with size 1234 occurred"; content: "abcd"; dsize: 1234; tag:host,700,seconds,src; sid:567892108; rev:1; activities: 1;)

@@ -1,0 +1,12 @@
+Type: 8 (Echo (ping) request)
+Code: 0
+Time to live: 64
+
+Type: 0 (Echo (ping) reply)
+Code: 0
+Time to live: 63
+
+Type: 11 (Time-tolive exceeded)
+Code: 0 (Time to live exceeded in transit)
+Time to live: 255
+

@@ -1,0 +1,69 @@
+
+/etc/proxychains.conf - plik konfiguracyjny
+zakomentowanie linii: socks4 	127.0.0.1 9050
+------------------------------------------------------------------------------
+dodanie linii do pliku (/etc/proxychains.conf): socks4 168.111.123.120 5155
+------------------------------------------------------------------------------
+
+proxychains nmap -n -PS -sT 192.168.1.1/24 -p80
+ProxyChains-3.1 (http://proxychains.sf.net)
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-29 09:34 EST
+|S-chain|-<>-168.111.123.120:5155-<--timeout
+|S-chain|-<>-168.111.123.120:5155-<--timeout
+|S-chain|-<>-168.111.123.120:5155-<--timeout
+Nmap scan report for 192.168.1.1
+Host is up (0.0024s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 192.168.1.103
+Host is up (0.0018s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 192.168.1.109
+Host is up (0.19s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 26.44 seconds
+
+
+-----------------------------------------
+teraz: socks4	251.116.94.120	12445
+-----------------------------------------
+
+
+proxychains nmap -n -PS -sT 192.168.1.1/24 -p80
+ProxyChains-3.1 (http://proxychains.sf.net)
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-29 09:31 EST
+|S-chain|-<>-251.116.94.120:12445-<--timeout
+|S-chain|-<>-251.116.94.120:12445-<--timeout
+|S-chain|-<>-251.116.94.120:12445-<--timeout
+Nmap scan report for 192.168.1.1
+Host is up (0.0023s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 192.168.1.103
+Host is up (0.012s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap scan report for 192.168.1.109
+Host is up (0.14s latency).
+
+PORT   STATE  SERVICE
+80/tcp closed http
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 26.23 seconds
+root@osboxes:~# proxychains nmap -n -PS -sT 192.168.1.1/24 -p80
+ProxyChains-3.1 (http://proxychains.sf.net)
+Starting Nmap 7.80 ( https://nmap.org ) at 2019-11-29 09:33 EST
+Nmap scan report for 192.168.1.1
+

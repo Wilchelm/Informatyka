@@ -1,0 +1,2 @@
+8e93271f80b0324399d11ffe6b61b1246e81fc82048a6df4160abbe1  snortrules-snapshot-29141.tar.gz
+

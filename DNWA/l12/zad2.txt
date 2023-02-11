@@ -1,0 +1,37 @@
+Żądanie przerwania (IRQ) to żądanie usługi wysłane na poziomie sprzętowym. Przerwania mogą być wysyłane albo przez dedykowaną linię sprzętową, albo przez magistralę sprzętową jako pakiet informacyjny (przerwanie sygnalizowane komunikatem lub MSI).
+
+
+cat /proc/interrupts:
+           CPU0       CPU1       CPU2       CPU3       
+
+ 16:        157          0          0          0   IO-APIC  16-fasteoi   eth1
+
+Wyświetlenie informacji o przerwaniu numer 16:
+----------------------------------------------
+cat /proc/irq/16/smp_affinity
+f
+----------------------------------------------
+----------------------------------------------
+Domyślna wartość smp_affinity to f, co oznacza, że ​​przerwanie IRQ może być obsługiwane na dowolnym procesorze w systemie. Ustawienie tej wartości na 4 w następujący sposób oznacza, że ​​tylko CPU2 może obsłużyć to przerwanie:
+----------------------------------------------
+cat /proc/irq/16/smp_affinity
+4
+----------------------------------------------
+----------------------------------------------
+ping -I eth1 onet.pl
+----------------------------------------------
+cat /proc/interrupts 
+           CPU0       CPU1       CPU2       CPU3       
+
+ 16:        157          0        504          0   IO-APIC  16-fasteoi   eth1
+
+    /\_____/\
+   /  o   o  \
+  ( ==  ^  == )
+   )         (
+  (           )
+ ( (  )   (  ) )
+(__(__)___(__)__)
+
+
+

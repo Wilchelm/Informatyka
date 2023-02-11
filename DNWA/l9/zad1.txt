@@ -1,0 +1,17 @@
+https://www.clamav.net/documents/clamav-development
+
+
+Compiled the rule, and make a test file to match against it. Then run it under strace to determine what underlying read system call is being used for the bytecode read function:
+
+----------------------------------------------------------------------
+clambc-compiler read_test.bc
+dd if=/dev/zero of=/tmp/zeroes bs=65535 count=256
+strace clamscan -d read_test.cbc --bytecode-unsigned /tmp/zeroes
+----------------------------------------------------------------------
+
+Jak to jest dokumentacji
+aby nasz plik cvc został zawarty należy użyć komendy clamscan z argumentem -d
+
+------------------------------------
+clamscan -d zad1.cbc
+------------------------------------

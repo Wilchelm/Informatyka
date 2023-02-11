@@ -1,0 +1,1 @@
+alert icmp any any -> any any (msg:"blablabla"; sid:5423752; dsize:448; itype:8;)

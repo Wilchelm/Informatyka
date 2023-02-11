@@ -1,0 +1,16 @@
+
+Konfiguracja proxy w przegladarce FIREFOX: "zad2-1.png"
+
+Instalacja certyfikatu Burp: 
+https://support.portswigger.net/customer/portal/articles/1783087-Installing_Installing%20CA%20Certificate%20-%20FF.html
+
+certyfikat pobiera sie z :  http://burp   "zad2-2.png"
+
+i instaluje "zad2-3.png"
+
+
+Przechwycenie loginu("uzytkownik") i hasła("123456") ze strony USOS: "zad2-4.png"
+
+
+aby automatycznie przechodziło do następnej strony trzeba: "zad2-5.png"
+

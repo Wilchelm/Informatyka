@@ -1,0 +1,16 @@
+Napisz regułę, która po przechwyceniu 30 pakietów TCP o rozmiarze 1234 i zawartości abcd loguje kolejne takie pakiety.
+
+
+Reguła: 
+
+active tcp any any -> any any (msg:"abcd with size 1234 occurred"; content: "abcd"; dsize: 1234; sid:567892107; rev:1; activities: 1;)
+
+dynamic tcp any any -> any any (activated_by:1; count: 30; sid:567892125;)
+
+
+Komenda:
+
+for i in {0..30}; do echo "abcd" | hping3 localhost -c 1 -d 1234 ; done;
+
+
+

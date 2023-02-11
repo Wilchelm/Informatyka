@@ -1,0 +1,3 @@
+reguła:
+
+M:RealHostname:DisplayedHostname[:FuncLevelSpec]

@@ -1,0 +1,404 @@
+==========================================================
+Summary of Results
+==========================================================
+
+SPF Check : pass
+Sender-ID Check : pass
+DKIM Check : pass
+SpamAssassin Check : spam
+==========================================================
+Details:
+==========================================================
+
+HELO hostname: bi.d.mailin.fr
+Source IP: 180.31.28.109
+mail-from: no-reply@bopra.xyz
+Anonymous To: ins-2hytww5l@isnotspam.com
+---------------------------------------------------------
+SPF check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: smtp.mail=no-reply@bopra.xyz
+DNS record(s):
+
+
+----------------------------------------------------------
+Sender-ID check details:
+----------------------------------------------------------
+
+Result: pass
+
+ID(s) verified: smtp.mail=no-reply@bopra.xyz
+DNS record(s):
+
+
+----------------------------------------------------------
+DKIM check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: header.From=no-reply@bopra.xyz
+Selector=mail
+domain=sendinblue.com
+DomainKeys DNS Record=mail._domainkey.sendinblue.com
+
+----------------------------------------------------------
+SpamAssassin check details:
+----------------------------------------------------------
+SpamAssassin 3.4.1 (2015-04-28)
+
+Result: spam (011.0points, 10.0 required)
+
+pts rule name description
+---- ---------------------- -------------------------------
+
+
+* 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+* See http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+* for more information.
+* [URIs: sendibt3.com]
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* -0.0 SPF_HELO_PASS SPF: HELO matches SPF record
+* 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+* domains are different
+* 1.5 SUBJ_ALL_CAPS Subject is all capitals
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* -0.0 RP_MATCHES_RCVD Envelope sender domain matches handover relay domain
+* 0.9 DRUG_ED_CAPS BODY: Mentions an E.D. drug
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 2.1 HTML_IMAGE_ONLY_12 BODY: HTML: images with 800-1200 bytes of words
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* 0.3 MIME_HTML_ONLY BODY: Message only has text/html MIME parts
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+* 0.4 HTML_MIME_NO_HTML_TAG HTML-only message, but there is no HTML tag
+* 2.0 DRUGS_ERECTILE Refers to an erectile drug
+X-Spam-Status: Yes, hits=11.0 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DRUGS_ERECTILE,DRUG_ED_CAPS,
+HEADER_FROM_DIFFERENT_DOMAINS,HTML_IMAGE_ONLY_12,HTML_MESSAGE,
+HTML_MIME_NO_HTML_TAG,MIME_HTML_ONLY,RP_MATCHES_RCVD,SPF_HELO_PASS,SPF_PASS,
+SUBJ_ALL_CAPS,URIBL_BLOCKED autolearn=no autolearn_force=no version=3.4.0
+X-Spam-Score: 11.0
+
+To learn more about the terms used in the SpamAssassin report, please search
+here: http://wiki.apache.org/spamassassin/
+
+==========================================================
+Explanation of the possible results (adapted from 
+draft-kucherawy-sender-auth-header-04.txt):
+==========================================================
+
+"pass"
+the message passed the authentication test.
+
+"fail"
+the message failed the authentication test.
+
+"softfail"
+the message failed the authentication test, and the authentication
+method has either an explicit or implicit policy which doesn't require
+successful authentication of all messages from that domain.
+
+"neutral"
+the authentication method completed without errors, but was unable
+to reach either a positive or a negative result about the message.
+
+"temperror"
+a temporary (recoverable) error occurred attempting to authenticate
+the sender; either the process couldn't be completed locally, or
+there was a temporary failure retrieving data required for the
+authentication. A later retry may produce a more final result.
+
+"permerror"
+a permanent (unrecoverable) error occurred attempting to
+authenticate the sender; either the process couldn't be completed
+locally, or there was a permanent failure retrieving data required
+for the authentication.
+
+
+==========================================================
+Original Email
+==========================================================
+
+From bounces-84930730-ins-2hytww5l=isnotspam.com@bi.d.mailin.fr Wed Oct 23 12:29:44 2019
+Return-path: <bounces-84930730-ins-2hytww5l=isnotspam.com@bi.d.mailin.fr>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+localhost.localdomain
+X-Spam-Flag: YES
+X-Spam-Level: **********
+X-Spam-Report: 
+* 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+* See http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+* for more information.
+* [URIs: sendibt3.com]
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* -0.0 SPF_HELO_PASS SPF: HELO matches SPF record
+* 0.0 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level mail
+* domains are different
+* 1.5 SUBJ_ALL_CAPS Subject is all capitals
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* -0.0 RP_MATCHES_RCVD Envelope sender domain matches handover relay domain
+* 0.9 DRUG_ED_CAPS BODY: Mentions an E.D. drug
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 2.1 HTML_IMAGE_ONLY_12 BODY: HTML: images with 800-1200 bytes of words
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* 0.3 MIME_HTML_ONLY BODY: Message only has text/html MIME parts
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+* 0.4 HTML_MIME_NO_HTML_TAG HTML-only message, but there is no HTML tag
+* 2.0 DRUGS_ERECTILE Refers to an erectile drug
+X-Spam-Status: Yes, hits=11.0 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DRUGS_ERECTILE,DRUG_ED_CAPS,
+HEADER_FROM_DIFFERENT_DOMAINS,HTML_IMAGE_ONLY_12,HTML_MESSAGE,
+HTML_MIME_NO_HTML_TAG,MIME_HTML_ONLY,RP_MATCHES_RCVD,SPF_HELO_PASS,SPF_PASS,
+SUBJ_ALL_CAPS,URIBL_BLOCKED autolearn=no autolearn_force=no version=3.4.0
+Envelope-to: ins-2hytww5l@isnotspam.com
+Delivery-date: Wed, 23 Oct 2019 12:29:44 +0000
+Received: from bi.d.mailin.fr ([185.41.28.109])
+by localhost.localdomain with esmtp (Exim 4.84_2)
+(envelope-from <bounces-84930730-ins-2hytww5l=isnotspam.com@bi.d.mailin.fr>)
+id 1iNFln-0002gr-6R
+for ins-2hytww5l@isnotspam.com; Wed, 23 Oct 2019 12:29:43 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendinblue.com;
+q=dns/txt; s=mail; bh=HbMvQ1JwD2x7UPGWsZB6R+RNq7mPUqPfWoMPiznj6/I=;
+h=from:reply-to:subject:date:mime-version:content-type:content-transfer-encoding:list-unsubscribe;
+b=VR5YlXFhBQs6wTArJTxFba5ksAttN96yYk8SLaHz+8S3tCHvgOEi3QpXRxk8U3xSPjaUW4vYDBcG
+B0p93MPaCItxn6WR6VoFNE9lLmwtLQq6IjYh45pZKa4OlTB7M/qzUbNtPYPvHQa2s9c4o7T17GSx
+MPxBCwkaOQRXulAoGpI=
+X-Mailin-EID: ODQ5MzA3MzB%2BaW5zLTJoeXR3dzVsQGlzbm90c3BhbS5jb21%2BPE1GV2JGQ0JRaTR3aVRCdHRzNzBXYzhWNGNhUjBadlBvNU1mNUNGY0B0ZW1wbWFpbC5uaW5qYT5%2BYmkuZC5tYWlsaW4uZnI%3D
+To: ins-2hytww5l@isnotspam.com
+Date: Wed, 23 Oct 2019 07:31:11 -0500
+Subject: SPAM VIAGRA
+Message-Id: <c8fc6617-2972-48ae-9642-2b096b9b0488@smtp-relay.sendinblue.com>
+Origin-messageId: <MFWbFCBQi4wiTBtts70Wc8V4caR0ZvPo5Mf5CFc@tempmail.ninja>
+Reply-To: ureichelm_u732g@anom.xyz
+X-Mailer: PHPMailer 6.1.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-sib-id: B3CXTmieTMbLgLeimwFl2gkLKPIgV8_1akViGnprDhxZLBTGje_2rlW4fkGHGFYUsR6pGoEtqatqbpQ_hLtQ8tXa6cQyw5M6-6wmDzPl_O8xwI2UepBJKIRgoNEpx1Zjyas1JoXVHqFjxgQO_bhVcl6gJA077uIP3gkyqfWRPzCpztIqRhyDGQ
+Feedback-ID: 185.41.28.109:2453988_-1:2453988:Sendinblue
+From: <no-reply@bopra.xyz>
+List-Unsubscribe: <mailto:unsubscribe-t@bi.d.mailin.fr?subject=unsub-ODQ5MzA3MzB-aW5zLTJoeXR3dzVsQGlzbm90c3BhbS5jb21-PE1GV2JGQ0JRaTR3aVRCdHRzNzBXYzhWNGNhUjBadlBvNU1mNUNGY0B0ZW1wbWFpbC5uaW5qYT5-bm8tcmVwbHlAYm9wcmEueHl6&body=ODQ5MzA3MzB-aW5zLTJoeXR3dzVsQGlzbm90c3BhbS5jb21-PE1GV2JGQ0JRaTR3aVRCdHRzNzBXYzhWNGNhUjBadlBvNU1mNUNGY0B0ZW1wbWFpbC5uaW5qYT5-bm8tcmVwbHlAYm9wcmEueHl6>, <http://cefdjii.r.bh.d.sendibt3.com/tr/un/li/xyvkqFiJJt1IYW2mtFuy_iJOaP6N_iBs60Xdy2s8pFsAybz_Wniso7GmI2UymwTkKLw_MdE8n9H7tDbQCkfMofjvtOsHXzujUbvRe1BrfsqP0QrR39yGAj6QjcCoW66K33EA63c6ae9zoNruVqlfdqhHMEJaS5YZ6RttW1MK7nOpB6vqywqu>
+X-DKIM-Status: pass (sendinblue.com)
+FIAHFANHOFUIGAHIEUVGA OICJPOIH O VIAGRA AFGBALDKBAUIFHNAFKLDN AKB SPAM NOT =
+A SPAM NOT SPAM NOT SPAM FOPANHDPXIOBANPD<br><br><br>This message has been =
+sent using a temporary email service. You can reply to this message by =
+sending an email to ureichelm=5Fu732g@anom.xyz. <strong>To not receive more=
+of these messages you can <a target=3D=22=5Fblank=22 =
+title=3D=22Unsubscribe=22 href=3D=22http://cefdjii.r.bh.d.sendibt3.=
+com/tr/un/KagXbAJVFl1BX8Gk4NmQuFUpuQ35L8JvKGrkY0sHOP=5FIhRnbJQX7COIa9K2HfEm=
+9rzElqDbOYgQCUKdGbwLL3gO39k70CWNKH6q1rtkp7FjRtaYXtfrmlmbQHQTIkq=5F5hF7prbMP=
+3KzybY1sRxtoy7qnCPcKqXqbc9Aj2tWUVJQ6D0Am9-uU=22>click here</a></strong>
+
+<div><img width=3D=221=22 height=3D=221=22 src=3D=22http://cefdjii.r.bh.d.=
+sendibt3.com/tr/op/HQb4Qh0YB5xN7toybYX5FL6T2o-YcCBnKPcaVO8wePygBGBAZ8F5LSeM=
+C2Aj4z7OvrvlgdY-46xeAjVGXMdrwP4saaaA5KxJa=5FyX5vLd1KxEfuS5tBNbCwArKuUtAPWZH=
+XP5flvm6QowTg=22 alt=3D=22=22 /></div>
+
+
+
+
+The isNOTspam team
+
+==========================================================
+Summary of Results
+==========================================================
+
+SPF Check : pass
+Sender-ID Check : pass
+DKIM Check : pass
+SpamAssassin Check : ham (non-spam)
+==========================================================
+Details:
+==========================================================
+
+HELO hostname: mx-out.tlen.pl
+Source IP: 193.222.135.142
+mail-from: x@o2.pl
+Anonymous To: ins-kyvuylny@isnotspam.com
+---------------------------------------------------------
+SPF check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: smtp.mail=x@o2.pl
+DNS record(s):
+o2.pl.	14234	IN	TXT	"v=spf1 include:wp.pl -all"
+
+
+----------------------------------------------------------
+Sender-ID check details:
+----------------------------------------------------------
+
+Result: pass
+
+ID(s) verified: smtp.mail=x@o2.pl
+DNS record(s):
+o2.pl.	14234	IN	TXT	"v=spf1 include:wp.pl -all"
+
+
+----------------------------------------------------------
+DKIM check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: header.From=x@o2.pl
+Selector=1024a
+domain=o2.pl
+DomainKeys DNS Record=1024a._domainkey.o2.pl
+
+----------------------------------------------------------
+SpamAssassin check details:
+----------------------------------------------------------
+SpamAssassin 3.4.1 (2015-04-28)
+
+Result: ham (non-spam) (00.9points, 10.0 required)
+
+pts rule name description
+---- ---------------------- -------------------------------
+
+
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* -2.8 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+* [193.222.135.142 listed in wl.mailspike.net]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (x[at]o2.pl)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=0.9 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,
+RCVD_IN_MSPIKE_H2,SPF_PASS autolearn=no autolearn_force=no version=3.4.0
+X-Spam-Score: 0.9
+
+To learn more about the terms used in the SpamAssassin report, please search
+here: http://wiki.apache.org/spamassassin/
+
+==========================================================
+Explanation of the possible results (adapted from 
+draft-kucherawy-sender-auth-header-04.txt):
+==========================================================
+
+"pass"
+the message passed the authentication test.
+
+"fail"
+the message failed the authentication test.
+
+"softfail"
+the message failed the authentication test, and the authentication
+method has either an explicit or implicit policy which doesn't require
+successful authentication of all messages from that domain.
+
+"neutral"
+the authentication method completed without errors, but was unable
+to reach either a positive or a negative result about the message.
+
+"temperror"
+a temporary (recoverable) error occurred attempting to authenticate
+the sender; either the process couldn't be completed locally, or
+there was a temporary failure retrieving data required for the
+authentication. A later retry may produce a more final result.
+
+"permerror"
+a permanent (unrecoverable) error occurred attempting to
+authenticate the sender; either the process couldn't be completed
+locally, or there was a permanent failure retrieving data required
+for the authentication.
+
+
+==========================================================
+Original Email
+==========================================================
+
+From x@o2.pl Wed Oct 23 12:07:48 2019
+Return-path: <x@o2.pl>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+localhost.localdomain
+X-Spam-Flag: YES
+X-Spam-Level: 
+X-Spam-Report: 
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* -2.8 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+* [193.222.135.142 listed in wl.mailspike.net]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (x[at]o2.pl)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=0.9 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,
+RCVD_IN_MSPIKE_H2,SPF_PASS autolearn=no autolearn_force=no version=3.4.0
+Envelope-to: ins-kyvuylny@isnotspam.com
+Delivery-date: Wed, 23 Oct 2019 12:07:48 +0000
+Received: from mx-out.tlen.pl ([193.222.135.142])
+by localhost.localdomain with esmtp (Exim 4.84_2)
+(envelope-from <x@o2.pl>)
+id 1iNFQY-0002Y9-Kt
+for ins-kyvuylny@isnotspam.com; Wed, 23 Oct 2019 12:07:46 +0000
+Received: (wp-smtpd smtp.tlen.pl 12537 invoked from network); 23 Oct 2019 14:09:15 +0200
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=o2.pl; s=1024a;
+t=1571832555; bh=IKKqxU8daBPgQYakXKUhSrBWoNxAZKle8sLoue7WUmQ=;
+h=Subject:From:To;
+b=WGyXH+88fhT2WUMVkE8uQkpTwf0AivsZjlijiR3jANDUnqLwZ+F85PuwqYMxvoGZD
+8a+03BNhp7H7lED13/CwfJ5K7jg/Y8UykESsSkSou0b+Q6uMkgw04xvyNlov5Xhu3C
+CeJX5h3gD9tPX4EZSF5nYW4yvtLmeC5ODDmVSI+8=
+Received: from localhost.localdomain (HELO localhost) ([127.0.0.1])
+(envelope-sender <x@o2.pl>)
+by smtp.tlen.pl (WP-SMTPD) with SMTP
+for <ins-kyvuylny@isnotspam.com>; 23 Oct 2019 14:09:15 +0200
+Content-Type: multipart/alternative; boundary="2QNQKCQAVDEESLLFOSDXYnhgwp"
+MIME-Version: 1.0
+User-Agent: GWP-Draft
+X-Originator: 150.254.79.8
+X-FactoryStamp: H---
+Date: Wed, 23 Oct 2019 14:09:14 +0200
+X-Draft-Variant: new
+X-Draft-Contenttype: text/html
+Priority: normal
+Subject: X
+From: x <x@o2.pl>
+To: =?UTF-8?Q?ins-kyvuylny=40isnotspam=2Ecom?= <ins-kyvuylny@isnotspam.com>
+Message-ID: <92198addda6547afbcd830f50a7ee1ac@grupawp.pl>
+X-WP-MailID: 84601673d7becc9e413966b023713c86
+X-WP-AV: skaner antywirusowy Poczty o2
+X-WP-SPAM: NO 0000010 [sfM0] 
+X-DKIM-Status: pass (o2.pl)
+--2QNQKCQAVDEESLLFOSDXYnhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+X=0D
+
+--2QNQKCQAVDEESLLFOSDXYnhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<div>X</div>
+--2QNQKCQAVDEESLLFOSDXYnhgwp--
+
+
+
+

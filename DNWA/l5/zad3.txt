@@ -1,0 +1,20 @@
+IPS musi odbierać wszystkie pakiety kierowane przez bramę i może wydać tylko terminalowy werdykt DROP lub ACCEPT. Ma więc pierwszeństwo przed wszystkimi kolejnymi regułami w zestawie reguł: wszelkie reguły AKCEPTUJĄ przed regułami IPS usuwają pakiety z analizy IPS, a w inny sposób każda decyzja po regułach IPS będzie ignorowana.
+
+Chcemy wysłać wszystkie pakiety, które są akceptowane w FORWARD do IPS. Jest to równoważne z zastąpieniem całego werdyktu ACCEPT działaniem wysłania pakietu do IPS. Aby to zrobić, możemy po prostu użyć niestandardowego łańcucha użytkowników:
+
+iptables -N IPS
+iptables -A IPS -j NFQUEUE --queue-balance 0:1
+
+(Zastępujemy wszystkie reguły ACCEPT przez cel wysyłający pakiet do łańcucha IPS (użyj -j IPS zamiast -j ACCEPT).)
+
+Korzystanie z niestandardowego łańcucha polega na tym, że możemy zdefiniować wyjątki lub specjalne traktowanie w łańcuchu. Na przykład, aby zignorować określony komputer:
+
+iptables -I IPS -d 1.2.3.4 -j ACCEPT
+
+Łańcuch NFQUEUE:
+Jednym z prawdziwych problemów z opisaną tutaj konfiguracją jest obsługa wielu programów za pomocą NFQUEUE. Poprzednia metoda może być zastosowana tylko do jednego programu, ponieważ wysyłanie do NFQUEUE będzie terminalem.
+Istnieją tutaj dwa rozwiązania. Pierwszym z nich jest użycie metody NFQ_REPEAT w programie innym niż IPS i użycie NFQUEUE. Pakiet osiągnie po pewnej iteracji regułę -j IPS i uzyskamy pożądany wynik.
+Inną metodą jest wykorzystanie możliwości routingu kolejek NFQUEUE. Werdykt jest 32-bitową liczbą całkowitą, ale tylko pierwszy 16 bitów jest używany przez werdykt. Pozostałe 16 bitów jest używane, jeśli nie jest puste, do wskazania, w której kolejce pakiet musi zostać wysłany po werdykcie przez bieżący program. Ta metoda jest elegancka, ale wymaga obsługi tej funkcji przez zaangażowane programy.
+
+
+

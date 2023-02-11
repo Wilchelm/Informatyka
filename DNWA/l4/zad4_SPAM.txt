@@ -1,0 +1,428 @@
+==========================================================
+Summary of Results
+==========================================================
+
+SPF Check : pass
+Sender-ID Check : pass
+DKIM Check : pass
+SpamAssassin Check : spam
+==========================================================
+Details:
+==========================================================
+
+HELO hostname: mx-out.tlen.pl
+Source IP: 193.222.135.145
+mail-from: x@o2.pl
+Anonymous To: ins-au3if2aw@isnotspam.com
+---------------------------------------------------------
+SPF check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: smtp.mail=x@o2.pl
+DNS record(s):
+o2.pl.	13032	IN	TXT	"v=spf1 include:wp.pl -all"
+
+
+----------------------------------------------------------
+Sender-ID check details:
+----------------------------------------------------------
+
+Result: pass
+
+ID(s) verified: smtp.mail=x@o2.pl
+DNS record(s):
+o2.pl.	13032	IN	TXT	"v=spf1 include:wp.pl -all"
+
+
+----------------------------------------------------------
+DKIM check details:
+----------------------------------------------------------
+
+Result: pass
+ID(s) verified: header.From=x@o2.pl
+Selector=1024a
+domain=o2.pl
+DomainKeys DNS Record=1024a._domainkey.o2.pl
+
+----------------------------------------------------------
+SpamAssassin check details:
+----------------------------------------------------------
+SpamAssassin 3.4.1 (2015-04-28)
+
+Result: spam (01003.7points, 10.0 required)
+
+pts rule name description
+---- ---------------------- -------------------------------
+
+
+* 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+* See http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+* for more information.
+* [URIs: o2.pl]
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (x[at]o2.pl)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 1000 GTUBE BODY: Generic Test for Unsolicited Bulk Email
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=1003.7 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,GTUBE,HTML_MESSAGE,
+SPF_PASS,URIBL_BLOCKED autolearn=no autolearn_force=no version=3.4.0
+X-Spam-Score: 1003.7
+
+To learn more about the terms used in the SpamAssassin report, please search
+here: http://wiki.apache.org/spamassassin/
+
+==========================================================
+Explanation of the possible results (adapted from 
+draft-kucherawy-sender-auth-header-04.txt):
+==========================================================
+
+"pass"
+the message passed the authentication test.
+
+"fail"
+the message failed the authentication test.
+
+"softfail"
+the message failed the authentication test, and the authentication
+method has either an explicit or implicit policy which doesn't require
+successful authentication of all messages from that domain.
+
+"neutral"
+the authentication method completed without errors, but was unable
+to reach either a positive or a negative result about the message.
+
+"temperror"
+a temporary (recoverable) error occurred attempting to authenticate
+the sender; either the process couldn't be completed locally, or
+there was a temporary failure retrieving data required for the
+authentication. A later retry may produce a more final result.
+
+"permerror"
+a permanent (unrecoverable) error occurred attempting to
+authenticate the sender; either the process couldn't be completed
+locally, or there was a permanent failure retrieving data required
+for the authentication.
+
+
+==========================================================
+Original Email
+==========================================================
+
+From x@o2.pl Tue Oct 29 16:30:40 2019
+Return-path: <x@o2.pl>
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+localhost.localdomain
+X-Spam-Flag: YES
+X-Spam-Level: **************************************************
+X-Spam-Report: 
+* 0.0 URIBL_BLOCKED ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+* See http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+* for more information.
+* [URIs: o2.pl]
+* 3.5 BAYES_99 BODY: Bayes spam probability is 99 to 100%
+* [score: 1.0000]
+* 0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail provider
+* (x[at]o2.pl)
+* -0.0 SPF_PASS SPF: sender matches SPF record
+* 1000 GTUBE BODY: Generic Test for Unsolicited Bulk Email
+* 0.2 BAYES_999 BODY: Bayes spam probability is 99.9 to 100%
+* [score: 1.0000]
+* 0.1 HTML_MESSAGE BODY: HTML included in message
+* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from author's
+* domain
+* 0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+* valid
+* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+X-Spam-Status: Yes, hits=1003.7 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,GTUBE,HTML_MESSAGE,
+SPF_PASS,URIBL_BLOCKED autolearn=no autolearn_force=no version=3.4.0
+Envelope-to: ins-au3if2aw@isnotspam.com
+Delivery-date: Tue, 29 Oct 2019 16:30:40 +0000
+Received: from mx-out.tlen.pl ([193.222.135.145])
+by localhost.localdomain with esmtp (Exim 4.84_2)
+(envelope-from <x@o2.pl>)
+id 1iPUOF-0009aw-NU
+for ins-au3if2aw@isnotspam.com; Tue, 29 Oct 2019 16:30:40 +0000
+Received: (wp-smtpd smtp.tlen.pl 25976 invoked from network); 29 Oct 2019 17:32:12 +0100
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=o2.pl; s=1024a;
+t=1572366732; bh=0y+80wDVLIBE4ywaaePqajeYDPVmPJx77xjp6uc4hXg=;
+h=Subject:From:To;
+b=Evaf6sHx3A5mn8yfD6/o9iscLRxmeiQ9kRSGiMqEeqATzUk05+gUE3D5nE5R2sIT5
+c+TkoQvFcJ1tQg+nYyQX8KaFS/r9MGXKjI91Z2+F/QUMbEhUroOj1rpumAw6rZ5n3z
+IYYHfsRfyZg7lQmzut/awn5W4V+0pBfiGw9+Z4/k=
+Received: from localhost.localdomain (HELO localhost) ([127.0.0.1])
+(envelope-sender <x@o2.pl>)
+by smtp.tlen.pl (WP-SMTPD) with SMTP
+for <ins-au3if2aw@isnotspam.com>; 29 Oct 2019 17:32:12 +0100
+Content-Type: multipart/alternative; boundary="2JMGLKHCXAUDQINXIJJTCnhgwp"
+MIME-Version: 1.0
+User-Agent: GWP-Draft
+X-Originator: 150.254.79.54
+X-FactoryStamp: H---
+Date: Tue, 29 Oct 2019 17:32:12 +0100
+X-Draft-Variant: forward
+X-Draft-Parentmailid: 521cf4fe5525c473551e7d24
+X-Draft-Contenttype: text/html
+Priority: normal
+Subject: =?UTF-8?Q?Pd=3A_Test_spam_mail_=28GTUBE=29?=
+From: x <x@o2.pl>
+To: =?UTF-8?Q?ins-au3if2aw=40isnotspam=2Ecom?= <ins-au3if2aw@isnotspam.com>
+Message-ID: <67ef908a28e74b959e5eb085139f25f2@grupawp.pl>
+In-Reply-To: <<e8252d0815f842eaad362b00381480f3@grupawp.pl>>
+References: <e8252d0815f842eaad362b00381480f3@grupawp.pl>
+X-WP-MailID: e428093b9569b8696a3dfdb3bfdc3acf
+X-WP-AV: skaner antywirusowy Poczty o2
+X-WP-SPAM: NO 0000010 [MaOE] 
+X-DKIM-Status: pass (o2.pl)
+--2JMGLKHCXAUDQINXIJJTCnhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+Dnia 29 pa=C5=BAdziernika 2019 17:09 x &lt;x@o2.pl&gt; napisa=
+=C5=82(a):
+
+
+
+This is the GTUBE, the Generic Test for Unsolicited Bulk =
+Email If your spam filter supports it, the GTUBE provides a test by w=
+hich you can verify that the filter is installed correctly and is detecti=
+ng incoming spam. You can send yourself a test mail containing the follow=
+ing string of characters (in upper case and with no white spaces and line=
+breaks): XJS*C4JDBQADN1.NSBN3*2IDNEN*GT You should send this test =
+mail from an account outside of your network.=0D
+
+--2JMGLKHCXAUDQINXIJJTCnhgwp
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+
+
+<br>
+
+<div class=3D"nh_extra">
+
+<p>
+Dnia 29 pa=C5=BAdziernika 2019 17:09 x &lt;x@o2.pl&gt=
+; napisa=C5=82(a):
+</p>
+
+<blockquote class=3D"nh_quote" style=3D"border-left: 2px solid #999; =
+padding-left: 8px; margin: 0;">
+<div id=3D"gwp06470bae"><div id=3D"gwp06470baeh"><div class=3D"gwp0=
+6470baeb" data-message-body=3D"true"><br/><table class=3D"gwp06470bae_highl=
+ight gwp06470bae_tab-size gwp06470bae_js-file-line-container" data-tab-size=
+=3D"8" style=3D"box-sizing: border-box; border-spacing: 0px; border-collaps=
+e: collapse; tab-size: 8; color: rgb(36, 41, 46); font-family: -apple-syste=
+m, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Col=
+or Emoji', 'Segoe UI Emoji'; font-size: 14px; font-style: normal; font-vari=
+ant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-=
+spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-tran=
+sform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-tex=
+t-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-=
+style: initial; text-decoration-color: initial;"><tbody style=3D"box-sizing=
+: border-box;"><tr style=3D"box-sizing: border-box;"></tr><tr style=3D"box-=
+sizing: border-box;"><td id=3D"gwp06470bae_LC11" class=3D"gwp06470bae_blob-=
+code gwp06470bae_blob-code-inner gwp06470bae_js-file-line" style=3D"box-siz=
+ing: border-box; padding: 0px 10px; position: relative; line-height: 20px; =
+vertical-align: top; overflow: visible; font-family: SFMono-Regular, Consol=
+as, 'Liberation Mono', Menlo, monospace; font-size: 12px; color: rgb(36, 41=
+, 46); overflow-wrap: normal; white-space: pre;">This is the GTUBE, the<br/=
+></td></tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp06470bae_L12"=
+class=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" data-line-number=
+=3D"12" style=3D"box-sizing: border-box; padding: 0px 10px; width: 50px; mi=
+n-width: 50px; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Me=
+nlo, monospace; font-size: 12px; line-height: 20px; color: rgba(27, 31, 35,=
+0.3); text-align: right; white-space: nowrap; vertical-align: top; cursor:=
+pointer; user-select: none;"><br/></td><td id=3D"gwp06470bae_LC12" class=
+=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp06470bae_js-file-l=
+ine" style=3D"box-sizing: border-box; padding: 0px 10px; position: relative=
+; line-height: 20px; vertical-align: top; overflow: visible; font-family: S=
+FMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12=
+px; color: rgb(36, 41, 46); overflow-wrap: normal; white-space: pre;">Gener=
+ic<br/></td></tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp06470ba=
+e_L13" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" data-line-=
+number=3D"13" style=3D"box-sizing: border-box; padding: 0px 10px; width: 50=
+px; min-width: 50px; font-family: SFMono-Regular, Consolas, 'Liberation Mon=
+o', Menlo, monospace; font-size: 12px; line-height: 20px; color: rgba(27, 3=
+1, 35, 0.3); text-align: right; white-space: nowrap; vertical-align: top; c=
+ursor: pointer; user-select: none;"><br/></td><td id=3D"gwp06470bae_LC13" c=
+lass=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp06470bae_js-fi=
+le-line" style=3D"box-sizing: border-box; padding: 0px 10px; position: rela=
+tive; line-height: 20px; vertical-align: top; overflow: visible; font-famil=
+y: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size=
+: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white-space: pre;">T=
+est for<br/></td></tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp06=
+470bae_L14" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" data-=
+line-number=3D"14" style=3D"box-sizing: border-box; padding: 0px 10px; widt=
+h: 50px; min-width: 50px; font-family: SFMono-Regular, Consolas, 'Liberatio=
+n Mono', Menlo, monospace; font-size: 12px; line-height: 20px; color: rgba(=
+27, 31, 35, 0.3); text-align: right; white-space: nowrap; vertical-align: t=
+op; cursor: pointer; user-select: none;"><br/></td><td id=3D"gwp06470bae_LC=
+14" class=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp06470bae_=
+js-file-line" style=3D"box-sizing: border-box; padding: 0px 10px; position:=
+relative; line-height: 20px; vertical-align: top; overflow: visible; font-=
+family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font=
+-size: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white-space: pr=
+e;">Unsolicited<br/></td></tr><tr style=3D"box-sizing: border-box;"><td id=
+=3D"gwp06470bae_L15" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-numb=
+er" data-line-number=3D"15" style=3D"box-sizing: border-box; padding: 0px 1=
+0px; width: 50px; min-width: 50px; font-family: SFMono-Regular, Consolas, '=
+Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 20px; col=
+or: rgba(27, 31, 35, 0.3); text-align: right; white-space: nowrap; vertical=
+-align: top; cursor: pointer; user-select: none;"><br/></td><td id=3D"gwp06=
+470bae_LC15" class=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp=
+06470bae_js-file-line" style=3D"box-sizing: border-box; padding: 0px 10px; =
+position: relative; line-height: 20px; vertical-align: top; overflow: visib=
+le; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monosp=
+ace; font-size: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white-=
+space: pre;">Bulk<br/></td></tr><tr style=3D"box-sizing: border-box;"><td i=
+d=3D"gwp06470bae_L16" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-num=
+ber" data-line-number=3D"16" style=3D"box-sizing: border-box; padding: 0px =
+10px; width: 50px; min-width: 50px; font-family: SFMono-Regular, Consolas, =
+'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 20px; co=
+lor: rgba(27, 31, 35, 0.3); text-align: right; white-space: nowrap; vertica=
+l-align: top; cursor: pointer; user-select: none;"><br/></td><td id=3D"gwp0=
+6470bae_LC16" class=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gw=
+p06470bae_js-file-line" style=3D"box-sizing: border-box; padding: 0px 10px;=
+position: relative; line-height: 20px; vertical-align: top; overflow: visi=
+ble; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monos=
+pace; font-size: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white=
+-space: pre;">Email<br/></td></tr><tr style=3D"box-sizing: border-box;"><td=
+id=3D"gwp06470bae_L17" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-n=
+umber" data-line-number=3D"17" style=3D"box-sizing: border-box; padding: 0p=
+x 10px; width: 50px; min-width: 50px; font-family: SFMono-Regular, Consolas=
+, 'Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 20px; =
+color: rgba(27, 31, 35, 0.3); text-align: right; white-space: nowrap; verti=
+cal-align: top; cursor: pointer; user-select: none;"><br/></td><td id=3D"gw=
+p06470bae_LC17" class=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner =
+gwp06470bae_js-file-line" style=3D"box-sizing: border-box; padding: 0px 10p=
+x; position: relative; line-height: 20px; vertical-align: top; overflow: vi=
+sible; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, mon=
+ospace; font-size: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; whi=
+te-space: pre;"><br/></td></tr><tr style=3D"box-sizing: border-box;"><td id=
+=3D"gwp06470bae_L18" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-numb=
+er" data-line-number=3D"18" style=3D"box-sizing: border-box; padding: 0px 1=
+0px; width: 50px; min-width: 50px; font-family: SFMono-Regular, Consolas, '=
+Liberation Mono', Menlo, monospace; font-size: 12px; line-height: 20px; col=
+or: rgba(27, 31, 35, 0.3); text-align: right; white-space: nowrap; vertical=
+-align: top; cursor: pointer; user-select: none;"><br/></td><td id=3D"gwp06=
+470bae_LC18" class=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp=
+06470bae_js-file-line" style=3D"box-sizing: border-box; padding: 0px 10px; =
+position: relative; line-height: 20px; vertical-align: top; overflow: visib=
+le; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monosp=
+ace; font-size: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white-=
+space: pre;">If your spam filter supports it, the GTUBE provides a test by =
+which you<br/></td></tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp=
+06470bae_L19" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" dat=
+a-line-number=3D"19" style=3D"box-sizing: border-box; padding: 0px 10px; wi=
+dth: 50px; min-width: 50px; font-family: SFMono-Regular, Consolas, 'Liberat=
+ion Mono', Menlo, monospace; font-size: 12px; line-height: 20px; color: rgb=
+a(27, 31, 35, 0.3); text-align: right; white-space: nowrap; vertical-align:=
+top; cursor: pointer; user-select: none;"><br/></td><td id=3D"gwp06470bae_=
+LC19" class=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp06470ba=
+e_js-file-line" style=3D"box-sizing: border-box; padding: 0px 10px; positio=
+n: relative; line-height: 20px; vertical-align: top; overflow: visible; fon=
+t-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; fo=
+nt-size: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white-space: =
+pre;">can verify that the filter is installed correctly and is detecting in=
+coming<br/></td></tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp064=
+70bae_L20" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" data-l=
+ine-number=3D"20" style=3D"box-sizing: border-box; padding: 0px 10px; width=
+: 50px; min-width: 50px; font-family: SFMono-Regular, Consolas, 'Liberation=
+Mono', Menlo, monospace; font-size: 12px; line-height: 20px; color: rgba(2=
+7, 31, 35, 0.3); text-align: right; white-space: nowrap; vertical-align: to=
+p; cursor: pointer; user-select: none;"><br/></td><td id=3D"gwp06470bae_LC2=
+0" class=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp06470bae_j=
+s-file-line" style=3D"box-sizing: border-box; padding: 0px 10px; position: =
+relative; line-height: 20px; vertical-align: top; overflow: visible; font-f=
+amily: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-=
+size: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white-space: pre=
+;">spam. You can send yourself a test mail containing the following string =
+of<br/></td></tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp06470ba=
+e_L21" class=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" data-line-=
+number=3D"21" style=3D"box-sizing: border-box; padding: 0px 10px; width: 50=
+px; min-width: 50px; font-family: SFMono-Regular, Consolas, 'Liberation Mon=
+o', Menlo, monospace; font-size: 12px; line-height: 20px; color: rgba(27, 3=
+1, 35, 0.3); text-align: right; white-space: nowrap; vertical-align: top; c=
+ursor: pointer; user-select: none;"><br/></td><td id=3D"gwp06470bae_LC21" c=
+lass=3D"gwp06470bae_blob-code gwp06470bae_blob-code-inner gwp06470bae_js-fi=
+le-line" style=3D"box-sizing: border-box; padding: 0px 10px; position: rela=
+tive; line-height: 20px; vertical-align: top; overflow: visible; font-famil=
+y: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size=
+: 12px; color: rgb(36, 41, 46); overflow-wrap: normal; white-space: pre;">c=
+haracters (in upper case and with no white spaces and line breaks):<br/></t=
+d></tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp06470bae_L22" cla=
+ss=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" data-line-number=3D"=
+22" style=3D"box-sizing: border-box; padding: 0px 10px; width: 50px; min-wi=
+dth: 50px; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo,=
+monospace; font-size: 12px; line-height: 20px; color: rgba(27, 31, 35, 0.3=
+); text-align: right; white-space: nowrap; vertical-align: top; cursor: poi=
+nter; user-select: none;"><br/></td><td id=3D"gwp06470bae_LC22" class=3D"gw=
+p06470bae_blob-code gwp06470bae_blob-code-inner gwp06470bae_js-file-line" s=
+tyle=3D"box-sizing: border-box; padding: 0px 10px; position: relative; line=
+-height: 20px; vertical-align: top; overflow: visible; font-family: SFMono-=
+Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; co=
+lor: rgb(36, 41, 46); overflow-wrap: normal; white-space: pre;"><br/></td><=
+/tr><tr style=3D"box-sizing: border-box;"><td id=3D"gwp06470bae_L23" class=
+=3D"gwp06470bae_blob-num gwp06470bae_js-line-number" data-line-number=3D"23=
+" style=3D"box-sizing: border-box; padding: 0px 10px; width: 50px; min-widt=
+h: 50px; font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, m=
+onospace; font-size: 12px; line-height: 20px; color: rgba(27, 31, 35, 0.3);=
+text-align: right; white-space: nowrap; vertical-align: top; cursor: point=
+er; user-select: none;"><br/></td><td id=3D"gwp06470bae_LC23" class=3D"gwp0=
+6470bae_blob-code gwp06470bae_blob-code-inner gwp06470bae_js-file-line" sty=
+le=3D"box-sizing: border-box; padding: 0px 10px; position: relative; line-h=
+eight: 20px; vertical-align: top; overflow: visible; font-family: SFMono-Re=
+gular, Consolas, 'Liberation Mono', Menlo, monospace; font-size: 12px; colo=
+r: rgb(36, 41, 46); overflow-wrap: normal; white-space: pre;">XJS*C4JDBQADN=
+1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X<br/></td></tr><tr s=
+tyle=3D"box-sizing: border-box;"><td id=3D"gwp06470bae_L24" class=3D"gwp064=
+70bae_blob-num gwp06470bae_js-line-number" data-line-number=3D"24" style=3D=
+"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; f=
+ont-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; =
+font-size: 12px; line-height: 20px; color: rgba(27, 31, 35, 0.3); text-alig=
+n: right; white-space: nowrap; vertical-align: top; cursor: pointer; user-s=
+elect: none;"><br/></td><td id=3D"gwp06470bae_LC24" class=3D"gwp06470bae_bl=
+ob-code gwp06470bae_blob-code-inner gwp06470bae_js-file-line" style=3D"box-=
+sizing: border-box; padding: 0px 10px; position: relative; line-height: 20p=
+x; vertical-align: top; overflow: visible; font-family: SFMono-Regular, Con=
+solas, 'Liberation Mono', Menlo, monospace; font-size: 12px; color: rgb(36,=
+41, 46); overflow-wrap: normal; white-space: pre;"><br/></td></tr><tr styl=
+e=3D"box-sizing: border-box;"><td id=3D"gwp06470bae_L25" class=3D"gwp06470b=
+ae_blob-num gwp06470bae_js-line-number" data-line-number=3D"25" style=3D"bo=
+x-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font=
+-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; fon=
+t-size: 12px; line-height: 20px; color: rgba(27, 31, 35, 0.3); text-align: =
+right; white-space: nowrap; vertical-align: top; cursor: pointer; user-sele=
+ct: none;"><br/></td><td id=3D"gwp06470bae_LC25" class=3D"gwp06470bae_blob-=
+code gwp06470bae_blob-code-inner gwp06470bae_js-file-line" style=3D"box-siz=
+ing: border-box; padding: 0px 10px; position: relative; line-height: 20px; =
+vertical-align: top; overflow: visible; font-family: SFMono-Regular, Consol=
+as, 'Liberation Mono', Menlo, monospace; font-size: 12px; color: rgb(36, 41=
+, 46); overflow-wrap: normal; white-space: pre;">You should send this test =
+mail from an account outside of your network.<br/></td></tr><tr style=3D"bo=
+x-sizing: border-box;"><td id=3D"gwp06470bae_L26" class=3D"gwp06470bae_blob=
+-num gwp06470bae_js-line-number" data-line-number=3D"26" style=3D"box-sizin=
+g: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family=
+: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; font-size:=
+12px; line-height: 20px; color: rgba(27, 31, 35, 0.3); text-align: right; =
+white-space: nowrap; vertical-align: top; cursor: pointer; user-select: non=
+e;"><br/></td></tr></tbody></table><div><br/></div></div></div></div>
+</blockquote>
+</div>
+
+
+--2JMGLKHCXAUDQINXIJJTCnhgwp--
+
+

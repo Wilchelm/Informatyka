@@ -1,0 +1,5 @@
+Dodac do pliku /etc/oinkmaster.conf
+
+url = https://www.snort.org/pub-bin/oinkmaster.cgi/00f42ac8685c7c5eeb36c7d3dec219fd6da799d8/snortrules-snapshot-29150.tar.gz
+
+sudo oinkmaster -C /etc/oinkmaster.conf -o /etc/suricata/rules

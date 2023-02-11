@@ -1,0 +1,24 @@
+Różnica pomiędzy Snortem a Suricatą: 
+
+				Snort 					Suricata
+Developer 		Sourcefire, Inc. (now Cisco) 	Open Information Security Foundation (OISF)
+Availability 		Since 1998 			Since 2009
+Coded Language 	C 				C
+Operating System 	Cross-platform 		Cross-platform
+Threads 		Single-threaded 		Multi-threaded
+IPv6 Support 		Yes 				Yes
+Snort (VRT) Rules 	Yes 				Yes
+Emerging Threats Rules Yes 				Yes
+Logging Format 	Unified2 			Unified2
+Aanval Compatible 	Yes 				Yes
+
+W nowej wersji Snort'a tj. 3 (wciąż bety) dodali:
+ 
++Obsługa wielu wątków przetwarzania pakietów
++Wspólna tabela konfiguracji i atrybutów
++Użyj prostej, skryptowalnej konfiguracji
++Spraw, aby kluczowe komponenty były wtykowe
++Usługi autodetekcji w celu konfiguracji bez portów
++Obsługa lepkich buforów w regułach
++Automatycznie generuj dokumentację referencyjną
++Zapewnij lepszą obsługę wielu platform

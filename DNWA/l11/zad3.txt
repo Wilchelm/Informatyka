@@ -1,0 +1,36 @@
+Link do zbioru publicznych PCAP
+
+https://www.netresec.com/?page=PcapFiles
+
+
+Link do pobrania plików:
+
+https://www.netresec.com/?page=MACCDC
+
+
+---------------------------------------
+Plik 3GB
+
+https://download.netresec.com/pcap/maccdc-2011/maccdc2011_00013_20110312202724.pcap.gz
+--------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------
+Plik 2GB
+
+https://download.netresec.com/pcap/maccdc-2011/maccdc2011_00012_20110312202052.pcap.gz
+--------------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------------
+plik 2gb
+
+https://download.netresec.com/pcap/maccdc-2010/maccdc2010_00016_20100311225328.pcap.gz
+
+
+--------------------------------------------------------------------------------------
+Wiele zrzutów:
+
+https://archive.wrccdc.org/pcaps/

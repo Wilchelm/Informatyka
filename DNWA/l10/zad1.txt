@@ -1,0 +1,8 @@
+Do wykonania zadania posłużyłem się obrazem z linku:
+
+http://downloads.digitalcorpora.org/corpora/drives/nps-2009-domexusers/nps-2009-domexusers.E01
+
+Jak widać po skorzystaniu z programu autopsy można wyekstrahować wiele informacji z informacjami czasowymi jak widać to na przykładzie mojego rozwiazania przedstawionego w obrazku "Timeline.png"
+
+Widać tam informację o usuniętych plikach, kontach, co ktoś przeglądał itd.
+

@@ -1,0 +1,8 @@
+Fragroute, Fragtest - przechwytuje, modyfikuje i wysyła pakiety do określonego serwera. Udostępnia następujące mechanizmy ataków – duplikowanie pakietu, utracenie pakietu, fragmentacja pakietu, zachodzenie pakietów, zmiana porządku.
+
+Program fragroute umożliwia wiele ataków związanych z fragmentacją strumienia pakietów (zniekształcenia fragmentów pakietów).
+
+komenda do wysyłania pofragmentowanych pakietów: 
+------------------------------------
+fragtest frag frag-new 150.254.79.170
+------------------------------------

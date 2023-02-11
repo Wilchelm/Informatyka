@@ -1,0 +1,33 @@
+Instalacja programu clamav: sudo apt install clamav
+Aktualizacja bazy: freshclam
+
+Plik z bazą: main.cvd  
+Rozkapakowanie sigtoolem: sigtool -u main.cvd
+
+Oznaczenia:
+
+*.hdb 		md5 hash 			HashString:FileSize:MalwareName
+*.hsb 		sha1 i sha256 hash 		HashString:FileSize:MalwareName
+*.mdb 		PE section hash 		PESectionSize:PESectionHash:MalwareName
+*.db 		Body-based	 		MalwareName=HexSignature
+*.ndb 		Body-based		 	MalwareName:TargetType:Offset:HexSignature[:MinFL:[MaxFL]]
+*.ldb 		Body-based		 	SignatureName;TargetDescriptionBlock;LogicalExpression;Subsig0; Subsig1;Subsig2;…
+*.idb 		PE ikony pliku			ICONNAME:GROUP1:GROUP2:ICON_HASH
+*.ndb 		PE metadanych			my_test_vi_sig:1:VI:paste_your_hex_sig_here
+.crb, .crtdb 	zaufane certyfikaty	 	Name;Trusted;Subject;Serial;Pubkey;Exponent;CodeSign;TimeSign;CertSign; NotBefore;Comment[;minFL[;maxFL]]
+*.cdb 		metadane kontenera 		VirusName:ContainerType:ContainerSize:FileNameREGEX:FileSizeInContainer:FileSizeReal:IsEncrypted:FilePos:Res1:Res2[:MinFL[:MaxFL]]
+.zmd(zip).rmd(rar) metadane ZIP/RAR 		virname:encrypted:filename:normal size:csize:crc32:cmethod:fileno:max depth
+.fp（md5).sfp（sha1和sha256） baza danych białejlisty 	HashString:FileSize:MalwareName
+*.pdb 		adres url/host 			R[Filter]:RealURL:DisplayedURL[:FuncLevelSpec]或H[Filter]:DisplayedHostname[:FuncLevelSpec]
+*.gdb 		adres URL hash 			S:P:HostPrefix[:FuncLevelSpec]
+						S:F:Sha256hash[:FuncLevelSpec]			
+						S1:P:HostPrefix[:FuncLevelSpec]			
+						S1:F:Sha256hash[:FuncLevelSpec]
+						S2:P:HostPrefix[:FuncLevelSpec]
+						S2:F:Sha256hash[:FuncLevelSpec]
+						S:W:Sha256hash[:FuncLevelSpec]
+*.wdb 		biała lista URL 	X:RealURL:DisplayedURL[:FuncLevelSpec]或M:RealHostname:DisplayedHostname[:FuncLevelSpec]
+
+Dodanie własnej sygnatury dla pliku test.exe:
+sigtool --md5 test.exe > test.hdb
+

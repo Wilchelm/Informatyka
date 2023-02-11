@@ -1,0 +1,19 @@
+X-Spam-Status: Yes, hits=0.9 required=-20.0 tests=BAYES_99,BAYES_999,
+DKIM_SIGNED,DKIM_VALID,DKIM_VALID_AU,FREEMAIL_FROM,HTML_MESSAGE,
+RCVD_IN_MSPIKE_H2,SPF_PASS autolearn=no autolearn_force=no version=3.4.0
+X-Spam-Score: 0.9
+
+https://spamassassin.apache.org/old/tests_3_3_x.html
+
+DKIM_SIGNED -	Message has a DKIM or DK signature, not necessarily valid
+DKIM_VALID - Message has at least one valid DKIM or DK signature
+DKIM_VALID_AU -Message has a valid DKIM or DK signature from author's domain
+FREEMAIL_FROM - Sender email is freemail
+HTML_MESSAGE -HTML included in message
+
+
+DKIM_ADSP_NXDOMAIN - No valid author signature and domain not in DNS
+DKIM_ADSP_DISCARD - No valid author signature, domain signs all mail and suggests discarding the rest		
+DKIM_ADSP_ALL - No valid author signature, domain signs all mail	
+DKIM_ADSP_DISCARD - No valid author signature, domain signs all mail and suggests discarding the rest
+USER_IN_DKIM_WHITELIST - From: address is in the user's DKIM whitelist	

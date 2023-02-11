@@ -1,0 +1,37 @@
+------------------------------------------
+------------------------------------------
+Wyświetlenie wyników przeciwnych do fixed:
+------------------------------------------
+ethtool -k eth0 | grep -v 'fixed'
+------------------------------------------
+------------------------------------------
+------------------------------------------
+Features for eth0:
+rx-checksumming: off
+tx-checksumming: on
+	tx-checksum-ip-generic: on
+scatter-gather: on
+	tx-scatter-gather: on
+tcp-segmentation-offload: on
+	tx-tcp-segmentation: on
+	tx-tcp-mangleid-segmentation: off
+udp-fragmentation-offload: off
+generic-segmentation-offload: on
+generic-receive-offload: on
+rx-vlan-offload: on
+tx-nocache-copy: off
+rx-fcs: off
+rx-all: off
+------------------------------------------
+------------------------------------------
+------------------------------------------
+
+.      *    *           *.       *   .                      *     .
+               .   .                   __   *    .     * .     *
+    *       *         *   .     .    _|__|_        *    __   .       *
+  .  *  /\       /\          *        ('')    *       _|__|_     .
+       /  \   * /  \  *          .  <( . )> *  .       ('')   *   *
+  *    /  \     /  \   .   *       _(__.__)_  _   ,--<(  . )>  .    .
+      /    \   /    \          *   |       |  )),`   (   .  )     *
+   *   `||` ..  `||`   . *.   ... ==========='`   ... '--`-` ... * jb .
+

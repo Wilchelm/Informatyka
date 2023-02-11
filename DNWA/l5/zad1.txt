@@ -1,0 +1,3 @@
+drop tls any any -> any any (msg:"SSL Allegro"; tls.subject:"allegro.pl"; classtype:policy-violation; sid:39398145; rev:1;)
+
+drop tls any any -> any any (msg:"SSL Allegro"; tls.subject:"Allegro.pl sp. z o.o."; classtype:policy-violation; sid:39398245; rev:1;)

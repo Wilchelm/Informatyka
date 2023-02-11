@@ -1,0 +1,16 @@
+1. Wyciągniamy tylko MD5 Hash z pliku "main.hdb" do "blacklist_md5".
+cat main.hdb >> clamav_md5
+cut -d':' -f1 clamav_md5 > blacklist_md5
+
+2. Kopiujemy plik "blacklist_md5" do /etc/suricata/rules/.
+
+3. Dodajemy reguły do suricaty np. do http-events.rules:
+drop http any any -> any any (msg:"Clamav MD5 Hash"; flow:established; filemd5:blacklist_md5; classtype: suspicious-filename-detect; sid:22210491; rev:1;)
+
+4. Uruchamiamy suricate.
+
+5. Pobieramy pliku ze strony https://www.eicar.org/?page_id=3950 (Download area using the standard protocol http)
+
+6. Plik się nie pobrał, a poniższy wpis pojawił się w logach suricaty: /var/log/suricata/fast.log
+08/01/2020-16:51:02.724465  [Drop] [**] [1:22210491:0] Clamav MD5 Hash [**] [Classification: A suspicious filename was detected] [Priority: 2] {TCP} 213.211.198.62:80 -> 10.0.2.15:47442
+

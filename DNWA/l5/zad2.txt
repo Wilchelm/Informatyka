@@ -1,0 +1,1 @@
+pass tcp any any -> any any (msg:"zamiana tajneDane na gwiazdki"; content: "tajneDane"; replace: "*********"; sid:513531254; rev:1;)

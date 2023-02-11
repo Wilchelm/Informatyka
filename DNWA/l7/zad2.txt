@@ -1,0 +1,44 @@
+Adres z którego wykonano najwięcej prób: IPv6 : 2001:0:9d38:6ab8:48:2726:6901:b2c2
+Liczba prób: 493
+
+Czy z któregoś adresu zarejestrowano więcej niż jeden rodzaj „ataku”?
+
+TAK.
+
+u2spewfoo snort.log > x.txt
+
+grep -E -o 'source: [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' x.txt | grep -E  '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' --colour | sort | uniq -c | sort -nr
+
+POTEM SPRAWDZAM SIG ID RĘCZNIE
+
+NAJCZĘSTSZE sig_id 384
+
+  ilość
+różnych co			sig_id:
+      2 5.8.66.101		366, 384
+      3 5.8.66.78		312, 1280, 402
+      2 167.114.82.227		1280, 1917
+      2 93.158.216.15		382, 384
+      2 80.89.131.62		469, 384
+      2 71.6.167.142		1616, 312
+      2 59.60.176.132		469, 384
+      2 47.21.61.186		469, 384
+      2 222.34.18.27		382, 384
+      2 221.12.133.130		469, 384
+      2 220.176.122.58		469, 384
+      2 212.156.51.34		469, 384
+      2 207.226.141.42		382, 384
+      2 195.218.175.162		469, 384
+      2 182.73.97.162		469, 384
+      2 176.197.96.162		469, 384 
+      2 173.242.113.205		1917, 312
+      2 120.197.142.114		496,384
+      2 107.161.88.35		384,382
+
+IPv6
+
+grep -E -o 'source: [0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+' x.txt | grep -E  '[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+:[0-9abcdef]+' --colour | sort | uniq -c | sort -nr
+
+POTEM SPRAWDZAM SIG ID RĘCZNIE
+
+BRAK - zawsze sig_id 527
