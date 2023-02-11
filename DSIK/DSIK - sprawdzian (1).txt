@@ -1,0 +1,26 @@
+1.Wyjasnij czym sie rozni route od zwyklego komputera?(sieciowe)
+
+Gdy komputer jest routerem to pakiet gdy nie jest do niego(routera) to go przepuszcza dalej natomias gdy nie jest roputerem to nie.
+
+a)ethernet w przypadku nie routa dzialamy tylko w sieci lokalnej, gdy jest router to idziemy dalej
+b)ip gdy ip jest inne niz ip routera to przepuszcza je dalej gdy nie ma routera to pakiet zostaje odrzucony no chyba ze jest do niego.
+
+linux by byl routerem to : echo "1" > /proc/sys/ipv4/ip_forward
+
+2) mechanizm nat i jak dizla dla naszej sieci
+
+Dzieki niemu mozemy zmieniac pakiety danych sieciowych i dowolnie je konfigurowac. Mo¿na zmieniaæ mac i ip docelowe i na odwrot.
+dla naszej sieci podmienia on adresy pomiedzy kompem do mroutera na docelowy podobnie z macami. W pakiecie zwrotnym podobnie
+
+3)wyjasnij jakie beda roznice w ramce eternet i w ip (numery portow)(nat dziial)
+mac nazwa to rt - router, srt- komp 
+przed otrzymaniem przez router
+ mac srt dmac siec
+ip srt dip 78.79
+port srt dport80
+
+
+po otrzymaniu przez router
+mac siec 	dmac rt
+ip 78.79 dip srt
+port 80 dport srt 
