@@ -1,0 +1,61 @@
+allow-unk: false
+beam-size: 12
+bpe:
+  - /home/username/amun/examples/translating-amun/cs-en/csen.bpe
+cpu-threads: 4
+log-info: info
+log-progress: info
+max-length: 200
+max-length-multiple: 2
+maxi-batch: 1
+mini-batch: 1
+mini-batch-words: 0
+n-best: false
+no-debpe: false
+normalize: true
+relative-paths: true
+return-alignment: false
+return-nematus-alignment: false
+return-soft-alignment: false
+scorers:
+  F0:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens1.npz
+    type: Nematus
+  F1:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens2.npz
+    type: Nematus
+  F2:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens3.npz
+    type: Nematus
+  F3:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens4.npz
+    type: Nematus
+  F4:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens5.npz
+    type: Nematus
+  F5:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens6.npz
+    type: Nematus
+  F6:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens7.npz
+    type: Nematus
+  F7:
+    path: /home/username/amun/examples/translating-amun/cs-en/model-ens8.npz
+    type: Nematus
+show-weights: false
+softmax-filter:
+  []
+source-vocab:
+  - /home/username/amun/examples/translating-amun/cs-en/vocab.cs.json
+target-vocab: /home/username/amun/examples/translating-amun/cs-en/vocab.en.json
+use-fused-softmax: true
+weights:
+  F0: 1
+  F1: 1
+  F2: 1
+  F3: 1
+  F4: 1
+  F5: 1
+  F6: 1
+  F7: 1
+wipo: false

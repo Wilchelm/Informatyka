@@ -1,0 +1,2030 @@
+tube;tuba
+ability;schopnost
+able;schopný
+above;nahoře
+abroad;zahraničí
+absolutely;naprosto
+accent;přízvuk
+accept;přijmout
+account;konto
+achieve;dosáhnout
+across;napříčtube
+act;čin
+action;činnost
+actually;skutečnosti
+adapted;přizpůsobený
+addict;narkoman
+adjective;přídavné jméno
+admire;obdivovat
+admit;vpustit
+advance;postup
+adventure;dobrodružství
+adverb;příslovce
+advertisement;reklama
+adviser;poradce
+aerobics;aerobik
+afraid;polekaný
+African;Afričan
+afterwards;později
+aged;letitý
+agency;agentura
+aggressive;agresivní
+air conditioning;klimatizace
+airline;letecký
+album;album
+alien;cizinec
+already;už
+alright;dobře
+altogether;dohromady
+amazing;úžasný
+ambition;ctižádost
+ambitious;ambiciózní
+amount;částka
+animal rights;práva zvířat
+announcer;hlasatel
+annoyed;rozmrzelý
+annoying;protivný
+anyway;stejně
+anywhere;někde
+apartment block;činžovní dům
+apologise;omluvit se
+apology;omluva
+apparently;zřejmě
+appear;jevit se
+application;přihláška
+apply;aplikovat
+Arab;arabský
+Arabia;Arábie
+area;území
+argue;diskutovat
+argument;argument
+arrangement;uspořádání
+arrest;zatknout
+art;umění
+artist;umělec
+ask someone out;ptát se koho na co
+asleep;spící
+assist;asistovat
+association;sdružení
+attack;napadnout
+attention;pozornost
+attitude;postoj
+auction;aukce
+audience;obecenstvo
+author;autor
+auxiliary;pomocný
+average;průměr
+award;cena
+babysitting;hlídání dětí
+bacteria;bakterie
+bagpipes;dudy
+ball;míč
+ballet;balet
+bar;kousek
+bark;kůra
+basic;základní
+basically;v podstatě
+basketball;basketbal
+be fed up with;mít po krk koho/čeho
+beat;úder
+Beatles;Beatles
+beauty;krása
+beauty spot;znaménko krásy
+behave;chovat se
+behavior;chování
+believe;věřit
+bell;zvon
+below;pod
+billion;bilion
+biology;biologie
+bit;kousek
+bland;bez chuti
+blind;slepý
+blow;úder
+blues;blues
+book;kniha
+bored;unuděný
+borrow;půjčit si
+bow;příď
+boy;chlapec
+branch;větev
+bravery;statečnost
+break into;vloupat se
+break up with;rozejít se s
+bright;jasný
+brilliant;zářivý
+brown;hnědý
+build;postava
+building;budova
+bullet;kulka
+burglar;lupič
+burglary;vloupání
+burgle;vloupat se
+businessman;obchodník
+button;knoflík
+cable TV;kabelová televize
+cake;dort
+calm;tichý
+camper;táborník
+camping;táboření
+cancel;odvolat
+care;starost
+career;profese
+carry;nést
+cash;peněžní hotovost
+castle;hrad
+catch;chytit
+category;kategorie
+catering;zajišťování stravy
+cause;příčina
+celebrity;známá osobnost
+cent;cent
+central heating;ústřední topení
+central heating;ústřední topení
+certain;jistý
+certificate;osvědčení
+chain;řetěz
+chairman;předseda
+chance;šťastná náhoda
+changeable;proměnlivý
+charity;dobročinnost
+chat;povídat si
+cheek;tvář
+Cheers!;Na zdraví!
+chef;šéfkuchař
+chew;žvýkat
+chewing gum;žvýkačka
+chicken;kuře
+childhood;dětství
+Christmas;Vánoce
+circle;kruh
+circular;kruhový
+circus;cirkus
+clash;spor
+classmate;spolužák
+clause;věta
+clever;chytrý
+client;klient
+close friend;blízký přítel
+clothing;šaty
+coast;pobřeží
+colleague;spolupracovník
+collect;sbírat
+collection;sbírka
+collector;výběrčí
+college;vysoká škola
+collocation;slovní spojení
+column;sloup
+comfortable;komfortní
+common;společný
+commute;dojíždět
+commuter;dojíždějící
+comparative;srovnávací
+comparison;srovnání
+complain;stěžovat si
+complaint;stížnost
+completely;kompletně
+complicated;složitý
+conditional;podmínkový
+conference;konference
+confident;sebejistý
+connect;spojovat
+connection;spojení
+consequence;následek
+considerate;ohleduplný
+consonant;souhláska
+contact;kontakt
+contain;obsahovat
+context;souvislost
+control;řídit
+cooking;vaření
+corner;roh
+cosmopolitan;kosmopolitní
+cotton;bavlna
+could;mohl/a
+countable;počitatelný
+crazy;šílený
+cream;smetana
+create;tvořit
+crime;trestný čin
+criminal;zločinec
+crop;plodina
+cross;kříž
+cruel;krutý
+cruelty;krutost
+cultural;kulturní
+culture;kultura
+cupboard;skříň
+currency;měna
+current affairs;aktuální události
+curtain;záclona
+customer;zákazník
+cut;řezat
+cutting;výstřižek
+CV;životopis
+cycling;jízda na kole
+damage;škoda
+dating;chodit na schůzky
+daughter-in-law;snacha
+dawn;svítání
+day-to-day;každodenní
+dead;mrtvý
+death;smrt
+decision;rozhodnutí
+definite;jasný
+definitely;určitě
+definition;definice
+delicious;lahodný
+deliver;odvézt
+demonstrator;demonstrant
+department store;obchodní dům
+depend;záležet
+describe;popsat
+description;popis
+desert;poušť
+design;návrhářství
+designer;návrhář
+dessert;zákusek
+destination;cíl cesty
+detail;podrobnost
+develop;rozvíjet se
+differently;jinak
+digit;číslice
+direct;přímý
+director;ředitel
+disagree;nesouhlasit
+disco;diskotéka
+discover;objevit
+discussion;diskuze
+disgusting;ohavný
+dishonest;nepoctivý
+disorganised;dezorganizovaný
+distance;vzdálenost
+dive;skok op hlavě do vody
+diver;potápěč
+divorce;rozvod
+documentary;písemný
+dollar;dolar
+dolphin;delfín
+domestic;domácí
+doorway;vchod
+dot;tečka
+draw;kreslit
+drop;kapka
+drum;buben
+during;během
+dye;barva
+earn;vydělávat
+earth;Země
+easily;jednoduše
+easy-going;mírný
+echo;ozvěna
+Edinburgh;Edinburgh
+edition;vydání
+editor;vydavatel
+educate;vzdělávat
+education;výchova
+Egypt;Egypt
+either;jeden nebo druhý
+elderly;postarší
+embarrassed;rozpačitý
+embarrassing;trapný
+employee;zaměstnanec
+employer;zaměstnavatel
+employment;zaměstnání
+enemy;nepřítel
+energy;energie
+engaged;zaneprázdněný
+engineering;strojírenství
+enormous;obrovský
+enough;dost
+entertainment;zábava
+environment;prostředí
+episode;epizoda
+equipment;výstroj
+escape;utéci
+especially;zvláště
+etc.;a tak dále
+Euro;Euro
+Europe;Evropa
+European;evropský
+even;dokonce
+event;událost
+everybody;každý
+everyone;každý
+everything;všechno
+everywhere;kdekoliv
+evil;zlý
+ex-;(předpona)
+exact;přesný
+exactly;přesně
+examination;zkouška
+examine;zkoušet
+examiner;zkoušející
+except;kromě
+excite;rozrušit
+excited;rozrušený
+excitement;vzrušení
+exclusive;exkluzivní
+expected;očekávaný
+expert;odborník
+explain;vysvětlit
+expression;výraz
+extra;zvlášť
+extremely;nesmírně
+eye;oko
+face;tvář
+facility;dovednost
+fact;fakt
+factory;závod
+fall in love with someone;zamilovat se
+fan;fanoušek
+fancy;představivost
+farm;farma
+farmer;zemědělec
+fascinating;úchvatný
+fashion;móda
+fashionable;módní
+father-in-law;tchán
+fault;nedopatření
+feed;krmit
+feeling;cit
+feet;nohy
+fence;plot
+festival;svátek
+few;málo
+field;pole
+film-maker;producent
+final;poslední
+finally;konečně
+fire;oheň
+fireman;hasič
+firstly;prvé
+flatmate;spolubydlící
+flexible;ohebný
+flower;květ
+folk;folkový
+follow-up;zabývat se
+food poisoning;otrava potravinami
+for ages;navěky
+force;síla
+forever;navždy
+formal;formální
+forward;čelní
+freezing;mrazivý
+frequency;frekvence
+fresh;čerstvý
+fries;hranolky
+frightened;vystrašený
+frightening;děsivý
+frozen;zmrzlý
+frustrating;frustrující
+full;plný
+full-time;řádný
+fully;plně
+funeral;pohřeb
+furthest;nejvzdálenější
+Gaelic;gaelský
+gallery;galerie
+gap;mezera
+gas;plyn
+gene;gen
+general;generál
+generally;všeobecně
+get engaged;zasnoubit se
+get lost;ztratit se
+get married;oženit se
+get on with;vycházet s někým
+get promoted;být povýšen
+get/be   stuck;uváznout
+glad;potěšený
+glasses;brýle
+glove;rukavice
+go on;pokračovat
+go out with;vyjít si s
+goal;gól
+golf;golf
+gorgeous;úžasný
+gossip;pomluvy
+government;vláda
+grammar;mluvnice
+great-uncle;prastrýc
+greedy;nestřídmý
+greeting;pozdrav
+ground;zem
+group;skupina
+grow;růst
+guest;host
+guide;vedoucí
+guilty;vinen
+guitarist;kytarista
+gun;pistole
+gunman;ozbrojený gangster
+guy;chlápek
+habit;zvyk
+haggis;tlačenka
+haircut;ostřihání vlasů
+hairdresser;kadeřník
+handcuffs;pouta
+happier;spokojenější
+happily;šťastně
+happiness;štěstí
+hate;nenávidět
+head;hlava
+heavy;těžký
+helpful;nápomocný
+hero;hrdina
+hers;její
+herself;se
+hey;zvolání
+hide;schovat
+history;historie
+hit;uhodit
+Holland;Holandsko
+Hollywood;Hollywood
+honest;čestný
+horrible;děsivý
+horror;děs
+hospital;nemocnice
+host;hostitel
+hostess;konferenciérka
+houseboat;hausbót
+housework;práce v domácnosti
+human;člověk
+Hungary;Maďarsko
+hungry;hladový
+hurry;spěchat
+hypnotise;hypnotizovat
+ice cream;zmrzlina
+idiot;idiot
+illustrate;ilustrovat
+imaginary;pomyslný
+imagine;představit si
+immature;nevyspělý
+immediately;okamžitě
+impatient;netrpělivý
+impolite;nezdvořilý
+impossible;nemožný
+improve;zlepšit
+inconsiderate;bezohledný
+incredible;neuvěřitelný
+Indian;indický
+industrial;průmyslový
+industry;průmysl
+infinitive;infinitiv
+ingredient;složka
+injured;zraněný
+insect;hmyz
+inside;vnitřek
+inspector;inspektor
+instant;chvilka
+instantly;okamžitě
+instead;namísto
+instructor;učitel
+interested;zajímat se o co
+interestingly;zajímavé je
+Internet;internet
+interviewer;reportér
+into;do
+intonation;intonace
+invent;vymyslet
+invention;vynález
+invitation;pozvání
+invite;pozvat
+irregular;nepravidelný
+itself;se
+job security;záruka práce
+job-hunting;hledání práce
+jogging;běh pro zdraví
+join;spojit
+journalist;novinář
+judo;džudo
+jump;skočit
+just;spravedlivý
+kangaroo;klokan
+kangaroo pouch;klokaní vak
+karaoke;karaoke
+keep;udržet si
+key;klíč
+kilt;skotská suknice
+king;král
+kingdom;království
+kiss;polibek
+knee;koleno
+knife;nůž
+knowledge;vědomí
+label;popiska
+laboratory;laboratoř
+lady;paní
+large;velký
+leader;vůdce
+leak;prasklina
+learn;učit se
+least;nejmenší
+leather;kůže
+lemon;citron
+lend;půjčit
+library;knihovna
+licence;povolení
+life;život
+lift;zvednout
+limited;omezený
+line;čára
+link;článek
+liquid;kapalina
+listener;posluchač
+literal;doslovný
+little;malý
+local;místní
+London;Londýn
+lonely;osamělý
+loud;hlučný
+lovely;milý
+lover;milenec
+luck;štěstí
+luckily;naštěstí
+lunchtime;doba oběda
+machine;stroj
+magic;kouzelný
+magician;mág
+main;hlavní
+major;hlavní
+make-up;vymyslet
+manage;řídit
+manufacture;vyrábět
+marriage;manželství
+Mars;Mars
+mature;dospělý
+may;moci
+meaning;význam
+medal;medaile
+medical;zdravotní
+medium;střední
+member;člen
+men;muži
+method;způsob
+metre;metr
+middle-aged;ve středních letech
+mile;míle
+milk shake;mléčný koktejl
+mind;rozum
+mine;můj
+mining;těžba
+ministry;ministerstvo
+monitor;monitor
+monkey;opice
+moody;náladový
+moon;měsíc
+mosque;mešita
+mostly;hlavně
+move in;nastěhovat se
+movie;film
+Mrs;zkr. paní
+Ms;zkr. paní
+much;moc
+multiply;mnohonásobný
+murder;vražda
+murderer;vrah
+mystery;tajemství
+naked;nahý
+national;státní
+natural;přírodní
+nearby;nedaleko
+nearly;málem
+necessarily;nutně
+negative;záporný
+neighbour;soused
+neighbourhood;sousedství
+neither;ani
+nephew;synovec
+nervous;nervový
+New Zealand;Nový Zéland
+news;novinky
+niece;neteř
+nightmare;zlý sen
+no one;nikdo
+nobody;nikdo
+noise;kravál
+normally;normálně
+north;sever
+nose;nos
+nothing;nic
+noun;podstatné jméno
+novel;román
+nowadays;nyní
+nowhere;nikde
+object;věc
+obviously;zřejmě
+occasion;příležitost
+occasionally;příležitostně
+odd;podivný
+official;oficiální
+olive oil;olivový olej
+onstage;na jevišti
+opal;opál
+opinion;názor
+opportunity;šance
+oral;ústní
+orchestra;orchestr
+order;pořadí
+ordinary;obvyklý
+organisation;organizace
+organise;zařídit
+organism;organismus
+original;původní
+originally;původně
+ours;naše
+overnight;přes noc
+oversleep;zaspat
+owe;dlužit
+owner;vlastník
+oxygen;kyslík
+package;balíček
+packet;krabička
+paint;barva
+painting;malování
+palace;palác
+parachute;padák
+Paris;Paříž
+participle;příčestí
+particle;částice
+particular;konkrétní
+passive;pasivní
+past;minulost
+patient;pacient
+pattern;vzor
+peaceful;klidný
+per;na
+perfume;vůně
+perhaps;možná
+period;doba
+Persia;Persie
+pet;domácí mazlíček
+photograph;fotografie
+piano;piáno
+pile;hromada
+pillar;pilíř
+pink;růžový
+pipe;roura
+piranha;piraňa
+planet;planeta
+plant;rostlina
+plate;talíř
+player;hráč
+pleased;spokojený
+pleasure;potěšení
+plot;spiknutí
+pocket;kapsa
+police;policie
+policeman;policista
+polite;slušný
+politician;politik
+polluted;znečištěný
+pollution;znečištění
+pool;louže
+positive;kladný
+possessive;majetnický
+possibly;snad
+power;síla
+practical;užitečný
+predict;předpovídat
+prediction;předpověď
+prefer;mít raději
+prefix;předpona
+prepare;chystat
+preposition;předložka
+presenter;hlasatel
+prevent;zamezit
+prevention;zabránění
+prime minister;předseda
+private;soukromý
+product;výrobek
+professional;odborný
+profile;profil
+promotion;postup
+prompt;rychlý
+pronoun;zájmeno
+pronounce;vyslovovat
+proper;vhodný
+protester;demonstrant
+proud;pyšný
+publish;uveřejnit
+pull;táhnout
+purpose;účel
+put up with;trpět bez nářků
+qualified;kvalifikovaný
+quantifier;kvantifikátor
+quantity;množství
+quarter-final;čtvrtfinále
+queen;královna
+queue;fronta
+rainforest;deštný prales
+raise;zvednout
+razor;žiletka
+reader;čtenář
+ready;připraven
+real;skutečný
+reality;skutečnost
+real-life;skutečný život
+receive;dostat
+recently;nedávno
+reception;přivítání
+recipe;recept
+recognise;poznat
+recommend;doporučit
+record-breaking;pokořit rekord
+recording;nahrávka
+refuse;odmítnout
+regular;pravidelný
+relative;příbuzný
+relaxed;uvolnit se
+release;propuštění
+remove;přestěhovat se
+repeat;opakování
+report;hlášení
+reporter;zpravodaj
+request;požadavek
+rescue;záchrana
+research;průzkum
+researcher;vědecký pracovník
+reservation;reservace
+reserved;chladný
+resident;usedlík
+respond;reagovat
+response;odpověď
+rest;odpočinek
+result;výsledek
+retire;odejít do penze
+review;recenze
+revolve;točit se
+rhythm;rytmus
+riding;jezdectví
+ring;prsten
+River Amazon;řeka Amazonka
+River Thames;řeka Temže
+robber;lupič
+robbery;krádež
+robot;robot
+robotics;robotika
+rocket;raketa
+role-play;hraní role
+roll;role
+Roman;Říman
+romance;romantika
+romantic;romantický
+Rome;Řím
+roof;střecha
+rose;růže
+round;okolo
+row;řada
+royal;královský
+rubbish;smetí
+rude;drzý
+run out of;dojít
+Russia;Rusko
+sack;pytel
+sailing;mořeplavba
+salary;pevný plat
+sales;prodeje
+sandal;sandál
+satellite;satelit
+satisfied;spokojený
+Saudi Arabia;Saudská Arábie
+school;škola
+scissors;nůžky
+Scottish;skotský
+screen;plátno
+search;prohledat
+series;série
+serious;vážný
+seriously;vážně
+servant;služebník
+serve;sloužit
+service station;autoservis
+severe;přísný
+shampoo;šampon
+shared;sdílený
+shaving foam;pěna na holení
+sheep;ovce
+shipwreck;ztroskotání lodi
+shock;náraz
+shoot;střelit
+shorter;kratší
+Sicily;Sicílie
+sick pay;nemocenská
+side;strana
+silly;hloupý
+silver;stříbrný
+since;od té doby
+singer;zpěvák
+sister-in-law;švagrová
+situation;situace
+size;velikost
+skateboarding;jízda na skateboardu
+skin;pokožka
+skincare;péče o pokožku
+sleepless;bezesný
+sleepy;ospalý
+smile;úsměv
+snorkelling;šnorchlování
+soap;mýdlo
+social;sociální
+socialising;vést společenský život
+society;společnost
+solar;sluneční
+solution;roztok
+solve;řešit
+sometime;někdy
+somewhere;někde
+soon;brzy
+spaceman;astronaut
+spaceship;kosmická loď
+spacious;prostorný
+special effects;speciální efekty
+spectacular;honosný
+speech;řeč
+speed;rychlost
+spicy;silně kořeněný
+spokesman;mluvčí
+sports;sportovní
+staff;personál
+stand;stát
+star;hvězda
+starter;startující
+state;stav
+stay;krást
+steal;nevlastní otec
+stepfather;stále
+stone;kámen
+stop;přestat
+storm;bouřka
+storyteller;vypravěč
+straight;rovný
+strange;neobvyklý
+strawberry;jahoda
+street;ulice
+stress;vypětí
+stressful;stresující
+stubborn;tvrdohlavý
+stunt;kaskadérský kousek
+stylist;kadeřník
+subject;předmět
+subtract;odečíst
+success;úspěch
+successful;úspěšný
+such;takový
+sugar;cukr
+suite;souprava
+summary;shrnutí
+sun cream;krém na opalování
+sunglasses;sluneční brýle
+sunset;západ slunce
+sunshine;sluneční záře
+suntan;opálený
+super;senzační
+superlative;vynikající
+support;podporovat
+suppose;předpokládat
+survive;přežít
+suspect;podezřelý
+swap;vyměnit
+Sweden;Švédsko
+Swedish;švédský
+swimming costume;dámské plavky
+swimming trunks;pánské plavky
+swimsuit;plavky
+Sydney;Sydney
+syllable;slabika
+symbol;symbol
+system;systém
+take off;vzlétnout
+take over;zabrat
+tarantula;tarantule
+tax;daň
+teach;učit
+teacher;učitel
+technical;technický
+teenage;dospívající
+temporary;dočasný
+terribly;strašně
+test;zkouška
+the sixties;šedesátá léta
+theatre;divadlo
+theatre play;divadelní hra
+theft;krádež
+themselves;se
+thief;zloděj
+thirties;třicátá léta
+tiger;tygr
+till;až do
+tiring;únavný
+toe;prst
+tolerate;snášet
+toothpaste;zubní pasta
+topic;téma
+touch;hmat
+tour;okružní cesta
+tourism;cestovní ruch
+towel;ručník
+toy;hračka
+trade;obchod
+trade union;odborová organizace
+tradition;zvyklost
+traditional;tradiční
+traffic jam;dopravní zácpa
+training;výcvik
+translate;přeložit
+traveller;turista
+treetop;koruna stromu
+trend;tendence
+trial;soudní proces
+trick;lest
+tropical;tropický
+trouble;nesnáze
+try on;vyzkoušet si
+turn off;zahnout
+twin;dvojče
+typewriter;psací stroj
+unattractive;nepřitažlivý
+unbelievable;neuvěřitelný
+unconscious;v bezvědomí
+uncountable;nespočetný
+underground;podzemní
+underwater;podvodní
+unemployment;nezaměstnanost
+unemployment benefit;příspěvek v nezaměstnanosti
+unfortunately;naneštěstí
+unlucky;nešťastný
+unprofessional;neprofesionální
+unreliable;nespolehlivý
+unselfish;nesobecký
+unsure;nejistý
+unusual;nezvyklý
+update;aktualizace
+upset;rozmrzelý
+usual;běžný
+usually;běžně
+vampire;upír
+van;dodávka
+vegetarian;vegetarián
+version;verze
+vet;zkr. veterinář
+vicious circle;bludný
+victim;oběť
+video;video
+videophone;televizní telefon
+view;pohled
+viewer;divák
+visitor;host
+voice;hlas
+vowel;samohláska
+wake;vzbudit se
+war;válka
+waste;plýtvání
+watch;sledovat
+wave;mávat
+way;cesta
+website;internetové stránky
+weekly;týdně
+weird;tajuplný
+well-known;známý
+west;západ
+wheel;kolo
+whereabouts;místo
+wherever;kdekoliv
+whisky;whisky
+whole;celý
+wide;rozlehlý
+wire;drát
+wives;manželky
+women;ženy
+wonder;zajímat se
+wonderful;báječný
+worker;pracovník
+workman;dělník
+workplace;pracoviště
+worldwide;celosvětový
+worm;červ
+worried;ustaraný
+worry;dělat si starosti
+worrying;znepokojující
+worse;horší
+worst;nejhorší
+worth;mající cenu
+yet;ještě
+yoga;jóga
+yours;patřící tobě/vám
+already;už
+auxiliary;pomocný
+book;kniha
+catering;zajišťování stravy
+celebrity;známá osobnost
+chef;šéfkuchař
+college;vysoká škola
+common;společný
+cooking;vaření
+day-to-day;každodenní
+detail;podrobnost
+drum;buben
+earn;vydělávat
+face;tvář
+final;poslední
+grammar;mluvnice
+group;skupina
+ingredient;složka
+instant;chvilka
+lemon;citron
+life;život
+much;moc
+naked;nahý
+olive oil;olivový olej
+past;minulost
+prepare;chystat
+prime minister;předseda
+profile;profil
+ready;připraven
+recipe;recept
+review;recenze
+riding;jezdectví
+school;škola
+Sicily;Sicílie
+subject;předmět
+success;úspěch
+summary;shrnutí
+swap;vyměnit
+teach;učit
+unusual;nezvyklý
+usually;běžně
+watch;sledovat
+wide;rozlehlý
+wire;drát
+advance;postup
+catch;chytit
+charity;dobročinnost
+commute;dojíždět
+commuter;dojíždějící
+crazy;šílený
+department store;obchodní dům
+describe;popsat
+distance;vzdálenost
+documentary;písemný
+editor;vydavatel
+either;jeden nebo druhý
+enormous;obrovský
+even;dokonce
+fascinating;úchvatný
+few;málo
+fireman;hasič
+gap;mezera
+instead;namísto
+journalist;novinář
+London;Londýn
+nearly;málem
+noun;podstatné jméno
+object;věc
+Paris;Paříž
+preposition;předložka
+series;série
+stay;krást
+stress;vypětí
+super;senzační
+syllable;slabika
+traffic jam;dopravní zácpa
+unbelievable;neuvěřitelný
+way;cesta
+west;západ
+adverb;příslovce
+aerobics;aerobik
+art;umění
+ball;míč
+basketball;basketbal
+Christmas;Vánoce
+could;mohl/a
+cycling;jízda na kole
+event;událost
+expression;výraz
+frequency;frekvence
+furthest;nejvzdálenější
+gallery;galerie
+generally;všeobecně
+habit;zvyk
+interviewer;reportér
+jogging;běh pro zdraví
+judo;džudo
+least;nejmenší
+line;čára
+lunchtime;doba oběda
+men;muži
+normally;normálně
+occasionally;příležitostně
+order;pořadí
+perhaps;možná
+publish;uveřejnit
+researcher;vědecký pracovník
+result;výsledek
+skateboarding;jízda na skateboardu
+socialising;vést společenský život
+somewhere;někde
+sports;sportovní
+theatre;divadlo
+traditional;tradiční
+vowel;samohláska
+women;ženy
+yoga;jóga
+actually;ve skutečnosti
+bell;zvon
+bit;kousek
+dating;chodit na schůzky
+definitely;určitě
+delicious;lahodný
+disagree;nesouhlasit
+everybody;každý
+everyone;každý
+hate;nenávidět
+horror;děs
+interested;zajímat se o co
+negative;záporný
+neither;ani
+nervous;nervový
+nightmare;zlý sen
+pet;domácí mazlíček
+positive;kladný
+real;skutečný
+response;odpověď
+ring;prsten
+speed;rychlost
+suppose;předpokládat
+vampire;upír
+vegetarian;vegetarián
+website;internetové stránky
+aged;letitý
+ambitious;ambiciózní
+cent;cent
+chicken;kuře
+childhood;dětství
+customer;zákazník
+develop;rozvíjet se
+etc.;a tak dále
+extra;zvlášť
+factory;závod
+farm;farma
+fries;hranolky
+hungry;hladový
+irregular;nepravidelný
+learn;učit se
+mile;míle
+milk shake;mléčný koktejl
+nearby;nedaleko
+north;sever
+official;oficiální
+regular;pravidelný
+serve;sloužit
+service station;autoservis
+soon;brzy
+spokesman;mluvčí
+state;stav
+stop;přestat
+the sixties;šedesátá léta
+traveller;turista
+action;činnost
+anyway;stejně
+ask someone out;ptát se koho na co
+billion;bilion
+break up with;rozejít se s
+engaged;zaneprázdněný
+food poisoning;otrava potravinami
+forever;navždy
+get engaged;zasnoubit se
+get married;oženit se
+go out with;vyjít si s
+immediately;okamžitě
+invite;pozvat
+just;spravedlivý
+lift;zvednout
+pronounce;vyslovovat
+queue;fronta
+relative;příbuzný
+romantic;romantický
+round;okolo
+shorter;kratší
+stand;stát
+straight;rovný
+adviser;poradce
+Arabia;Arábie
+clever;chytrý
+collection;sbírka
+consequence;následek
+contain;obsahovat
+edition;vydání
+Egypt;Egypt
+exactly;přesně
+fall in love with someone;zamilovat se
+fully;plně
+happily;šťastně
+herself;se
+Indian;indický
+into;do
+king;král
+kingdom;království
+lover;milenec
+main;hlavní
+original;původní
+originally;původně
+palace;palác
+Persia;Persie
+professional;odborný
+queen;královna
+situation;situace
+smile;úsměv
+storyteller;vypravěč
+teacher;učitel
+thief;zloděj
+translate;přeložit
+version;verze
+well-known;známý
+bow;příď
+Cheers!;Na zdraví!
+festival;svátek
+illustrate;ilustrovat
+imagine;představit si
+keep;udržet si
+kiss;polibek
+member;člen
+mine;můj
+neighbour;soused
+role-play;hraní role
+touch;hmat
+usual;běžný
+worried;ustaraný
+airline;letecký
+basic;základní
+borrow;půjčit si
+colleague;spolupracovník
+employment;zaměstnání
+examiner;zkoušející
+fact;fakt
+farmer;zemědělec
+flexible;ohebný
+job security;záruka práce
+knowledge;vědomí
+licence;povolení
+major;hlavní
+meaning;význam
+opportunity;šance
+oral;ústní
+pleased;spokojený
+practical;užitečný
+promotion;postup
+qualified;kvalifikovaný
+salary;pevný plat
+street;ulice
+test;zkouška
+training;výcvik
+vet;zkr. veterinář
+whole;celý
+application;přihláška
+apply;aplikovat
+believe;věřit
+chance;šťastná náhoda
+circle;kruh
+CV;životopis
+explain;vysvětlit
+follow-up;zabývat se
+frustrating;frustrující
+job-hunting;hledání práce
+local;místní
+Mrs;zkr. paní
+news;novinky
+nothing;nic
+product;výrobek
+report;hlášení
+sick pay;nemocenská
+support;podporovat
+technical;technický
+temporary;dočasný
+vicious circle;bludný
+act;čin
+advertisement;reklama
+apologise;omluvit se
+apparently;zřejmě
+argue;diskutovat
+argument;argument
+artist;umělec
+assist;asistovat
+audience;obecenstvo
+building;budova
+chew;žvýkat
+chewing gum;žvýkačka
+circus;cirkus
+collect;sbírat
+column;sloup
+consonant;souhláska
+cream;smetana
+decision;rozhodnutí
+discussion;diskuze
+environment;prostředí
+examination;zkouška
+examine;zkoušet
+excite;rozrušit
+excitement;vzrušení
+field;pole
+fire;oheň
+guitarist;kytarista
+head;hlava
+hit;uhodit
+horrible;děsivý
+industry;průmysl
+knife;nůž
+link;článek
+liquid;kapalina
+manage;řídit
+natural;přírodní
+organise;zařídit
+paint;barva
+politician;politik
+rubbish;smetí
+strange;neobvyklý
+strawberry;jahoda
+stylist;kadeřník
+unemployment;nezaměstnanost
+unemployment benefit;příspěvek v nezaměstnanosti
+unprofessional;neprofesionální
+visitor;host
+wonderful;báječný
+worm;červ
+worse;horší
+afterwards;později
+apology;omluva
+cancel;odvolat
+client;klient
+lovely;milý
+prefer;mít raději
+alien;cizinec
+amazing;úžasný
+attack;napadnout
+career;profese
+conference;konference
+dawn;svítání
+dead;mrtvý
+director;ředitel
+entertainment;zábava
+episode;epizoda
+everything;všechno
+evil;zlý
+fan;fanoušek
+force;síla
+happier;spokojenější
+happiness;štěstí
+human;člověk
+movie;film
+opinion;názor
+participle;příčestí
+plot;spiknutí
+robot;robot
+romance;romantika
+screen;plátno
+silver;stříbrný
+society;společnost
+special effects;speciální efekty
+star;hvězda
+video;video
+war;válka
+worry;dělat si starosti
+album;album
+ballet;balet
+blues;blues
+brilliant;zářivý
+education;výchova
+folk;folkový
+orchestra;orchestr
+piano;piáno
+rhythm;rytmus
+seriously;vážně
+singer;zpěvák
+yours;patřící tobě/vám
+addict;narkoman
+average;průměr
+bored;unuděný
+cable TV;kabelová televize
+cause;příčina
+chat;povídat si
+control;řídit
+cross;kříž
+current affairs;aktuální události
+dot;tečka
+equipment;výstroj
+especially;zvláště
+excited;rozrušený
+feeling;cit
+flatmate;spolubydlící
+frightened;vystrašený
+frightening;děsivý
+glasses;brýle
+hey;zvolání
+Holland;Holandsko
+may;moci
+noise;kravál
+player;hráč
+power;síla
+quarter-final;čtvrtfinále
+reality;skutečnost
+satellite;satelit
+soap;mýdlo
+tiring;únavný
+turn off;zahnout
+worrying;znepokojující
+chairman;předseda
+educate;vzdělávat
+government;vláda
+impossible;nemožný
+lady;paní
+little;malý
+ministry;ministerstvo
+national;státní
+respond;reagovat
+row;řada
+trade union;odborová organizace
+ability;schopnost
+able;schopný
+abroad;v zahraničí
+build;postava
+collocation;slovní spojení
+complicated;složitý
+domestic;domácí
+easily;jednoduše
+engineering;strojírenství
+expert;odborník
+feed;krmit
+finally;konečně
+firstly;prvé
+guest;host
+housework;práce v domácnosti
+inside;vnitřek
+invention;vynález
+machine;stroj
+possibly;snad
+predict;předpovídat
+prediction;předpověď
+recognise;poznat
+robotics;robotika
+servant;služebník
+take over;zabrat
+toy;hračka
+videophone;televizní telefon
+wherever;kdekoliv
+across;napříč
+ambition;ctižádost
+biology;biologie
+camper;táborník
+certain;jistý
+desert;poušť
+dive;skok op hlavě do vody
+forward;čelní
+history;historie
+infinitive;infinitiv
+photograph;fotografie
+retire;odejít do penze
+suntan;opálený
+van;dodávka
+voice;hlas
+worst;nejhorší
+African;Afričan
+agency;agentura
+amount;částka
+bacteria;bakterie
+circular;kruhový
+differently;jinak
+earth;Země
+European;evropský
+except;kromě
+gene;gen
+join;spojit
+Mars;Mars
+method;způsob
+moon;měsíc
+necessarily;nutně
+organism;organismus
+oxygen;kyslík
+planet;planeta
+pleasure;potěšení
+private;soukromý
+revolve;točit se
+rocket;raketa
+size;velikost
+solar;sluneční
+spaceman;astronaut
+spaceship;kosmická loď
+sunset;západ slunce
+system;systém
+topic;téma
+tourism;cestovní ruch
+view;pohled
+disco;diskotéka
+general;generál
+intonation;intonace
+karaoke;karaoke
+library;knihovna
+organisation;organizace
+raise;zvednout
+request;požadavek
+adjective;přídavné jméno
+aggressive;agresivní
+bright;jasný
+comparative;srovnávací
+comparison;srovnání
+completely;kompletně
+considerate;ohleduplný
+easy-going;mírný
+elderly;postarší
+enemy;nepřítel
+helpful;nápomocný
+honest;čestný
+mature;dospělý
+middle-aged;ve středních letech
+moody;náladový
+patient;pacient
+polite;slušný
+stressful;stresující
+stubborn;tvrdohlavý
+teenage;dospívající
+side;strana
+close friend;blízký přítel
+daughter-in-law;snacha
+draw;kreslit
+employee;zaměstnanec
+employer;zaměstnavatel
+ex-;(předpona)
+gorgeous;úžasný
+great-uncle;prastrýc
+guy;chlápek
+haircut;ostřihání vlasů
+nephew;synovec
+niece;neteř
+owner;vlastník
+sister-in-law;švagrová
+stepfather;stále
+superlative;vynikající
+twin;dvojče
+wave;mávat
+calm;tichý
+criminal;zločinec
+dishonest;nepoctivý
+disorganised;dezorganizovaný
+divorce;rozvod
+extremely;nesmírně
+full;plný
+guide;vedoucí
+hurry;spěchat
+idiot;idiot
+immature;nevyspělý
+impatient;netrpělivý
+impolite;nezdvořilý
+inconsiderate;bezohledný
+listener;posluchač
+prefix;předpona
+serious;vážný
+steal;nevlastní otec
+successful;úspěšný
+unattractive;nepřitažlivý
+unreliable;nespolehlivý
+unselfish;nesobecký
+unsure;nejistý
+update;aktualizace
+wonder;zajímat se
+afraid;polekaný
+beat;úder
+contact;kontakt
+formal;formální
+golf;golf
+limited;omezený
+workplace;pracoviště
+anywhere;někde
+beauty;krása
+beauty spot;znaménko krásy
+coast;pobřeží
+definite;jasný
+destination;cíl cesty
+New Zealand;Nový Zéland
+overnight;přes noc
+pool;louže
+sunshine;sluneční záře
+tour;okružní cesta
+viewer;divák
+package;balíček
+carry;nést
+countable;počitatelný
+heavy;těžký
+hers;její
+large;velký
+make-up;vymyslet
+ours;naše
+packet;krabička
+perfume;vůně
+possessive;majetnický
+quantifier;kvantifikátor
+quantity;množství
+razor;žiletka
+roll;role
+sandal;sandál
+shampoo;šampon
+shaving foam;pěna na holení
+such;takový
+sun cream;krém na opalování
+sunglasses;sluneční brýle
+swimming costume;dámské plavky
+swimming trunks;pánské plavky
+swimsuit;plavky
+toothpaste;zubní pasta
+towel;ručník
+uncountable;nespočetný
+above;nahoře
+adventure;dobrodružství
+camping;táboření
+certificate;osvědčení
+classmate;spolužák
+comfortable;komfortní
+deliver;odvézt
+description;popis
+diver;potápěč
+during;během
+facility;dovednost
+father-in-law;tchán
+ground;zem
+incredible;neuvěřitelný
+instructor;učitel
+laboratory;laboratoř
+metre;metr
+monitor;monitor
+monkey;opice
+per;na
+piranha;piraňa
+plant;rostlina
+rainforest;deštný prales
+research;průzkum
+River Amazon;řeka Amazonka
+sailing;mořeplavba
+search;prohledat
+shared;sdílený
+shipwreck;ztroskotání lodi
+snorkelling;šnorchlování
+staff;personál
+suite;souprava
+treetop;koruna stromu
+tropical;tropický
+underwater;podvodní
+wake;vzbudit se
+cupboard;skříň
+complain;stěžovat si
+complaint;stížnost
+drop;kapka
+enough;dost
+mind;rozum
+reception;přivítání
+solution;roztok
+terribly;strašně
+air conditioning;klimatizace
+area;území
+below;pod
+central heating;ústřední topení
+culture;kultura
+fashionable;módní
+for ages;navěky
+freezing;mrazivý
+houseboat;hausbót
+mining;těžba
+opal;opál
+period;doba
+roof;střecha
+since;od té doby
+spacious;prostorný
+underground;podzemní
+accept;přijmout
+cake;dort
+dessert;zákusek
+eye;oko
+flower;květ
+host;hostitel
+hostess;konferenciérka
+ice cream;zmrzlina
+mosque;mešita
+purpose;účel
+Roman;Říman
+rude;drzý
+starter;startující
+wheel;kolo
+accent;přízvuk
+admire;obdivovat
+Arab;arabský
+behave;chovat se
+behavior;chování
+blow;úder
+cheek;tvář
+cultural;kulturní
+death;smrt
+depend;záležet
+disgusting;ohavný
+doorway;vchod
+embarrassing;trapný
+feet;nohy
+funeral;pohřeb
+greedy;nestřídmý
+greeting;pozdrav
+luck;štěstí
+nose;nos
+odd;podivný
+pattern;vzor
+plate;talíř
+pocket;kapsa
+receive;dostat
+refuse;odmítnout
+Russia;Rusko
+scissors;nůžky
+shock;náraz
+speech;řeč
+symbol;symbol
+unlucky;nešťastný
+admit;vpustit
+bagpipes;dudy
+basically;v podstatě
+bland;bez chuti
+castle;hrad
+changeable;proměnlivý
+cosmopolitan;kosmopolitní
+currency;měna
+cut;řezat
+Edinburgh;Edinburgh
+Gaelic;gaelský
+haggis;tlačenka
+industrial;průmyslový
+itself;se
+kilt;skotská suknice
+nowhere;nikde
+polluted;znečištěný
+relaxed;uvolnit se
+reserved;chladný
+Saudi Arabia;Saudská Arábie
+Scottish;skotský
+sheep;ovce
+spicy;silně kořeněný
+Sweden;Švédsko
+Swedish;švédský
+tradition;zvyklost
+whereabouts;místo
+whisky;whisky
+alright;dobře
+clause;věta
+conditional;podmínkový
+Euro;Euro
+get lost;ztratit se
+get/be   stuck;uváznout
+key;klíč
+oversleep;zaspat
+reservation;reservace
+run out of;dojít
+annoyed;rozmrzelý
+annoying;protivný
+confident;sebejistý
+embarrassed;rozpačitý
+energy;energie
+full-time;řádný
+guilty;vinen
+lonely;osamělý
+satisfied;spokojený
+sleepless;bezesný
+social;sociální
+upset;rozmrzelý
+asleep;spící
+bark;kůra
+be fed up with;mít po krk koho/čeho
+care;starost
+fault;nedopatření
+get on with;vycházet s někým
+go on;pokračovat
+hospital;nemocnice
+improve;zlepšit
+literal;doslovný
+loud;hlučný
+move in;nastěhovat se
+neighbourhood;sousedství
+nobody;nikdo
+particle;částice
+peaceful;klidný
+police;policie
+pollution;znečištění
+presenter;hlasatel
+put up with;trpět bez nářků
+reader;čtenář
+recently;nedávno
+remove;přestěhovat se
+reporter;zpravodaj
+solve;řešit
+take off;vzlétnout
+thirties;třicátá léta
+tolerate;snášet
+trouble;nesnáze
+arrangement;uspořádání
+babysitting;hlídání dětí
+central heating;ústřední topení
+fancy;představivost
+invent;vymyslet
+invitation;pozvání
+rest;odpočinek
+absolutely;naprosto
+auction;aukce
+Beatles;Beatles
+boy;chlapec
+category;kategorie
+cotton;bavlna
+crop;plodina
+cutting;výstřižek
+direct;přímý
+Europe;Evropa
+grow;růst
+hairdresser;kadeřník
+Internet;internet
+manufacture;vyrábět
+painting;malování
+passive;pasivní
+pipe;roura
+record-breaking;pokořit rekord
+sales;prodeje
+sometime;někdy
+theatre play;divadelní hra
+tiger;tygr
+till;až do
+attitude;postoj
+everywhere;kdekoliv
+fresh;čerstvý
+frozen;zmrzlý
+interestingly;zajímavé je
+mostly;hlavně
+no one;nikdo
+nowadays;nyní
+repeat;opakování
+skincare;péče o pokožku
+sugar;cukr
+trend;tendence
+typewriter;psací stroj
+award;cena
+businessman;obchodník
+create;tvořit
+design;návrhářství
+designer;návrhář
+discover;objevit
+fashion;móda
+gunman;ozbrojený gangster
+label;popiska
+leather;kůže
+marriage;manželství
+murder;vražda
+murderer;vrah
+occasion;příležitost
+particular;konkrétní
+recording;nahrávka
+sack;pytel
+tax;daň
+weekly;týdně
+wives;manželky
+altogether;dohromady
+cash;peněžní hotovost
+medium;střední
+unfortunately;naneštěstí
+victim;oběť
+account;konto
+connect;spojovat
+exact;přesný
+expected;očekávaný
+get promoted;být povýšen
+gossip;pomluvy
+knee;koleno
+prompt;rychlý
+try on;vyzkoušet si
+appear;jevit se
+arrest;zatknout
+author;autor
+break into;vloupat se
+bullet;kulka
+burglar;lupič
+burglary;vloupání
+burgle;vloupat se
+button;knoflík
+connection;spojení
+corner;roh
+crime;trestný čin
+escape;utéci
+gun;pistole
+instantly;okamžitě
+mystery;tajemství
+novel;román
+obviously;zřejmě
+policeman;policista
+real-life;skutečný život
+robber;lupič
+robbery;krádež
+rose;růže
+shoot;střelit
+sleepy;ospalý
+suspect;podezřelý
+yet;ještě
+theft;krádež
+adapted;přizpůsobený
+announcer;hlasatel
+apartment block;činžovní dům
+association;sdružení
+attention;pozornost
+blind;slepý
+branch;větev
+bravery;statečnost
+clash;spor
+collector;výběrčí
+context;souvislost
+cruel;krutý
+cruelty;krutost
+damage;škoda
+definition;definice
+demonstrator;demonstrant
+dollar;dolar
+dolphin;delfín
+exclusive;exkluzivní
+fence;plot
+gas;plyn
+hero;hrdina
+injured;zraněný
+inspector;inspektor
+kangaroo;klokan
+kangaroo pouch;klokaní vak
+leader;vůdce
+leak;prasklina
+magic;kouzelný
+medal;medaile
+medical;zdravotní
+Ms;zkr. paní
+prevent;zamezit
+prevention;zabránění
+protester;demonstrant
+recommend;doporučit
+rescue;záchrana
+resident;usedlík
+royal;královský
+severe;přísný
+skin;pokožka
+stone;kámen
+storm;bouřka
+trade;obchod
+trial;soudní proces
+unconscious;v bezvědomí
+weird;tajuplný
+worker;pracovník
+workman;dělník
+animal rights;práva zvířat
+echo;ozvěna
+Hollywood;Hollywood
+worth;mající cenu
+achieve;dosáhnout
+brown;hnědý
+glad;potěšený
+goal;gól
+lend;půjčit
+owe;dlužit
+pronoun;zájmeno
+proper;vhodný
+proud;pyšný
+Rome;Řím
+silly;hloupý
+Sydney;Sydney
+dye;barva
+glove;rukavice
+hypnotise;hypnotizovat
+imaginary;pomyslný
+insect;hmyz
+jump;skočit
+parachute;padák
+pink;růžový
+waste;plýtvání
+worldwide;celosvětový
+chain;řetěz
+clothing;šaty
+curtain;záclona
+digit;číslice
+film-maker;producent
+handcuffs;pouta
+hide;schovat
+Hungary;Maďarsko
+luckily;naštěstí
+magician;mág
+multiply;mnohonásobný
+onstage;na jevišti
+ordinary;obvyklý
+pile;hromada
+pillar;pilíř
+pull;táhnout
+release;propuštění
+River Thames;řeka Temže
+spectacular;honosný
+stunt;kaskadérský kousek
+subtract;odečíst
+survive;přežít
+tarantula;tarantule
+themselves;se
+toe;prst
+trick;lest

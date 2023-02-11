@@ -1,0 +1,5 @@
+description: Runed an available model
+tags:
+  - marian
+param-files:
+  - "*yaml"
