@@ -1,0 +1,109 @@
+----1
+select {([Measures].[Obrot]),([Measures].[Ilosc])} on columns,
+[Regiony].[Region].members on rows
+from [Dged s412161 nowa]
+where ([Towary].[Podgrupa].&[okapy],[Czas].[Rok].&[2006],[Czas].[Kwartal].&[2]);
+----2
+select [Towary].[Hierarchy].[Grupa].&[BI].&[okapy].children on rows,
+{[Czas].[Hierarchy].[Rok].&[2006].&[1].&[1]:[Czas].[Hierarchy].[Rok].&[2006].&[2].&[4]} on columns
+from [Dged s412161 nowa]
+where [Measures].[Ilosc]
+----3
+select
+crossjoin({[Czas].[Rok].&[2006],[Czas].[Rok].&[2007]},{[Czas].[Kwartal].MEMBERS})on rows,
+[Measures].[Obrot] on columns
+from [Dged s412161 nowa]
+where [Towary].[Towar].&[chlodziarki]
+----4
+select 
+NONEMPTYcrossjoin({Except([Towary].[Grupa].members,[Towary].[Grupa].[All])},
+{Order(Except([Regiony].[Region].members,[Regiony].[Region].[All]),[Measures].[Ilosc],BDESC)}) on rows,
+{[Measures].[Ilosc]} on columns
+from [Dged s412161 nowa]
+where ([Towary].[Podgrupa].&[zmywarki],[Czas].[Rok].&[2007]);
+-----5
+with 
+member Measures.[Wartosc]  as [Measures].[Cena]*[Measures].[Ilosc]
+member
+[Klienci].[Klient].[zagregowane] as 
+Aggregate ({[Klienci].[Klient].&[AVANS],[Klienci].[Klient].&[MEDIA MARKT]})
+select {[Klienci].[Klient].&[AVANS],[Klienci].[Klient].&[MEDIA MARKT],[Klienci].[Klient].[zagregowane]} on rows,
+{Measures.[Wartosc]} on columns
+from [Dged s412161 nowa]
+-----6
+with member Measures.[MinZmywarek] as 'MIN({[Regiony].[Region].members},[Measures].[Ilosc])'
+select {Measures.[MinZmywarek]} on columns,
+filter(NONEMPTYcrossjoin ([Towary].[Grupa].children,
+{Order([Regiony].[Region].children,[Measures].[Ilosc], BDESC)}),
+[Measures].[Ilosc]=Measures.[MinZmywarek]) on rows
+from [Dged s412161 nowa]
+where ([Towary].[Podgrupa].&[zmywarki],[Czas].[Rok].&[2007])
+-----7
+with member Measures.[Udzial] as '[Measures].[Obrot]/sum(Except([Towary].[Podgrupa].members,[Towary].[Podgrupa].[All]),[Measures].[Obrot])',
+FORMAT_STRING = "Percent"
+select
+{Except([Towary].[Podgrupa].members,[Towary].[Podgrupa].[All])} on rows,
+{Measures.[Udzial]} on columns
+from [Dged s412161 nowa]
+-----8
+with member
+[Measures].[Podgrupa] AS 
+Ancestor([Towary].[Hierarchy].currentmember,[Towary].[Hierarchy].[Podgrupa]).MEMBER_CAPTION
+member [Measures].[Grupa] as 
+Ancestor([Towary].[Hierarchy].currentmember,[Towary].[Hierarchy].[Grupa]).MEMBER_CAPTION
+select {[Measures].[Podgrupa],[Measures].[Grupa]}on columns,
+[Towary].[Hierarchy].[Towar].members on rows
+from [Dged s412161 nowa]
+-----9
+with member Measures.[UdzialPodgrupa] as '([Towary].[Hierarchy].currentmember,[Measures].[Obrot])/
+    ([Towary].[Hierarchy].currentmember.parent,[Measures].[Obrot])',
+FORMAT_STRING = "Percent"
+member Measures.[UdzialGrupa] as '([Towary].[Hierarchy].currentmember,[Measures].[Obrot])/
+    ([Towary].[Hierarchy].currentmember.parent.parent,[Measures].[Obrot])',
+FORMAT_STRING = "Percent"
+member Measures.[UdzialRynek] as '([Towary].[Hierarchy].currentmember,[Measures].[Obrot])/
+    ([Towary].[Hierarchy].currentmember.parent.parent.parent,[Measures].[Obrot])',
+FORMAT_STRING = "Percent"
+select
+{ Measures.[UdzialPodgrupa],Measures.[UdzialGrupa],Measures.[UdzialRynek] } on columns,
+[Towary].[Hierarchy].[Towar].members on rows
+from [Dged s412161 nowa]
+-----10
+with set [Najlepsi] AS 
+'TOPCOUNT([Regiony].[Region].[Region],3,[Measures].[Ilosc])'
+set [Reszta] AS 
+'Except([Regiony].[Region].[Region], [Najlepsi])'
+member [Regiony].[Region].[Najlepsi-suma] as 'sum([Najlepsi])'
+member [Regiony].[Region].[Reszta-suma] as 'sum([Reszta])'
+select { [Regiony].[Region].CHILDREN, [Regiony].[Region].[Najlepsi-suma], [Regiony].[Region].[Reszta-suma]} on rows,
+{ [Measures].[Ilosc] } on columns
+from [Dged s412161 nowa]; 
+
+-----11
+with MEMBER Measures.[Akumulacja] AS Sum(YTD(),[Measures].[Ilosc] )
+select {[Measures].[Ilosc],Measures.[Akumulacja]} on columns,
+( [Czas].[Hierarchy].[Rok].&[2004].Children) on rows
+from [Dged s412161 nowa];
+
+with MEMBER Measures.[Akumulacja] AS 'SUM(PeriodsToDate([Czas].[Hierarchy].[Rok],[Czas].[Hierarchy].CurrentMember ), [Measures].[Ilosc])'
+select  {[Measures].[Ilosc],Measures.[Akumulacja]} on columns,
+([Czas].[Hierarchy].[Rok].&[2004].Children) on rows
+from [Dged s412161 nowa];
+
+with MEMBER Measures.[Akumulacja] AS 'SUM(TopCount(Descendants(Ancestor([Czas].[Hierarchy].CurrentMember, [Czas].[Hierarchy].[Rok]), 
+[Czas].[Hierarchy].CurrentMember.Level), Count([Czas].[Hierarchy].[Rok].&[2004].&[1] : [Czas].[Hierarchy].CurrentMember)),[Measures].[Ilosc] )'
+select  {[Measures].[Ilosc],Measures.[Akumulacja]} on columns,
+([Czas].[Hierarchy].[Rok].&[2004].Children) on rows
+from [Dged s412161 nowa];
+
+-----12
+WITH MEMBER Measures.[Skok] AS
+'IIF([Czas].[Miesiac].currentmember.membervalue=1,"-",IIf(([Czas].[Hierarchy].Currentmember,[Measures].[Obrot])>=([Czas].[Hierarchy].Prevmember,[Measures].[Obrot]),
+"wzrost", "spadek"))'
+select crossjoin (
+{ [Regiony].[Region].[Region].MEMBERS },
+{ [Czas].[Hierarchy].[Miesiac] }
+) on rows,
+{ [Measures].[Obrot] , Measures.[Skok]} on columns
+from [Dged s412161 nowa]
+where ([Czas].[Rok].&[2006]);

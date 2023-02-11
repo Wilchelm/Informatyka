@@ -1,0 +1,22 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Projekt", "Projekt\Projekt.dtproj", "{EE86A2AF-B6FE-4CC3-8637-FC349B894CB2}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "dged_s412161(MSSQL-2014)", "<Server=mssql-2014;Database=dged_s412161;>", "{21BFC6BB-4343-4ABD-8E5E-DADFB2FD81BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE86A2AF-B6FE-4CC3-8637-FC349B894CB2}.Development|Default.ActiveCfg = Development
+		{EE86A2AF-B6FE-4CC3-8637-FC349B894CB2}.Development|Default.Build.0 = Development
+		{21BFC6BB-4343-4ABD-8E5E-DADFB2FD81BD}.Development|Default.ActiveCfg = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
