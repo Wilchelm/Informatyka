@@ -1,0 +1,19 @@
+<!doctype html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<title>Fuzzy SQL</title>
+
+  <h1>Fuzzy SQL</h1>
+  <div>
+  <a href="{{ url_for('upload') }}">Upload CSV</a>
+  </div>
+  <div>
+  <a href="{{ url_for('fuzzyfunction') }}">Create Fuzzy function</a>
+  </div>
+  <div>
+  <a href="{{ url_for('show') }}">Show Fuzzy SQL</a>
+  </div>
+</body>
+

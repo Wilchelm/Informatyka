@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Fuzzy SQL</title>
+ <script src="{{ url_for('static', filename='js.js') }}"></script>
+ <script src="{{ url_for('static', filename='Chart.min.js') }}"></script>
+</head>
+<body>
+<h1>Create Fuzzy function</h1>
+<div>
+<form align="center">
+<h2 align="center">Define fuzzy question:</h2>
+<label for="vala">Write a</label>
+<input type="text" id="vala" value="Write a value"><br>
+<label for="valb">Write b</label>
+<input type="text" id="valb" value="Write b value"><br>
+<label for="valc">Write c</label>
+<input type="text" id="valc" value="Write c value"><p>
+<button type="button" onclick="showChart()">Click Me!</button><p>
+<canvas id="line-chart"></canvas>
+</form>
+</div>
+<div>
+<form align="center" id="funtion-form" action="{{ url_for('fuzzyfunction') }}" method="POST" enctype="multipart/form-data">
+<select name="option" style="width:100%">
+{% for row in result1 %}
+	{% if row[0]==opt %}
+		<option value="{{ row[0] }}" selected="selected">{{ row[0] }}</option>
+	{% else %}
+		<option value="{{ row[0] }}">{{ row[0] }}</option>
+	{% endif %}
+{% endfor %}
+</select>
+<input align="center" type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>
+
+<script>
+
+var myChart;
+
+function showChart() {
+	if (myChart) {
+    myChart.destroy();
+  }
+
+	var a,b,c;
+	a = 0;
+	b = 0;
+	c = 0;
+
+	var vala;
+	vala = document.getElementById("vala").value;
+	var valb;
+	valb = document.getElementById("valb").value;
+	var valc;
+	valc = document.getElementById("valc").value;
+
+	vala = Number(vala);
+	valb = Number(valb);
+	valc = Number(valc);
+
+	if (isNaN(vala) || isNaN(valb) || isNaN(valc)) {
+		alert("a,b,c must be numbers");
+	} else {
+
+		if (valb == vala && valc > valb) {
+			a = 1;
+			b = 1;
+			c = 0;
+		} else if (valb == valc && valb > vala) {
+			a = 0;
+			b = 1;
+			c = 1;
+		} else if (valb > vala && valc > valb) {
+			a = 0;
+			b = 1;
+			c = 0;
+		} else {
+			alert("incorrect values");
+		}
+
+	}
+
+	if (!(a == 0 && b ==0 && c ==0)) {
+		myChart = new Chart(document.getElementById("line-chart"), {
+			type: 'scatter',
+			data: {
+				datasets: [{
+					data: [{x:(vala-10),y:a},{x:vala,y:a},{x:valb,y:b},{x:valc,y:c},{x:(valc+10),y:c}],
+					borderColor: "#c45850",
+					label: "",
+					lineTension: 0,
+					fill: false
+				}
+				]
+			},
+			options: {
+				title: {
+					display: true,
+					fontSize: 40,
+					text: 'Fuzzy Chart'
+				},
+				scales: {
+          xAxes: [{
+						ticks: {
+            	min: vala - 10,
+            	max: valc + 10
+         		},
+            type: 'linear',
+            position: 'bottom'
+          }]
+        }
+			}
+		});
+	}
+};
+
+</script>

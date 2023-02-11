@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title>Fuzzy SQL</title>
+ <script src="{{ url_for('static', filename='js.js') }}"></script>
+</head>
+<body>
+<h1>Upload CSV File</h1>
+<div>
+<form align="center" id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+    <input align="center" type="file" name="file" accept=".csv" multiple>
+    <input align="center" type="submit" value="Upload!">
+</form>
+</div>
+</body>
+</html>

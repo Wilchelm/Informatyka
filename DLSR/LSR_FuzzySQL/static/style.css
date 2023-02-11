@@ -1,0 +1,112 @@
+.whole-page {
+  font-family: tahoma;
+  background-color: #44ffef;
+}
+
+.page-title {
+  text-align: center;
+  font-family: HoltwoodOneSC;
+  margin-top: 100px;
+  font-weight: bold;
+  color: #34383B;
+}
+
+.div-element {
+  width: 75%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #34383b;
+  box-shadow: 7px 7px 7px #585757;
+}
+
+.menu-item {
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.white-form {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.upload-input {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.text-input {
+  background-color: #007bff;
+  border: #007bff;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.select-class {
+  background-color: #007bff;
+  border: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.div-table {
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  height: 200px;
+  width: 90%;
+  overflow: auto;
+  box-shadow: 7px 7px 7px #585757;
+  display: block;
+}
+
+.clone-section {
+    display: none;
+}

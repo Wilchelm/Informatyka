@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<title>Fuzzy SQL</title>
+  <script src="{{ url_for('static', filename='js.js') }}"></script>
+  <script src="{{ url_for('static', filename='Chart.min.js') }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+  
+    function myFunction() {
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    }
+
+    function changeDatabase(db) {
+      document.getElementById("database").value = "FROM " + db;
+
+      $.getJSON('/columnstherms/' + db,
+        function(data) {
+				  $("#select-column").empty();
+          $("#select-therm").empty();
+          
+          for (var j = 1; j < 6; j++) {
+            $("#select-column" + j).empty();
+            $("#select-therm" + j).empty();
+          }
+          
+				  var select_columns = "";
+          var select_therms = "";
+				  for (var i = 0; i < data.columns.length; i++) {
+                    console.log(data.columns[i])
+                    if (!data.columns[i].includes("for"))
+					  select_columns += "<option value="+data.columns[i]+">"+data.columns[i]+"</option>";
+    		  }
+          for (var i = 0; i < data.therms.length; i++) {
+					  select_therms += "<option value="+data.therms[i]+">"+data.therms[i]+"</option>";
+    		  }
+          
+          $("#select-column").append(select_columns);
+          $("#select-therm").append(select_therms);
+          
+          for (var j = 1; j < 6; j++) {
+            $("#select-column" + j).append(select_columns);
+            $("#select-therm" + j).append(select_therms);
+          }
+          
+        });
+      return false;
+    }
+    
+    function addCases(number) {
+        /*document.getElementById("cloneSection1").value = "FROM " + db;*/
+    
+    
+        /*var node = document.createElement("div"); */
+    
+    
+        if (number == 0) {
+            document.getElementById("cloneSection1").style.display = "none";
+            document.getElementById("cloneSection2").style.display = "none";
+            document.getElementById("cloneSection3").style.display = "none";
+            document.getElementById("cloneSection4").style.display = "none";
+            document.getElementById("cloneSection5").style.display = "none";
+        }
+        else if (number == 1) {
+            document.getElementById("cloneSection1").style.display = "inline";
+            document.getElementById("cloneSection2").style.display = "none";
+            document.getElementById("cloneSection3").style.display = "none";
+            document.getElementById("cloneSection4").style.display = "none";
+            document.getElementById("cloneSection5").style.display = "none";
+        }
+        else if (number == 2) {
+            document.getElementById("cloneSection1").style.display = "inline";
+            document.getElementById("cloneSection2").style.display = "inline";
+            document.getElementById("cloneSection3").style.display = "none";
+            document.getElementById("cloneSection4").style.display = "none";
+            document.getElementById("cloneSection5").style.display = "none";
+        }
+        else if (number == 3) {
+            document.getElementById("cloneSection1").style.display = "inline";
+            document.getElementById("cloneSection2").style.display = "inline";
+            document.getElementById("cloneSection3").style.display = "inline";
+            document.getElementById("cloneSection4").style.display = "none";
+            document.getElementById("cloneSection5").style.display = "none";
+        }
+        else if (number == 4) {
+            document.getElementById("cloneSection1").style.display = "inline";
+            document.getElementById("cloneSection2").style.display = "inline";
+            document.getElementById("cloneSection3").style.display = "inline";
+            document.getElementById("cloneSection4").style.display = "inline";
+            document.getElementById("cloneSection5").style.display = "none";
+        }
+        else if (number == 5) {
+            document.getElementById("cloneSection1").style.display = "inline";
+            document.getElementById("cloneSection2").style.display = "inline";
+            document.getElementById("cloneSection3").style.display = "inline";
+            document.getElementById("cloneSection4").style.display = "inline";
+            document.getElementById("cloneSection5").style.display = "inline";
+        }
+        
+        /*for (var i = 1; i < number + 1; i++)
+            if (document.getElementById("cloneSection" + i).style.display == "none")
+                document.getElementById("cloneSection" + i).style.display = "block";
+            else
+                document.getElementById("cloneSection" + i).style.display = "none";*/
+        
+        //$(".cloneSection").clone()appendTo(".repeatCases");
+    
+        /*for (var i = 0; i < number; i++)
+            document.getElementById("repeatCases").innerHTML += '<select class="select-class"><option value="AND">AND</option><option value="OR">OR</option></select>'*/
+    }
+
+    /*$(document).ready(function() {
+       $("select#selectDatabase").bind("change",function changeDatabase() {
+        $("input#database").value = $("select#selectDatabase").value;
+        window.location.reload();
+         //if ($(this).val() == "one") 
+         // $("div#myform").show(); 
+         //else
+         // $("div#myform").hide(); 
+       })
+   })*/
+
+
+
+    /*$(document).ready(function() {
+  function changeDatabase() {
+    document.getElementById("database").value = "from" + document.getElementById("selectDatabase").value;
+  }
+});*/
+</script>
+
+</head>
+<body class="whole-page">
+  <h1 class="page-title">Show CSV Table</h1>
+  <div class="div-element">
+  <button class="collapsible" onclick="myFunction()">Open Creator</button>
+  <div class="myDIV">
+    <form class="white-form" align="center" id="show" action="{{ url_for('show') }}" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <select class="select-class" id="selectDatabase" name="option" style="width:100%" onchange="changeDatabase(this.value)">
+        {% if tables %}
+          {% for row in tables %}
+            {% if row==opt %}
+              <option value="{{ row }}" selected="selected">{{ row }}</option>
+            {% else %}
+              <option value="{{ row }}">{{ row }}</option>
+            {% endif %}
+	        {% endfor %}
+        {% endif %}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input class="text-input" style="width:20%" type="text" disabled="true" value="SELECT"></input>
+        <input name="inputColumn" class="text-input" style="width:10%" type="text" value="*" disabled="true"></input>
+        <input name="inputDatabase" class="text-input" style="width: calc(70% - 20px)" id="database" type="text" disabled="true"></input>
+      </div>
+
+      <div class="form-group">
+        <input class="text-input" style="width:20%" type="text" disabled="true" value="WHERE"></input>
+        <!-- <div class="cloneSection"> -->
+				<!-- <select class="select-class" style="width:20%" name="inputCase" id="select-column"> -->
+				<!-- {% for column in columns %} -->
+					<!-- <option value="{{ column }}">{{ column }}</option> -->
+				<!-- {% endfor %} -->
+        <!-- </select> -->
+        <!--<input name="inputCase" class="text-input" style="width:20%" type="text" placeholder="Column name"></input>-->
+
+        <!-- <input class="text-input" style="width:5%" type="text" disabled="true" value="IS"></input> -->
+        <!-- <select class="select-class" style="width:20%" name="selectTherm" id="select-therm"> -->
+        <!-- {% if therms %} -->
+          <!-- {% for therm in therms %} -->
+            <!-- <option value="{{ therm[0] }}">{{ therm[0] }}</option> -->
+          <!-- {% endfor %} -->
+        <!-- {% endif %} -->
+        <!-- </select> -->
+        <!-- </div> -->
+  
+        <!-- <input type="text" placeholder="Podaj term" pattern="[a-zA-Z]+" title="Format obejmuje tylko znaki alfabetu"></input> -->
+      </div>
+      
+      <div class="form-group">
+        <label for="casesNumber">Liczba warunków: </label>
+        <select id="casesNumber" name="casesNumber" onchange="addCases(this.value)">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <!--<button submit="false" onclick="addCases(document.getElementById('casesNumber').value)">Dodaj</button>-->
+      </div>
+      
+      <div class="form-group repeatCases">
+        
+      </div>
+      
+      <div id="cloneSection1" class="form-group clone-section">
+        
+        <select class="select-class" style="width:20%" name="inputCase1" id="select-column1">
+				{% for column in columns_list %}
+					<option value="{{ column }}">{{ column }}</option>
+				{% endfor %}
+        </select>
+
+        <input class="text-input" style="width:5%" type="text" disabled="true" value="IS"></input>
+        <select class="select-class" style="width:20%" name="selectTherm1" id="select-therm1">
+        {% if therms %}
+          {% for therm in therms %}
+            <option value="{{ therm[0] }}">{{ therm[0] }}</option>
+          {% endfor %}
+        {% endif %}
+        </select>
+      </div>
+      </br>
+      <div id="cloneSection2" class="form-group clone-section">
+        <select name="case2" class="select-class" style="width:20%">
+					<option value="AND">AND</option>
+                    <option value="OR">OR</option>
+        </select>
+        
+        <select class="select-class" style="width:20%" name="inputCase2" id="select-column2">
+				{% for column in columns_list %}
+					<option value="{{ column }}">{{ column }}</option>
+				{% endfor %}
+        </select>
+
+        <input class="text-input" style="width:5%" type="text" disabled="true" value="IS"></input>
+        <select class="select-class" style="width:20%" name="selectTherm2" id="select-therm2">
+        {% if therms %}
+          {% for therm in therms %}
+            <option value="{{ therm[0] }}">{{ therm[0] }}</option>
+          {% endfor %}
+        {% endif %}
+        </select>
+      </div>
+      </br>
+      <div id="cloneSection3" class="form-group clone-section">
+        <select name="case3" class="select-class" style="width:20%">
+					<option value="AND">AND</option>
+                    <option value="OR">OR</option>
+        </select>
+        
+        <select class="select-class" style="width:20%" name="inputCase3" id="select-column3">
+				{% for column in columns_list %}
+					<option value="{{ column }}">{{ column }}</option>
+				{% endfor %}
+        </select>
+
+        <input class="text-input" style="width:5%" type="text" disabled="true" value="IS"></input>
+        <select class="select-class" style="width:20%" name="selectTherm3" id="select-therm3">
+        {% if therms %}
+          {% for therm in therms %}
+            <option value="{{ therm[0] }}">{{ therm[0] }}</option>
+          {% endfor %}
+        {% endif %}
+        </select>
+      </div>
+      </br>
+      <div id="cloneSection4" class="form-group clone-section">
+        <select name="case4" class="select-class" style="width:20%">
+					<option value="AND">AND</option>
+                    <option value="OR">OR</option>
+        </select>
+        
+        <select class="select-class" style="width:20%" name="inputCase4" id="select-column4">
+				{% for column in columns_list %}
+					<option value="{{ column }}">{{ column }}</option>
+				{% endfor %}
+        </select>
+
+        <input class="text-input" style="width:5%" type="text" disabled="true" value="IS"></input>
+        <select class="select-class" style="width:20%" name="selectTherm4" id="select-therm4">
+        {% if therms %}
+          {% for therm in therms %}
+            <option value="{{ therm[0] }}">{{ therm[0] }}</option>
+          {% endfor %}
+        {% endif %}
+        </select>
+      </div>
+      </br>
+      <div id="cloneSection5" class="form-group clone-section">
+        <select name="case5" class="select-class" style="width:20%">
+					<option value="AND">AND</option>
+                    <option value="OR">OR</option>
+        </select>
+      
+        <select class="select-class" style="width:20%" name="inputCase5" id="select-column5">
+				{% for column in columns_list %}
+					<option value="{{ column }}">{{ column }}</option>
+				{% endfor %}
+        </select>
+
+        <input class="text-input" style="width:5%" type="text" disabled="true" value="IS"></input>
+        <select class="select-class" style="width:20%" name="selectTherm5" id="select-therm5">
+        {% if therms %}
+          {% for therm in therms %}
+            <option value="{{ therm[0] }}">{{ therm[0] }}</option>
+          {% endfor %}
+        {% endif %}
+        </select>
+      </div>
+      </br>
+
+      <div class="form-group">
+        <label for="Threshold">Threshold</label>
+        <input class="text-input" type="number" id="Threshold" name="threshold" min=0 max=1 step=0.1>
+      </div>
+
+      <div class="form-group">
+        <input class="btn btn-primary" type="submit"  onclick="myFunction()" value="Run query">
+      </div>
+    </form>
+  </div>
+  </div>
+  {% if table_data %}
+  <div class="div-table">
+    <table class="table table-dark table-striped">
+      <thead>
+	      <tr>
+	      {% for column in columns %}
+		      <th>{{ column }}</th>
+	      {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+	    {% for row in table_data %}
+		    <tr>
+		    {% for r in row %}
+			    <th>{{ r }} </th>
+		    {% endfor %}
+		    </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+
+</body>
+</html>
