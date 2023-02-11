@@ -1,0 +1,43 @@
+HS.A1(1)
+
+square :: Int -> Int
+square x = x * x
+
+HS.A2(1)
+
+first x y = x
+
+HS.B1(3)
+
+myMapSquare :: [Integer] -> [Integer]
+myMapSquare (x:xs) = x*x:myMapSquare xs
+myMapSquare [] = []
+
+HS.B4(4)  
+
+ordered :: (a -> a -> Bool) -> [a] -> Bool
+ordered sign = loop
+	where
+		loop [] = True
+		loop [_] = True
+		loop (x:y:z) = (x `sign` y) && loop (y:z)
+
+PL.A1(1)
+
+ojciec(X,Y) :- rodzic(X,Y), mezczyzna(X).
+
+PL.A3(1)
+
+dziadek(X,Y) :- ojciec(X,Z), rodzic(Z,Y).
+
+PL.B(2)
+
+ordered([]).
+ordered([_]).
+ordered([X,Y|Xs]) := X =< Y, ordered([Y|Xs]).
+
+PL.B(3)
+
+rev(X,Y) :- rev(X,[],Y).
+rev([],Y,Y).
+rev([Head|Tail],Z,Y) :- rev(Tail, [Head|Z],Y).
