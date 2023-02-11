@@ -1,0 +1,16 @@
+class Produkt{
+		string nazwa;
+		double cena;
+};
+
+class Magazyn : Produkt
+{
+	private:
+		int identyfikator;
+		Magazyn * wsk = new Produkt[3];
+		
+		~Magazyn()
+		{
+			delete * wsk;
+		}
+};

@@ -1,0 +1,12 @@
+class SprzetRTV {
+   string nazwaProducenta;
+   string dataProdukcji;
+   double mocZnamionowa;
+   double cena;
+public:
+     int dana;
+ 
+     SprzetRTV( int parametrDomyslny ) {
+       this->dana = parametrDomyslny;
+     }
+};

@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int wynik[10];
+	int m;
+	int n;
+	cin >> m >> n;
+	for (int i = 0; i < 10; ++i) {
+		wynik[i] = 0;
+	}
+	for (int i = 0; i < n; ++i) {
+		int glos;
+		cin >> glos;
+		--glos;
+		++wynik[glos];
+	}
+	for (int i = 0; i < m; ++i) {
+		cout << i + 1 << ": " << wynik[i] << '\n' ;
+	}
+	int zwyciezca = 0;
+	for (int i = 0; i < m; ++i) {
+		if (wynik[i] > wynik[zwyciezca]) {
+			zwyciezca = i;
+		}
+	}
+	cout << zwyciezca + 1;
+	return 0;
+}

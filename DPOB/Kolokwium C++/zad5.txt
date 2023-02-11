@@ -1,0 +1,6 @@
+BazaDanych * tempBazaDanych = dynamic_cast<BazaDanych*> (wsk);        
+                if (tempBazaDanych != NULL) {
+                        cout << "OK";
+                } else {
+                        cout << "error";
+                }

@@ -1,0 +1,106 @@
+18:26:48 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:30:2: error: expected '}' at end of input
+  }
+  ^
+18:26:56 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+18:30:22 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:6:6: warning: variable 'oceny' set but not used [-Wunused-but-set-variable]
+  int oceny[1010];
+      ^
+g++ -o ppr.exe main.o 
+Info: Nothing to build for ppr
+18:30:53 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+Info: Nothing to build for ppr
+18:31:43 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+Info: Nothing to build for ppr
+18:33:13 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:8:6: warning: unused variable 'j' [-Wunused-variable]
+  int j = 0;
+      ^
+g++ -o ppr.exe main.o 
+18:33:37 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+18:44:42 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+18:45:01 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+18:46:01 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+17:24:26 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+13:19:35 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:11:12: error: 'stdin' was not declared in this scope
+     fflush(stdin);
+            ^
+..\main.cpp:11:17: error: 'fflush' was not declared in this scope
+     fflush(stdin);
+                 ^
+13:20:26 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+13:23:00 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function 'int main()':
+..\main.cpp:11:12: error: 'stdin' was not declared in this scope
+     fflush(stdin);
+            ^
+..\main.cpp:11:17: error: 'fflush' was not declared in this scope
+     fflush(stdin);
+                 ^
+13:23:07 **** Incremental Build of configuration Debug for project ppr ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o ppr.exe main.o 
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
+Info: Nothing to build for ppr
