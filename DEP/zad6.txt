@@ -1,0 +1,28 @@
+Na wstępie przepraszam za spóźnienie. Zadanie 5B było do 15 maja, więc z racji tego, że przedmiot jest 2 tygodniowy to sądziłem, że następne będzie 29 maja. A do tego dnia było już siódme #7, które zrobiłem w terminie.
+
+'ZARZ_PROJEKTEM_wyklad_cz_1___(40m).mp4'
+
+
+Dany wykład opowiada ogólnie o projektach i ich odmianach. Na wstępie zostało przytoczone nazwijmy to równaniem: "Bycie szefem projektu = bycie szefem zespołu." A projektem nazywamy proces jednostkowy mający swój początek i koniec. Istnieje projekt od samego początku czyli trzeba zacząć wszystko od zera, wybór szefa pracowników (przykład Firma usługowa GPRS) itd. i nie tylko czyli pełnoprawna firma z pełnym składem przyjmuje zlecenie(tu był przykład z dokumentacją do UMTS'a). Jeszcze inny, gdzie nie występuje powiązanie kontraktem czyli "Juwenalia na uczelni" oraz łączone, tworzony pomiędzy wieloma firmami, instytutami. Dany proces posiada cykle życia. Początkowa gdzie są identyfikowane potrzeby. Fazę planowania gdzie ustala się problematyki. Następnie przechodzi w fazę realizacji i kończy na fazie zamknięcia. Nimi zarządza lider, gdzie określa dokąd trzeba dojść, określa strategię. Natomiast menadżer to wdraża. W projektach w dużych korporacjach istnieją nieformalne składy z osobami ważnymi jak koordynator bądź "prezydium projektu", mało ważnymi tzw. "symboliczni" oraz resztą. Istnieje także czynnik zwany mentalnością silosową czyli gdy tobie na tym zależy, mnie nie za bardzo. Na przykład gdy chcesz szybko jakieś dokumenty, bo potrzebujesz do projektu, a osoba odpowiedzialną ma ważniejsze rzeczy na głowie. Takie rzeczy są naturalne i nie da się ich pokonać siłą. Gdy projekt nie jest zdecydowanie akceptowany w firmie dana efekt silosów jest bardziej widoczna. Gdy zakończy się proces to istnieją dwa rodzaje sukcesu: pierwszy - sukces merytoryczny gdzie cele projektu zrealizowane oraz drugi czyli sukces formalny gdzie nie ma się zastrzeżeń co do realizacji projektu i wydanych pieniędzy.
+
+ 
+'ZARZ_PROJEKTEM_wyklad_cz2_1___(22m).mp4'
+
+
+W danej części wykładu był powiedziane, że idealny projekt to gdy jest zrobiony szybko, tanio, a dobrze. Natomiast tylko 2 dowolne dwa są możliwe w rzeczywistości. Następnie były przykłady wielkich projektów (google glass), który nie został wdrożony. Taka sytuacja jest rzeczą normalną, większość projektów jest taka. Największym powodem tego jest zmiana kryteriów projektu. Chcę się już coś innego, jednakże to już powodowałby stworzenie nowego projektu, a zakończenie obecnego jest równie kosztowne co przerwanie obecnego. Dlatego lepiej już zakończyć obecny projekt i odłożyć na półkę.
+
+
+'ZARZ_PROJEKTEM_wyklad_cz2_2___(26m).mp4'
+
+
+W danej części pojawił się model matrycowy oznaczający projekt gdzie jest wielu szefów. Jeden w kraju, inny związany z globalnym projektem. Każdy projekt generuje pewne ryzyko. Idiotą jest ten co sądzi, że nie ma zagrożeń. Są zespołu gdzie kierownik zespołu jest guru - może zastąpić każdego oraz przeciwnie. Przykład remontu. Są osoby od murowania, malowania, kładzenia płytek itd. a kierownikiem powinna być osoba co potrafi nimi zarządzić. Właściciel salonów fryzjerskich nie musi się znać na strzyżeniu, musi umieć zarządzać firmą. Musisz analizować ryzyko. Trzeba zdać się na pracowników, a burza mózgów to ogólnikowe hasło dotyczące ogólnej dyskusji. Był także poruszany temat zlecania komuś projektów, a robieniu samemu. Nie ma reguł odnośnie danego aspektu, jednakże gdy projekt ma sponsorów to trzeba spełniać ich wymagania na przykład na siłę obliczanie kryteriów finansowych, ponieważ tak ma być. Nie można ściśle określić zysków z budowy przedszkola dla pracowników, ale gdy takie jest kryterium trzeba coś wymyśle.
+
+
+'ZARZ_PROJEKTEM_wyklad_cz_3____(46 min)_H.mp4'
+
+
+W danej części było powiedziane, że praca zajmuje tyle czasu ile masz. Jednakże rzeczywistość mówi inaczej, trwa dłużej niż się można było tego spodziewać, aniżeli się zakładało. Gdy projekt jest wieloletni, wielomiesięczny to nie ma równomiernego podziału pracy. Zawsze jest tak, że na przykład roczny projekt po pierwszym kwartale będzie wykonany w niecałych 3 procentach. Potem nastąpi wzrost do około 10 procent, natomiast w ostatnich miesiącach praca może sięgać niekiedy 20% projektu miesięcznie. Najtrudniej zakończyć projekt, ponieważ nie ma się sił na podsumowania i już trwają następne. Trzeba liczyć się z opóźnieniami na każdym kroku. Był przykład prowadzenia reguły 4dni przed, ale była ona nieskuteczna. Należy spodziewać się, że wystąpi coś niespodziewanego i w związku z tym zostawić z 20% budżetu na wszelki wypadek. Jako lider trzeba wziąć pod uwagę także liczebność zespołu do 15 osób da radę się ogarnąć więcej może być problematyczne dla samego projektu. Dlatego duże projekty składające się z paruset osób najczęściej są łączone hierarchicznie. Podobnie jest z firmami. Wiele projektów ma wielu współwykonawców. Istnieje wtedy konsorcja czyli współudział w projekcie. Pomimo zrobienia np. 1% w projekcie, firma może mówić, że robiła dany projekt jako referencje. Do zarządzania projektem w większości przypadków nie trzeba oprogramowania, a do kosztorysu wystarczą arkusze kalkulacyjne z excela. Duży projekt zajmie niespełna jedną stronę takiego arkusza. Natomiast zawsze trzeba się liczyć z ryzykiem. Wszelka działalność jest zarządzaniem ryzykiem. A waga zagrożenia to prawdopodobieństwo wystąpienia razy koszty ze strat.
+
+
+
+
