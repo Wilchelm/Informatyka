@@ -1,0 +1,5 @@
+description: Simple bigram model
+tags:
+  - lm
+param-files:
+  - "*yaml"
