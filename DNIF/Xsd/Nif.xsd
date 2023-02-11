@@ -1,0 +1,53 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <xs:element name="czlowiek">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="osoba" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="imie" type="xs:string"></xs:element>
+                                             <xs:element name="nazwisko" type="xs:string"></xs:element>
+                                             <xs:element name="urodziny" type="xs:date"></xs:element>
+                                             <xs:element name="email" type="xs:string"></xs:element>
+                                             <xs:element name="wzrost">
+											 <xs:simpleType>
+													<xs:restriction base="xs:int">
+													<xs:maxInclusive value="300"/>
+													</xs:restriction>
+												</xs:simpleType>
+												</xs:element>
+                                             <xs:element name="numer1">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+													<xs:maxLength value="9"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+                                             <xs:element name="numer2">	
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+													<xs:maxLength value="9"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+                                             <xs:element name="numer3">		
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+													<xs:maxLength value="9"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+                                             <xs:element name="plec">
+											 <xs:simpleType>
+												<xs:restriction base="xs:string">
+												<xs:pattern value="mężczyzna|kobieta"/>
+												</xs:restriction>
+												</xs:simpleType>
+											</xs:element>											 
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+		</xs:element>
+ </xs:schema>

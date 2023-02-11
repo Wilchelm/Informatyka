@@ -1,0 +1,30 @@
+.one { 
+text-align: center;
+color: black;
+font-weight: 900;
+font-size: 20px;}
+
+.two {
+text-align: center;
+color: red;}
+
+.three {
+border-collapse: collapse;
+border: 5px dotted black;
+margin-left: auto;
+margin-right: auto;}
+
+.four {
+text-align: center;
+
+border: 5px double red;
+background-color:blue;}
+
+.five {
+text-align: center;
+border: 5px double red;
+background-color:yellow;}
+
+#kierownik {
+font-size: 30px; }
+
